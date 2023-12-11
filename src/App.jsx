@@ -1,5 +1,10 @@
+import SignUp from "./Page/SignUp Page folder/SignUp";
+
+
 function App() {
-  return <></>;
+  return <>
+  <SignUp/>
+  </>;
 }
 
 export default App;
