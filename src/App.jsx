@@ -1,9 +1,11 @@
-import SignUp from "./Page/SignUp Page folder/SignUp";
+import SignUp from "./Page/SignupPageFolder/SignUp";
+
 
 
 function App() {
   return <>
   <SignUp/>
+
   </>;
 }
 
