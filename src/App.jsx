@@ -1,11 +1,7 @@
-import ResetPassword from "./Page/SignInPageFolder/resetPassword";
+import ResetPassword from "./Page/resetPassword/resetPassword";
 
 function App() {
-  return (
-    <>
-      <ResetPassword />
-    </>
-  );
+  return <></>;
 }
 
 export default App;
