@@ -17,7 +17,7 @@ function ResetPassword() {
             </div>
           </div>
         </div>
-        <div className="w-[69%]">
+        <div className="grid w-[69%] grid-rows-[1fr_auto]">
           <div className="mx-auto w-[48%] pt-[248px]">
             <h2 className="text-center text-[49px] font-bold leading-[64px] text-[#444]">
               Reset Password
@@ -48,7 +48,7 @@ function ResetPassword() {
                   Don’t have an account?
                   <a
                     id="sign-up"
-                    className="text-[18px] font-medium leading-6 text-[#007074]"
+                    className="text-[18px] font-medium leading-6 text-[#007074] hover:cursor-pointer"
                   >
                     Sign In
                   </a>
@@ -56,6 +56,12 @@ function ResetPassword() {
               </div>
             </form>
           </div>
+          <footer className="text-[#444 mx-auto w-[48%] pb-5 text-center">
+            <div className="flex items-center justify-between text-[10px] font-normal leading-4 ">
+              <p>All rights reserved &copy; 2023 Alstride</p>
+              <p>Privacy | Terms</p>
+            </div>
+          </footer>
         </div>
       </div>
     </>
