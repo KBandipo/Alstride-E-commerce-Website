@@ -2,11 +2,12 @@ function ResetPassword() {
   return (
     <>
       <main className="box-border flex">
+        {/* Left Container */}
         <div className=" hidden overflow-hidden md:block md:w-[31%]">
           <div className="h-screen w-full bg-[url('/image/passwordRecoveryImage.svg')] bg-cover bg-center bg-no-repeat">
             <div className="w-[90%] pl-[32px] pt-[38px] text-white">
               <img
-                src="/public/image/alstrideVector.svg"
+                src="/image/alstrideVector.svg"
                 alt="alstrideVector"
                 className=" h-[24px] w-[164px] object-cover"
               />
@@ -17,7 +18,10 @@ function ResetPassword() {
             </div>
           </div>
         </div>
-        <div className="grid grid-rows-[auto_1fr_auto] md:w-[69%]  ">
+
+        {/* Right Container */}
+        <div className="grid w-[100%] grid-rows-[auto_1fr_auto] md:w-[69%]  ">
+          {/* Navigation */}
           <div className="flex items-center justify-between px-3 pt-3">
             <div>
               <img
@@ -26,18 +30,23 @@ function ResetPassword() {
                 className="h-[16px] w-[110px] sm:h-[24px] sm:w-[164px] md:hidden"
               />
             </div>
-            <img src="/public/image/previousIcon.svg" alt="previousIcon" />
+            <a href="#previous">
+              <img src="/image/previousIcon.svg" alt="previousIcon" />
+            </a>
           </div>
+
+          {/* Inner Container */}
           <div className="mx-auto mb-[100px] mt-[100px] w-[48%]">
             <div className="w-[100%]">
               <h2 className="text-center text-xl font-bold text-[#444] sm:text-3xl md:text-[33px] md:leading-10 lg:text-[42px] lg:leading-[50px] xl:text-[49px] xl:leading-[64px]">
                 Reset Password
               </h2>
-              <h6 className="text-14px text-center font-normal leading-4 text-[#043133] sm:text-[18px] sm:leading-6 md:text-[20px] md:leading-6">
+              <h6 className="text-14px mt-2 text-center font-normal leading-4 text-[#043133] sm:text-[18px] sm:leading-6 md:text-[20px] md:leading-6">
                 We know how hard it is to remember password sometimes let’s help
                 you reset your password.
               </h6>
 
+              {/*Form */}
               <form className="mx-auto mt-8 w-full md:mt-12 md:w-[79%] lg:mt-16 xl:mt-[75px]">
                 <div className="mb-6 w-full text-[#444] md:mb-[49px]">
                   <label className="block text-sm font-medium md:text-base lg:text-[18px] lg:leading-6">
@@ -49,12 +58,17 @@ function ResetPassword() {
                     placeholder="Enter a valid email address"
                   />
                 </div>
-
+                {/* button */}
                 <div className="text-center">
-                  <button className="rounded bg-[#00666A] px-4 py-2 text-sm font-medium leading-6 text-white md:px-6 md:py-3 md:text-base lg:px-8 lg:py-[16px] lg:text-[18px] xl:px-[40px] ">
+                  <a
+                    href="#resetPassword"
+                    className="rounded bg-[#00666A] px-4 py-2 text-sm font-medium leading-6 text-white md:px-6 md:py-3 md:text-base lg:px-8 lg:py-[16px] lg:text-[18px] xl:px-[40px] "
+                  >
                     Reset Password
-                  </button>
+                  </a>
                 </div>
+
+                {/* To sign up */}
                 <div className="mt-4 text-center md:mt-6 lg:mt-8 xl:mt-[34px] ">
                   <p className="text-sm font-normal leading-6 md:text-base lg:text-[18px]">
                     Don’t have an account?
@@ -69,7 +83,7 @@ function ResetPassword() {
               </form>
             </div>
           </div>
-
+          {/* Footer */}
           <footer className="text-[#444 mx-auto w-[48%] text-center ">
             <div className="flex items-center justify-between py-5 text-[10px] font-normal leading-4 ">
               <p>All rights reserved &copy; 2023 Alstride</p>
