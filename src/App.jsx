@@ -1,10 +1,12 @@
 import React from 'react'
-import SignUp from './Page/SignupPageFolder/SignUp'
+import AppRouter from './AppRouter'
+
+
 
 function App() {
   return (
     <>
-    <SignUp/>
+    <AppRouter/>
     </>
   )
 }
