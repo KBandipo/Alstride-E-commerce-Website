@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Assuming you are using react-router-dom
+ // Assuming you are using react-router-dom
 
 function SignIn() {
+    const [isFocused, setIsFocused] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
@@ -11,13 +12,7 @@ function SignIn() {
       console.log('Forgot Password clicked');
     };
   
-    const handleEmailChange = (e) => {
-      setEmail(e.target.value);
-    };
-  
-    const handlePasswordChange = (e) => {
-      setPassword(e.target.value);
-    };
+    
   
     const handleRememberMeChange = () => {
       setRememberMe(!rememberMe);
@@ -28,6 +23,25 @@ function SignIn() {
       // Add logic to handle form submission with email, password, and rememberMe
       console.log('Form submitted with:', email, password, 'Remember Me:', rememberMe);
   };
+  const handleChange = (e, setState) => {
+    setState(e.target.value);
+  };
+  
+  const [showPassword, setShowPassword] = useState(false);
+
+  
+
+
+
+const handleFocus = () => {
+  // Add logic for focus event if needed
+};
+
+const handleBlur = () => {
+  // Add logic for blur event if needed
+};
+
+
 
   return (
     <>
@@ -68,56 +82,61 @@ function SignIn() {
                   We need this information in order to complete your request...
                 </p>
 
-        <form className="space-y-4" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-600">
-              Email:
-            </label>
-            <input
-              type="email"
-              id="email"
-              required
-              value={email}
-              onChange={handleEmailChange}
-              className="mt-1 p-2 w-full border rounded-md"
-            />
-          </div>
+                <form className="space-y-4" onSubmit={handleSubmit}>
+  <div className="mt-[36px]">
+    <label htmlFor="email" className="text-[18px] font-normal leading-normal text-[#444]">
+      Email
+    </label>
+    <input
+      type="email"
+      placeholder="Enter a valid email address"
+      value={email}
+      onChange={(e) => handleChange(e, setEmail)}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+      className="w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A]"
+    />
+    {!email && !isFocused && <p className="text-red-500 mt-2">Enter a valid Email</p>}
+  </div>
 
-          <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-600">
-              Password:
-            </label>
-            <input
-              type="password"
-              id="password"
-              required
-              value={password}
-              onChange={handlePasswordChange}
-              className="mt-1 p-2 w-full border rounded-md"
-            />
-          </div>
+  <div className="mt-[36px] relative">
+    <label htmlFor="password" className="text-[18px] font-normal leading-normal text-[#444]">
+      Password
+    </label>
+    <div className="relative">
+      <input
+        type={showPassword ? 'text' : 'password'}
+        placeholder="Enter password"
+        value={password}
+        onChange={(e) => handleChange(e, setPassword)}
+        className="w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A]"
+      />
+      <span
+        onClick={() => setShowPassword(!showPassword)}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer "
+      >
+        {showPassword ? <span className="text-[#444]">Hide</span> : <span className="text-[#444]">Show</span>}
+      </span>
+    </div>
+  </div>
 
-          <div className="mt-4">
-            <a href="#" onClick={handleForgotPassword} className="text-blue-500 hover:underline">
-              Forgot Password?
-            </a>
-          </div>
-
-          <div className="mt-2 flex items-center">
-            <input
-              type="checkbox"
-              id="rememberMe"
-              checked={rememberMe}
-              onChange={handleRememberMeChange}
-              className="mr-2"
-            />
-            <label htmlFor="rememberMe" className="text-sm text-gray-600">
-              Remember Me
-            </label>
-          </div>
-
-
-          
+  <div className="flex justify-between items-center">
+    <div className="flex items-center mt-[45px]">
+      <input
+        type="checkbox"
+        id="rememberMe"
+        checked={rememberMe}
+        onChange={handleRememberMeChange}
+        className="mr-2"
+      />
+      <label htmlFor="rememberMe" className="text-sm text-gray-600 ">
+        Remember Me
+      </label>
+    </div>
+    <button type="button" onClick={handleForgotPassword} className="text-[#444] text-[16px] font-medium leading-[24px]">
+      Forgot Password?
+    </button>
+  </div>
 
            {/* Sign In and Sign Up Buttons  */}
            <div className="flex flex-col md:space-x-[100px] sm:flex-row space-y-8  justify-center items-center">
