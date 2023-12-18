@@ -10,6 +10,7 @@ function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isFocused, setIsFocused] = useState(false);
+  
 
   const handleChange = (e, setter) => {
     setter(e.target.value);
@@ -29,6 +30,11 @@ function SignUp() {
     }
     return true;
   };
+
+  const validateField = (field) => {
+    return field.trim() === '' && !isFocused;
+  };
+  
 
   const getPasswordStrength = () => {
     const length = password.length;
@@ -162,79 +168,99 @@ function SignUp() {
 
             <form className="mt-[48px] w-full " onSubmit={handleSignUp}>
               {/* First Name Input  */}
-              <div>
-                <label htmlFor="firstname" className="text-[18px] font-normal leading-normal text-[#444]">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter your First Name"
-                  value={firstName}
-                  onChange={(e) => handleChange(e, setFirstName)}
-                  onFocus={handleFocus}
-                  onBlur={handleBlur}
-                  className=" w-full md:w-full  h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] rounded transition-colors duration-300 hover:border-[#00666A]"
-/>
-                {!firstName && !isFocused && <p className="text-red-500 mt-2">Enter your First name</p>}
-              </div>
-
+              <div className={` ${validateField(firstName) ? 'border-red-500' : ''}`}>
+             <label htmlFor="firstname" className="text-[18px] font-normal leading-normal text-[#444]">
+             First Name
+             </label>
+            <input
+            type="text"
+            placeholder="Enter your First Name"
+            value={firstName}
+            onChange={(e) => handleChange(e, setFirstName)}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A] ${validateField(firstName) ? 'border-red-500' : ''}`}
+            />
+           {!firstName && !isFocused && (
+            <div className="flex items-center mt-2">
+            <span className="text-red-500 ">&#9888;</span>
+            <p className="text-red-500 ml-2">First Name cannot be empty</p>
+          </div>
+           )}
+          </div>
               {/* Last Name Input  */}
-              <div className="mt-[36px]">
-                <label htmlFor="lastname" className="text-[18px] font-normal leading-normal text-[#444]">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter your Last Name"
-                  value={lastName}
-                  onChange={(e) => handleChange(e, setLastName)}
-                  onFocus={handleFocus}
-                  onBlur={handleBlur}
-                  className="w-full md:w-full  h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A]"
-                  />
-                {!lastName && !isFocused && <p className="text-red-500 mt-2">Enter your Last name</p>}
-              </div>
+              <div className={`mt-[36px] ${validateField(lastName) ? 'border-red-500' : ''}`}>
+            <label htmlFor="lastname" className="text-[18px] font-normal leading-normal text-[#444]">
+            Last Name
+            </label>
+            <input
+            type="text"
+            placeholder="Enter your Last Name"
+            value={lastName}
+            onChange={(e) => handleChange(e, setLastName)}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] rounded transition-colors duration-300 hover:border-[#00666A] ${validateField(lastName) ? 'border-red-500' : ''}`}
+            />
+            {!lastName && !isFocused && (
+            <div className="flex items-center mt-2">
+            <span className="text-red-500">&#9888;</span>
+            <p className="text-red-500 ml-2">Last Name cannot be empty</p>
+            </div>
+            )}
+            </div>
+
+
 
               {/* Phone Number Input  */}
-              <div className="mt-[36px]">
-                <label htmlFor="phoneNumber" className="text-[18px] font-normal leading-normal text-[#444]">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  placeholder="Enter your phone number"
-                  value={phoneNumber}
-                  onChange={(e) => handleChange(e, setPhoneNumber)}
-                  onFocus={handleFocus}
-                  onBlur={handleBlur}
-                  className=" w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A]"
-                  />
-                {!phoneNumber && !isFocused && <p className="text-red-500 mt-2">Enter your Phone Number</p>}
-              </div>
-
+              <div className={`mt-[36px] ${validateField(phoneNumber) ? 'border-red-500' : ''}`}>
+              <label htmlFor="phoneNumber" className="text-[18px] font-normal leading-normal text-[#444]">
+              Phone Number
+              </label>
+              <input
+              type="tel"
+              placeholder="Enter your phone number"
+              value={phoneNumber}
+              onChange={(e) => handleChange(e, setPhoneNumber)}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] rounded transition-colors duration-300 hover:border-[#00666A] ${validateField(phoneNumber) ? 'border-red-500' : ''}`}
+              />
+              {!phoneNumber && !isFocused && (
+            <div className="flex items-center mt-2">
+            <span className="text-red-500">&#9888;</span>
+            <p className="text-red-500 ml-2">Phone Number cannot be empty</p>
+            </div>
+              )}
+            </div>
               {/* Email Input  */}
-              <div className="mt-[36px]">
-                <label htmlFor="email" className="text-[18px] font-normal leading-normal text-[#444]">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="Enter a valid email address"
-                  value={email}
-                  onChange={(e) => handleChange(e, setEmail)}
-                  onFocus={handleFocus}
-                  onBlur={handleBlur}
-                  className="w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A]"
-/>
-                {!email && !isFocused && <p className="text-red-500 mt-2">Enter a valid Email</p>}
-              </div>
+              <div className={`mt-[36px] ${validateField(email) ? 'border-red-500' : ''}`}>
+            <label htmlFor="email" className="text-[18px] font-normal leading-normal text-[#444]">
+            Email address
+            </label>
+            <input
+            type="email"
+            placeholder="Enter a valid email address"
+            value={email}
+            onChange={(e) => handleChange(e, setEmail)}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] rounded transition-colors duration-300 hover:border-[#00666A] ${validateField(email) ? 'border-red-500' : ''}`}
+            />
+            {!email && !isFocused && (
+            <div className="flex items-center mt-2">
+            <span className="text-red-500">&#9888;</span>
+            <p className="text-red-500  ml-2">Email address is not valid</p>
+            </div>
+            )}
+            </div>
 
               {/* Password Input  */}
               <div className="mt-[36px] relative">
-        <label htmlFor="password" className="text-[18px] font-normal leading-normal text-[#444]">
+          <label htmlFor="password" className="text-[18px] font-normal leading-normal text-[#444]">
           Password
-        </label>
-        <div className="relative">
+          </label>
+          <div className="relative">
           <input
             type={showPassword ? 'text' : 'password'}
             placeholder="Enter password"
