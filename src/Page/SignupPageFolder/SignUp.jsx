@@ -179,7 +179,7 @@ function SignUp() {
             onChange={(e) => handleChange(e, setFirstName)}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A] ${validateField(firstName) ? 'border-red-500' : ''}`}
+            className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:text-[#00666A] hover:border-[#00666A] ${validateField(firstName) ? 'border-red-500' : ''}`}
             />
            {!firstName && !isFocused && (
             <div className="flex items-center mt-2">
@@ -200,7 +200,7 @@ function SignUp() {
             onChange={(e) => handleChange(e, setLastName)}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] rounded transition-colors duration-300 hover:border-[#00666A] ${validateField(lastName) ? 'border-red-500' : ''}`}
+            className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] rounded transition-colors duration-300 hover:text-[#00666A] hover:border-[#00666A] ${validateField(lastName) ? 'border-red-500' : ''}`}
             />
             {!lastName && !isFocused && (
             <div className="flex items-center mt-2">
@@ -224,7 +224,7 @@ function SignUp() {
               onChange={(e) => handleChange(e, setPhoneNumber)}
               onFocus={handleFocus}
               onBlur={handleBlur}
-              className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] rounded transition-colors duration-300 hover:border-[#00666A] ${validateField(phoneNumber) ? 'border-red-500' : ''}`}
+              className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] rounded transition-colors duration-300 hover:text-[#00666A] hover:border-[#00666A] ${validateField(phoneNumber) ? 'border-red-500' : ''}`}
               />
               {!phoneNumber && !isFocused && (
             <div className="flex items-center mt-2">
@@ -245,7 +245,7 @@ function SignUp() {
             onChange={(e) => handleChange(e, setEmail)}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] rounded transition-colors duration-300 hover:border-[#00666A] ${validateField(email) ? 'border-red-500' : ''}`}
+            className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] rounded transition-colors duration-300 hover:text-[#00666A] hover:border-[#00666A] ${validateField(email) ? 'border-red-500' : ''}`}
             />
             {!email && !isFocused && (
             <div className="flex items-center mt-2">
@@ -266,13 +266,13 @@ function SignUp() {
             placeholder="Enter password"
             value={password}
             onChange={(e) => handleChange(e, setPassword)}
-            className="w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A]"
+            className="w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:text-[#00666A] hover:border-[#00666A]"
           />
           <span
             onClick={() => setShowPassword(!showPassword)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
           >
-            {showPassword ? <span className="text-[#444]">Hide</span> : <span className="text-[#444]">Show</span>}
+            {showPassword ? <span className="text-[#828282] hover:text-[#4444]">Hide</span> : <span className="text-[#828282] hover:text-[#4444]">Show</span>}
           </span>
         </div>
         <div className="mt-2">{passwordStrength}</div>
