@@ -116,22 +116,7 @@ function EmailVerification() {
                 </div>
           </div>
 
-
-           
-            </form>
-             {/* Footer Section  */}
-        
-            <div className="flex text-[#444] text-[10px] mt-[45px]  space-x-[260px] ">
-              <p>All rights reserved © 2023 Alstride</p>
-              <div className="">
-                <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-                  Privacy | Terms
-                </a>
-              </div>
-            </div>
-
-                </div>
-                {verificationVisible && (
+          {verificationVisible && (
       <div className="bg-[#FEFDFA] w-[274px] h-[478px] md:w-[462px] md:h-[608px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center bg-blur">
         <div className="text-center">
           <img className="mx-auto mt-[103px]" src="public/image/Group 11771.svg" alt="" />
@@ -149,6 +134,24 @@ function EmailVerification() {
       </div>
     )}
 
+
+
+           
+            </form>
+             {/* Footer Section  */}
+        
+            <div className="flex text-[#444] text-[10px] mt-[45px]  space-x-[260px] ">
+              <p>All rights reserved © 2023 Alstride</p>
+              <div className="">
+                <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                  Privacy | Terms
+                </a>
+              </div>
+            </div>
+                </div>
+                
+               
+          
           </div>
           </div>
 

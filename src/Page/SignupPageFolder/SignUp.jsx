@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 function SignUp() {
   const navigate = useNavigate();
 
-  // Separate state variables for each input
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -24,11 +23,7 @@ function SignUp() {
     setIsFocused(false);
   };
 
-  
-    
-
   const validateForm = () => {
-    // Example: Add your form validation logic here
     if (firstName.trim() === '' || lastName.trim() === '' || phoneNumber.trim() === '' || email.trim() === '') {
       return false;
     }
@@ -36,19 +31,71 @@ function SignUp() {
   };
 
   const getPasswordStrength = () => {
-    // Define your criteria for password strength
-    const minLength = 8;
+    const length = password.length;
+    if (length === 0) {
+      return (
+        <div className="mt-[8px] flex justify-between">
+          <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+          <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+          <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+          <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+          <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+          <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+        </div>
+      );
+    } else if (length <= 5) {
+      return (
+        <div>
+          <div className="mt-[8px] flex justify-between">
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#BB0C0C] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#BB0C0C] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+          </div>
+          <span></span>
+        </div>
+      );
+    } else if (length <= 8) {
+      return (
+        <div>
+          <div className="mt-[8px] flex justify-between">
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#FF7F00] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#FF7F00] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#FF7F00] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#FF7F00] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+          </div>
 
-    // Check the length of the password
-    if (password.length < minLength) {
-      return 'Weak';
+
+          <span className="text-[10px] leading-[16px] text-[#2C2C2C] sm:text-[12px]">
+            You’re almost at a strong password, try adding characters.
+          </span>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <div className="mt-[8px] flex justify-between">
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+          </div>
+
+
+          <span className="text-[10px] leading-[16px] text-[#2C2C2C] sm:text-[12px]">
+            You now have a strong password
+          </span>
+        </div>
+      );
     }
-
-    // Additional checks for complexity can be added here
-
-    // If the password meets the criteria, consider it strong
-    return 'Strong';
   };
+
 
   const passwordStrength = getPasswordStrength();
   const [showPassword, setShowPassword] = useState(false);
@@ -184,32 +231,26 @@ function SignUp() {
 
               {/* Password Input  */}
               <div className="mt-[36px] relative">
-                <label htmlFor="password" className="text-[18px] font-normal leading-normal text-[#444]">
-                  Password
-                  </label>
-                  <div className="relative">
-                  <input
-                  type={showPassword ? 'text' : 'password'}
-                  placeholder="Enter password"
-                  value={password}
-                  onChange={(e) => handleChange(e, setPassword)}
-                  className="w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A]"
-                 />
-            <span
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer "
-                   >
-                  {showPassword ? (
-                <span className="text-[#444]">Hide</span>
-                   ) : (
-                <span className="text-[#444]">Show</span>
-                  )}
-            </span>
-          </div>
-                <p className={`mt-2 ${passwordStrength === 'Weak' ? 'text-red-500' : 'text-green-500'}`}>
-                   Password Strength: {passwordStrength}
-                 </p>
+        <label htmlFor="password" className="text-[18px] font-normal leading-normal text-[#444]">
+          Password
+        </label>
+        <div className="relative">
+          <input
+            type={showPassword ? 'text' : 'password'}
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => handleChange(e, setPassword)}
+            className="w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A]"
+          />
+          <span
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          >
+            {showPassword ? <span className="text-[#444]">Hide</span> : <span className="text-[#444]">Show</span>}
+          </span>
         </div>
+        <div className="mt-2">{passwordStrength}</div>
+      </div>
 
               {/* Sign In and Sign Up Buttons  */}
               <div className="flex flex-col md:space-x-[100px] sm:flex-row space-y-8  justify-center items-center">
