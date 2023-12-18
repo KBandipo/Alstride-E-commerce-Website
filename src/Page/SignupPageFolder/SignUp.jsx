@@ -73,11 +73,11 @@ function SignUp() {
   return (
     <>
       <div className="box-border flex overflow-hidden">
-      <div className="hidden md:block w-[31%] bg-[url('public/image/signupBackgroundImage.svg')] bg-cover bg-center bg-no-repeat">
+      <div className="hidden md:block w-[31%] bg-[url('/image/signupBackgroundImage.svg')] bg-cover bg-center bg-no-repeat">
           {/* Left Section Content */}
           <div className="w-full pl-[32px] pt-[38px] text-white">
           <img
-              src="public/image/alstrideVector.svg"
+              src="/image/alstrideVector.svg"
             alt="alstrideVector"
             className="h-[24px] w-[164px] object-cover"
             />
@@ -95,7 +95,7 @@ function SignUp() {
           <div className=" flex justify-between items-center">
              {/* Show this only on screens >= 768px */}
              <div>
-               <img className=" md:hidden" src="public/image/alstrideVector2.svg" alt="alstrideVector2" />
+               <img className=" md:hidden" src="/image/alstrideVector2.svg" alt="alstrideVector2" />
                 </div>
                 
                   <a href="https://example.com" target="_blank" rel="noopener noreferrer">
@@ -230,7 +230,7 @@ function SignUp() {
                {/* Social Login Section ( */}
 
               <div className='flex  mt-[41px] space-x-8 justify-center items-center'>
-            <img className='w-[106px] md:w-[165px] h-[10px] flex-shrink-0' src="public/image/OrSigninwithelement.svg" alt="" />
+            <img className='w-[106px] md:w-[165px] h-[10px] flex-shrink-0' src="/image/OrSigninwithelement.svg" alt="" />
               <p className='text-[#444] text-[16px] font-normal leading-[24px] w-[102] md:w-[116px] h-[18px] flex-col justify-center flex-shrink-0'>
               Or Sign in with
               </p>
@@ -239,15 +239,15 @@ function SignUp() {
               <div className='flex mt-[33px] space-x-[100px] justify-center items-center '>
             <div className=''>
           <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-                <img src="public/image/gmail icon.svg"alt="google login"/></a>
+                <img src="/image/gmail icon.svg"alt="google login"/></a>
                 </div>
                 <div>
           <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-                <img src="public/image/fb icon.svg"alt="facebook login"/></a>
+                <img src="/image/fb icon.svg"alt="facebook login"/></a>
                 </div>
                 <div className=''>
           <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-                <img src="public/image/x icon.svg" alt="X login"/></a>
+                <img src="/image/x icon.svg" alt="X login"/></a>
                 </div>
           </div>
 
