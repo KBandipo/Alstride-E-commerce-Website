@@ -6,6 +6,97 @@ function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
+
+    
+    
+  
+    const handleChange = (e, setter) => {
+      setter(e.target.value);
+    };
+  
+    const handleFocus = () => {
+      setIsFocused(true);
+    };
+  
+    const handleBlur = () => {
+      setIsFocused(false);
+    };
+  
+    
+  
+    const validateField = (field) => {
+      return field.trim() === '' && !isFocused;
+    };
+    
+  
+    const getPasswordStrength = () => {
+      const length = password.length;
+      if (length === 0) {
+        return (
+          <div className="mt-[8px] flex justify-between">
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+            <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+          </div>
+        );
+      } else if (length <= 5) {
+        return (
+          <div>
+            <div className="mt-[8px] flex justify-between">
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#BB0C0C] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#BB0C0C] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+            </div>
+            <span></span>
+          </div>
+        );
+      } else if (length <= 8) {
+        return (
+          <div>
+            <div className="mt-[8px] flex justify-between">
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#FF7F00] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#FF7F00] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#FF7F00] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#FF7F00] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#D7DDE2] "></div>
+            </div>
+  
+  
+            <span className="text-[10px] leading-[16px] text-[#2C2C2C] sm:text-[12px]">
+              You’re almost at a strong password, try adding characters.
+            </span>
+          </div>
+        );
+      } else {
+        return (
+          <div>
+            <div className="mt-[8px] flex justify-between">
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+              <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
+            </div>
+  
+  
+            <span className="text-[10px] leading-[16px] text-[#2C2C2C] sm:text-[12px]">
+              You now have a strong password
+            </span>
+          </div>
+        );
+      }
+    };
+  
+  
+    const passwordStrength = getPasswordStrength();
   
     const handleForgotPassword = () => {
       // Add logic for handling forgot password here
@@ -23,9 +114,7 @@ function SignIn() {
       // Add logic to handle form submission with email, password, and rememberMe
       console.log('Form submitted with:', email, password, 'Remember Me:', rememberMe);
   };
-  const handleChange = (e, setState) => {
-    setState(e.target.value);
-  };
+  
   
   const [showPassword, setShowPassword] = useState(false);
 
@@ -33,13 +122,6 @@ function SignIn() {
 
 
 
-const handleFocus = () => {
-  // Add logic for focus event if needed
-};
-
-const handleBlur = () => {
-  // Add logic for blur event if needed
-};
 
 
 
@@ -82,42 +164,47 @@ const handleBlur = () => {
                 </p>
 
                 <form className="mt-[48px] w-full" onSubmit={handleSubmit}>
-  <div className="mt-[36px]">
-    <label htmlFor="email" className="text-[18px] font-normal leading-normal text-[#444]">
-      Email
-    </label>
-    <input
-      type="email"
-      placeholder="Enter a valid email address"
-      value={email}
-      onChange={(e) => handleChange(e, setEmail)}
-      onFocus={handleFocus}
-      onBlur={handleBlur}
-      className="w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A]"
-      />
-    {!email && !isFocused && <p className="text-red-500 mt-2">Enter a valid Email</p>}
-  </div>
-
+                <div className={`mt-[36px] ${validateField(email) ? 'border-red-500' : ''}`}>
+            <label htmlFor="email" className="text-[18px] font-normal leading-normal text-[#444]">
+            Email address
+            </label>
+            <input
+            type="email"
+            placeholder="Enter a valid email address"
+            value={email}
+            onChange={(e) => handleChange(e, setEmail)}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            className={`w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] rounded transition-colors duration-300 hover:border-[#00666A] ${validateField(email) ? 'border-red-500' : ''}`}
+            />
+            {!email && !isFocused && (
+            <div className="flex items-center mt-2">
+            <span className="text-red-500">&#9888;</span>
+            <p className="text-red-500  ml-2">Email address is not valid</p>
+            </div>
+            )}
+            </div>
   <div className="mt-[36px] relative">
-    <label htmlFor="password" className="text-[18px] font-normal leading-normal text-[#444]">
-      Password
-    </label>
-    <div className="relative">
-      <input
-        type={showPassword ? 'text' : 'password'}
-        placeholder="Enter password"
-        value={password}
-        onChange={(e) => handleChange(e, setPassword)}
-        className="w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A]"
-                 />
-      <span
-        onClick={() => setShowPassword(!showPassword)}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer "
-      >
-        {showPassword ? <span className="text-[#444]">Hide</span> : <span className="text-[#444]">Show</span>}
-      </span>
-    </div>
-  </div>
+          <label htmlFor="password" className="text-[18px] font-normal leading-normal text-[#444]">
+          Password
+          </label>
+          <div className="relative">
+          <input
+            type={showPassword ? 'text' : 'password'}
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => handleChange(e, setPassword)}
+            className="w-full md:w-full h-[60px] flex-shrink-0 border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  rounded transition-colors duration-300 hover:border-[#00666A]"
+          />
+          <span
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          >
+            {showPassword ? <span className="text-[#444]">Hide</span> : <span className="text-[#444]">Show</span>}
+          </span>
+        </div>
+        <div className="mt-2">{passwordStrength}</div>
+      </div>
 
   <div className="flex justify-between items-center">
     <div className="flex items-center mt-[45px]">
