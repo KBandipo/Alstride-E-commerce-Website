@@ -1,7 +1,14 @@
-import ResetPassword from "./Page/resetPassword/resetPassword";
+// import ResetPassword from "./Page/resetPassword/ResetPassword";
+
+import UpdatePassword from "./Page/updatePasswordPage/updatePassword";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      {/* <ResetPassword /> */}
+      <UpdatePassword />
+    </>
+  );
 }
 
 export default App;

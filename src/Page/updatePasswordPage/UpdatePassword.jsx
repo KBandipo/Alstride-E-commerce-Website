@@ -5,6 +5,7 @@ function UpdatePassword() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [successMessageVisible, setSuccessMessageVisible] = useState(false);
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -145,10 +146,15 @@ function UpdatePassword() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Add your password update logic here
+    // Password update logic here
     if (newPassword === confirmPassword) {
       // Passwords match, proceed with updating the password
       console.log("Password updated successfully!");
+      setSuccessMessageVisible(true);
+
+      // You can also reset the form or redirect the user after a successful update
+      setNewPassword("");
+      setConfirmPassword("");
     } else {
       // Passwords don't match, handle accordingly
       console.error("Passwords do not match");
@@ -186,13 +192,15 @@ function UpdatePassword() {
                 className="h-[16px] w-[110px] sm:h-[24px] sm:w-[164px] md:hidden"
               />
             </div>
+
+            {/* previous button */}
             <a href="#previous">
               <img src="/image/previousIcon.svg" alt="previousIcon" />
             </a>
           </div>
 
           {/* Inner Container */}
-          <div className="mx-auto mt-[28px] md:w-[48%]">
+          <div className="relative mx-auto mt-[28px] md:w-[48%]">
             <div className="w-[100%]">
               <h2 className="text-center text-xl font-bold text-[#444] sm:text-3xl md:text-[33px] md:leading-10 lg:text-[42px] lg:leading-[50px] xl:text-[49px] xl:leading-[64px]">
                 Update Password
@@ -276,6 +284,42 @@ function UpdatePassword() {
             </div>
           </footer>
         </div>
+
+        {/* Success Message Overlay */}
+        {successMessageVisible && (
+          <div className="fixed inset-0 flex items-center  justify-center bg-black/30 backdrop-blur-[1px] backdrop-filter">
+            <div className=" absolute h-full w-full rounded bg-white px-6 py-[40px] text-center shadow-md sm:right-[22%] sm:h-auto sm:w-[62%] md:right-[22%] md:w-[24%]">
+              <div className="flex w-full items-center justify-between px-3 pt-3">
+                {/* I created an empty div here */}
+                <div></div>
+                {/* previous button */}
+                <a href="#previous" className="sm:hidden">
+                  <img src="/image/previousIcon.svg" alt="previousIcon" />
+                </a>
+              </div>
+
+              <img
+                src="/image/resetPasswordSuccessIcon.svg"
+                alt="resetPasswordSuccessIcon"
+                className="mx-auto h-[100px] w-[100px]"
+              />
+              <h2 className="mt-3 text-[21px] font-medium leading-normal text-[#444] ">
+                Password Reset!
+              </h2>
+              <p className="mb-[27px] mt-[22px] text-[16px] font-normal leading-6 text-[#444] ">
+                Your password has been successfully reset, click below to
+                continue your access
+              </p>
+
+              <button
+                className="cursor-pointer rounded bg-[#00666A] px-4 py-2 text-sm font-medium leading-6 text-white md:px-6 md:py-3 md:text-base lg:px-8 lg:py-[16px] lg:text-[18px] xl:px-[40px]"
+                onClick={() => setSuccessMessageVisible(false)}
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        )}
       </main>
     </>
   );
