@@ -30,7 +30,7 @@ function EmailVerification() {
         </div>
 
         {/* Right Section */}
-        <div className="md:w-[69%]">
+        <div className="relative md:w-[69%]">
           <div className="md:hidden">
             <img src="/image/alstrideVector2.svg" alt="alstrideVector2" />
           </div>
@@ -90,9 +90,7 @@ function EmailVerification() {
                              Resend Code
                         </button>
               </div>
-
                {/* Social Login Section ( */}
-            
                <div className='flex  mt-[35px] space-x-8 justify-center items-center'>
             <img className='w-[106px] md:w-[165px] h-[10px] flex-shrink-0' src="/image/OrSigninwithelement.svg" alt="" />
               <p className='text-[#444] text-[16px] font-normal leading-[24px] w-[102] md:w-[116px] h-[18px] flex-col justify-center flex-shrink-0'>
@@ -114,29 +112,7 @@ function EmailVerification() {
           <a href="https://example.com" target="_blank" rel="noopener noreferrer">
                 <img src="/image/x icon.svg" alt="X login"/></a>
                 </div>
-          </div>
-
-          {verificationVisible && (
-      <div className="bg-[#FEFDFA] w-[274px] h-[478px] md:w-[462px] md:h-[608px] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center bg-blur">
-        <div className="text-center">
-          <img className="mx-auto mt-[103px]" src="public/image/Group 11771.svg" alt="" />
-          <p className='text-[#444] text-[21.257px] font-medium mt-[12px]'>Great news!</p>
-          <p className='w-[265px] md:w-[311px] text-[16px] font-normal leading-[24px] mt-[22px]'>Your email has been successfully verified. Welcome aboard!</p>
-          <button
-            type="button"
-            className="bg-[#007074] w-[178px] mt-[71px] mx-auto md:mt-[26px] text-[#fff]  flex flex-col justify-center items-center  h-[56px] flex-shrink-0 rounded-md "
-            onClick={() => setVerificationVisible(false)}
-           
-          >
-            Continue
-          </button>
-        </div>
-      </div>
-    )}
-
-
-
-           
+          </div> 
             </form>
              {/* Footer Section  */}
         
@@ -149,11 +125,27 @@ function EmailVerification() {
               </div>
             </div>
                 </div>
-                
-               
+          </div>
+          </div>
+
           
-          </div>
-          </div>
+          {verificationVisible && (
+  <div className=" fixed inset-0 flex items-center  justify-center bg-black/30 backdrop-blur-[1px] backdrop-filter">
+    <div className="absolute bg-[#FEFDFA]  w-[274px] h-full md:w-[35%] md:h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center  rounded-md shadow-md">
+      <img className="mx-auto mt-[103px]" src="public/image/Group 11771.svg" alt="" />
+      <p className='text-[#444] text-[21.257px] font-medium mt-[12px]'>Great news!</p>
+      <p className='w-[265px] md:w-[311px] text-[16px] font-normal leading-[24px] mt-[22px] text-center'>Your email has been successfully verified. Welcome aboard!</p>
+      <button
+        type="button"
+        className="bg-[#007074] w-[178px] mt-[71px] mx-auto md:mt-[26px] text-[#fff]  flex flex-col justify-center items-center  h-[56px] flex-shrink-0 rounded-md "
+        onClick={() => setVerificationVisible(false)}
+      >
+        Continue
+      </button>
+    </div>
+  </div>
+)}
+
 
     </>
   )

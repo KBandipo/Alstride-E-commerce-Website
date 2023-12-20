@@ -12,13 +12,12 @@ function SignUp() {
   const [isFocused, setIsFocused] = useState(false);
   
 
-  const handleFocus = () => {
-    // Implement the logic for handleFocus
-    setIsFocused(true);
-  };
-
   const handleChange = (e, setter) => {
     setter(e.target.value);
+  };
+
+  const handleFocus = () => {
+    setIsFocused(true);
   };
 
   const handleBlur = () => {
@@ -26,10 +25,7 @@ function SignUp() {
   };
 
   const validateForm = () => {
-    if (firstName.trim() === '' 
-    || lastName.trim() === '' 
-    || phoneNumber.trim() === '' 
-    || email.trim() === '') {
+    if (firstName.trim() === '' || lastName.trim() === '' || phoneNumber.trim() === '' || email.trim() === '') {
       return false;
     }
     return true;
