@@ -6,7 +6,6 @@ function EmailVerification() {
 
   const handleSignUp = (e) => {
     e.preventDefault();
-    // Add your sign-up logic here
     setVerificationVisible(true);
   };
 
@@ -16,7 +15,6 @@ function EmailVerification() {
       <div className="box-border flex overflow-hidden">
         {/* Left Section */}
         <div className="hidden md:block w-[31%] bg-[url('/image/emailVerificationBackgroudImage.svg')] bg-cover bg-center bg-no-repeat">
-          {/* Left Section Content */}
           <div className="w-[90%] pl-[32px] pt-[38px] text-white">
             <img
               src="/image/alstrideVector.svg"
@@ -114,9 +112,9 @@ function EmailVerification() {
                 </div>
           </div> 
             </form>
-             {/* Footer Section  */}
-        
-            <div className="flex text-[#444] text-[10px] mt-[45px]  space-x-[260px] ">
+              </div>
+               {/* Footer Section  */}
+            <div className="flex text-[#444] text-[10px] mt-[45px]  space-x-[260px] justify-center items-center ">
               <p>All rights reserved © 2023 Alstride</p>
               <div className="">
                 <a href="https://example.com" target="_blank" rel="noopener noreferrer">
@@ -124,7 +122,6 @@ function EmailVerification() {
                 </a>
               </div>
             </div>
-                </div>
           </div>
           </div>
 

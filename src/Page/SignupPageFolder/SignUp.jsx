@@ -111,9 +111,8 @@ function SignUp() {
   const handleSignUp = (e) => {
     e.preventDefault();
 
-    // Example: Add your signup logic here
     if (validateForm()) {
-      // Call an API or perform form submission
+      
       console.log('Form submitted successfully!');
       // Redirect to email verification page
       navigate('/email-verification');
@@ -141,20 +140,15 @@ function SignUp() {
       </div>
     </div>
 
-```
-
         {/* Right Section */}
         <div className=" md:w-[69%]">
           <div className=" flex justify-between items-center">
-             {/* Show this only on screens >= 768px */}
              <div>
                <img className=" md:hidden" src="/image/alstrideVector2.svg" alt="alstrideVector2" />
                 </div>
-                
                   <a href="https://example.com" target="_blank" rel="noopener noreferrer">
                    <img  src="/image/PREVIOUS ICON.svg" alt="previous link" />
               </a>
-           
         </div>
          
           <div className="  md:w-[56%] mx-auto ">
@@ -165,7 +159,6 @@ function SignUp() {
                   We need this information in order to complete your request...
                 </p>
                  {/* Form Section  */}
-
             <form className="mt-[48px] w-full " onSubmit={handleSignUp}>
               {/* First Name Input  */}
               <div className={` ${validateField(firstName) ? 'border-red-500' : ''}`}>
@@ -209,9 +202,6 @@ function SignUp() {
             </div>
             )}
             </div>
-
-
-
               {/* Phone Number Input  */}
               <div className={`mt-[36px] ${validateField(phoneNumber) ? 'border-red-500' : ''}`}>
               <label htmlFor="phoneNumber" className="text-[18px] font-normal leading-normal text-[#444]">
@@ -254,7 +244,6 @@ function SignUp() {
             </div>
             )}
             </div>
-
               {/* Password Input  */}
               <div className="mt-[36px] relative">
           <label htmlFor="password" className="text-[18px] font-normal leading-normal text-[#444]">
@@ -277,7 +266,6 @@ function SignUp() {
         </div>
         <div className="mt-2">{passwordStrength}</div>
       </div>
-
               {/* Sign In and Sign Up Buttons  */}
               <div className="flex flex-col md:space-x-[100px] sm:flex-row space-y-8  justify-center items-center">
                 <div className="flex space-x-1 mt-[55px]  order-2 sm:order-1">
@@ -295,7 +283,6 @@ function SignUp() {
                      </button>
               </div>
                {/* Social Login Section ( */}
-
               <div className='flex  mt-[41px] space-x-8 justify-center items-center'>
             <img className='w-[106px] md:w-[165px] h-[10px] flex-shrink-0' src="/image/OrSigninwithelement.svg" alt="" />
               <p className='text-[#444] text-[16px] font-normal leading-[24px] w-[102] md:w-[116px] h-[18px] flex-col justify-center flex-shrink-0'>
@@ -317,8 +304,6 @@ function SignUp() {
                 <img src="/image/x icon.svg" alt="X login"/></a>
                 </div>
           </div>
-
-             
             </form>
           </div>
            {/* Footer Section  */}
@@ -332,8 +317,6 @@ function SignUp() {
             </div>
         </div>
       </div>
-
-     
     </>
   );
   }
