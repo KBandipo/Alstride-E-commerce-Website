@@ -147,17 +147,17 @@ function UpdatePassword() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Password update logic here
+    // Password update logic
     if (newPassword === confirmPassword) {
       // Passwords match, proceed with updating the password
       console.log("Password updated successfully!");
       setSuccessMessageVisible(true);
 
-      // You can also reset the form or redirect the user after a successful update
+      // reset the form after a successful update
       setNewPassword("");
       setConfirmPassword("");
     } else {
-      // Passwords don't match, handle accordingly
+      // Passwords don't match is consoled for now
       console.error("Passwords do not match");
     }
   };
