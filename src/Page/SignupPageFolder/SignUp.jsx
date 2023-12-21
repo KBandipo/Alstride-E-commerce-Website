@@ -102,12 +102,9 @@ function SignUp() {
     }
   };
 
-
   const passwordStrength = getPasswordStrength();
   const [showPassword, setShowPassword] = useState(false);
 
-
- 
   const handleSignUp = (e) => {
     e.preventDefault();
 
@@ -124,9 +121,9 @@ function SignUp() {
 
   return (
     <>
-      <div className="box-border flex overflow-hidden">
-      <div className="hidden md:block w-[31%] bg-[url('/image/signupBackgroundImage.svg')] bg-cover bg-center bg-no-repeat">
-          {/* Left Section Content */}
+      <div className="box-border flex">
+        {/* Left Section*/}
+      <div className="hidden overflow-hidden md:block md:w-[31%] bg-[url('/image/signupBackgroundImage.svg')] bg-cover bg-center bg-no-repeat">
           <div className="w-full pl-[32px] pt-[38px] text-white">
           <img
               src="/image/alstrideVector.svg"
