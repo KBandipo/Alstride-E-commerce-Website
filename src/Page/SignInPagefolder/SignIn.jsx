@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
- // Assuming you are using react-router-dom
+ 
 
 function SignIn() {
     const [isFocused, setIsFocused] = useState(false);
@@ -7,9 +7,6 @@ function SignIn() {
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
 
-    
-    
-  
     const handleChange = (e, setter) => {
       setter(e.target.value);
     };
@@ -22,13 +19,10 @@ function SignIn() {
       setIsFocused(false);
     };
   
-    
-  
     const validateField = (field) => {
       return field.trim() === '' && !isFocused;
     };
     
-  
     const getPasswordStrength = () => {
       const length = password.length;
       if (length === 0) {
@@ -85,8 +79,6 @@ function SignIn() {
               <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
               <div className="h-[4px] w-[15%] rounded-[55px] bg-[#04971C] "></div>
             </div>
-  
-  
             <span className="text-[10px] leading-[16px] text-[#2C2C2C] sm:text-[12px]">
               You now have a strong password
             </span>
@@ -95,15 +87,11 @@ function SignIn() {
       }
     };
   
-  
     const passwordStrength = getPasswordStrength();
   
     const handleForgotPassword = () => {
-      // Add logic for handling forgot password here
       console.log('Forgot Password clicked');
     };
-  
-    
   
     const handleRememberMeChange = () => {
       setRememberMe(!rememberMe);
@@ -111,19 +99,10 @@ function SignIn() {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      // Add logic to handle form submission with email, password, and rememberMe
       console.log('Form submitted with:', email, password, 'Remember Me:', rememberMe);
   };
   
-  
   const [showPassword, setShowPassword] = useState(false);
-
-  
-
-
-
-
-
 
   return (
     <>
@@ -145,7 +124,6 @@ function SignIn() {
      {/* Right Section */}
     <div className="w-full md:w-[69%]">
     <nav className=" flex justify-between items-center">
-             {/* Show this only on screens >= 	768px */}
              <div>
                <img className=" md:hidden" src="public/image/alstrideVector2.svg" alt="alstrideVector2" />
                 </div>
@@ -153,7 +131,6 @@ function SignIn() {
                   <a href="https://example.com" target="_blank" rel="noopener noreferrer">
                    <img  src="/image/PREVIOUS ICON.svg" alt="previous link" />
               </a>
-           
         </nav>
     <div className="md:w-[56%] mx-auto ">
       <h3 className=" max-w-full text-[31px] text-center leading-[48px] md:text-[39px] font-bold  text-[#444]  ">
@@ -228,22 +205,18 @@ function SignIn() {
            <div className="flex flex-col md:space-x-[100px] sm:flex-row space-y-8  justify-center items-center">
                 <div className="flex space-x-1 mt-[55px]  order-2 sm:order-1">
                       <p className="w-[220px] h-[22px] flex-shrink-0 text-[18px] font-normal leading-[24px] text-[#000]">
-                          Already have an account?
+                      Don’t have an account?
                         </p>
                 <button type="button"className="w-[60px] h-[22px] flex items-center text-[#007074] justify-center flex-shrink-0">
                        SignUp
                       </button>
                   </div>
-              
                  <button type="submit"
                   className="bg-[#007074] text-[#fff] md:flex flex-col justify-center items-center w-[222px] sm:w-[137px] h-[56px]   flex-shrink-0 rounded-md  order-1 sm:order-2">
                  SignIn
                      </button>
               </div>
                {/* Social Login Section ( */}
-
-               {/* Social Login Section ( */}
-
               <div className='flex  mt-[41px] space-x-8 justify-center items-center'>
             <img className='w-[106px] md:w-[165px] h-[10px] flex-shrink-0' src="/image/OrSigninwithelement.svg" alt="" />
               <p className='text-[#444] text-[16px] font-normal leading-[24px] w-[102] md:w-[116px] h-[18px] flex-col justify-center flex-shrink-0'>
@@ -266,9 +239,7 @@ function SignIn() {
                 </div>
           </div>
         </form>
-
       </div>
-
       {/* Footer Section  */}
       <div className="flex text-[#444] text-[10px] mt-[90px] space-x-[260px] justify-center items-center ">
               <p>All rights reserved © 2023 Alstride</p>
@@ -280,8 +251,6 @@ function SignIn() {
             </div>
     </div>
     </div>
-   
-
     </>
   );
 }
