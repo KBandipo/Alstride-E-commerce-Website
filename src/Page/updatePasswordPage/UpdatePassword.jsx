@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function UpdatePassword() {
@@ -194,9 +195,9 @@ function UpdatePassword() {
             </div>
 
             {/* previous button */}
-            <a href="#previous">
+            <button>
               <img src="/image/previousIcon.svg" alt="previousIcon" />
-            </a>
+            </button>
           </div>
 
           {/* Inner Container */}
@@ -293,9 +294,9 @@ function UpdatePassword() {
                 {/* I created an empty div here */}
                 <div></div>
                 {/* previous button */}
-                <a href="#previous" className="sm:hidden">
+                <button>
                   <img src="/image/previousIcon.svg" alt="previousIcon" />
-                </a>
+                </button>
               </div>
 
               <img
