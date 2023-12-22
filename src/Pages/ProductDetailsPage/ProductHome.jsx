@@ -42,39 +42,60 @@ function ProductHome() {
   };
 
   return (
-    <div className="flex flex-wrap justify-center">
-      {visibleProducts.map((product) => (
-        <div key={product.id} className=" max-w-[calc(50% - 1rem)] mx-4 my-4">
-          <ProductCard
-            id={product.id}
-            name={product.name}
-            image={product.image}
-            price={product.price}
-            discountPrice={product.discountPrice}
-          />
-        </div>
-      ))}
-
-      {/* Pagination controls */}
-      <div className="mt-4 flex">
-        <button
-          className="mx-2 px-4 py-2 border bg-white text-gray-600"
-          onClick={handlePrevPage}
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
-        <span className="mx-2 text-gray-600">
-          Page {currentPage} of {totalPages}
-        </span>
-        <button
-          className="mx-2 px-4 py-2 border bg-white text-gray-600"
-          onClick={handleNextPage}
-          disabled={currentPage === totalPages}
-        >
-          Next
-        </button>
+    <div>
+      <div className='bg-[#F7E7CE] w-full h-[90px] mt-[46px]'>
+        <h1 className='text-center text-[31px] font-bold leading-[40px]'>Shop</h1>
+        <p className='text-center'>
+        <a href='home'>Home</a> / <a href='/'>Shop</a>
+        </p>
       </div>
+      
+    <div className="flex">
+      {/* Sidebar on the left */}
+      <div className="w-1/3 bg-[#F6F8F9] p-4">
+        {/* Your content for the sidebar goes here */}
+        <h2 className="text-2xl font-semibold mb-4">Sidebar Section</h2>
+        {/* Add other components/content for the sidebar */}
+      </div>
+
+      {/* Product Cards on the right */}
+      <div className="w-2/3 bg-[#F6F8F9] p-4">
+        <div className="flex flex-wrap justify-center">
+          {visibleProducts.map((product) => (
+            <div key={product.id} className=" max-w-[calc(50% - 1rem)] mx-4 my-4">
+              <ProductCard
+                id={product.id}
+                name={product.name}
+                image={product.image}
+                price={product.price}
+                discountPrice={product.discountPrice}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Pagination controls */}
+        <div className="mt-4 flex justify-center w-full">
+          <button className="mx-2 px-4 py-2 border" onClick={handlePrevPage}>
+            Previous
+          </button>
+          {[...Array(totalPages).keys()].map((page) => (
+            <button
+              key={page + 1}
+              className={`mx-2 px-4 py-2 border ${
+                page + 1 === currentPage ? 'bg-gray-500 text-white' : 'bg-white text-gray-600'
+              }`}
+              onClick={() => setCurrentPage(page + 1)}
+            >
+              {page + 1}
+            </button>
+          ))}
+          <button className="mx-2 px-4 py-2 border" onClick={handleNextPage}>
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
     </div>
   );
 }
