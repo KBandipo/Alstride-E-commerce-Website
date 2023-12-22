@@ -9,7 +9,7 @@ function ResetPassword() {
     const inputEmail = e.target.value;
     setEmail(inputEmail);
 
-    // Update email validity state in real-time
+    // Update email validity state
     setIsEmailValid(validateEmail(inputEmail));
   };
 
