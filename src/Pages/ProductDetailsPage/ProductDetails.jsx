@@ -164,6 +164,116 @@ function getProductDetailsById(id) {
       image: '/image/one-black-sneaker-shoe-isolated-white 2.svg',
       // ... (add more details as needed)
     },
+    {
+      id: 3,
+      name: 'Shoebaru Max',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      price: 120,
+      discountPrice: 100,
+      colors: ['Black', 'White', 'Red'],
+      sizes: ['US 7', 'US 8', 'US 9', 'US 10'],
+      image: '/image/one-white-sneaker-shoe-isolated-white 2.svg',
+      // ... (add more details as needed)
+    },
+    {
+      id: 4,
+      name: 'Shoebaru Max',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      price: 120,
+      discountPrice: 100,
+      colors: ['Black', 'White', 'Red'],
+      sizes: ['US 7', 'US 8', 'US 9', 'US 10'],
+      image: '/image/one-white-sneaker-shoe-isolated-white (1) 2.svg',
+      // ... (add more details as needed)
+    },
+    {
+      id: 5,
+      name: 'Shoebaru Max',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      price: 120,
+      discountPrice: 100,
+      colors: ['Black', 'White', 'Red'],
+      sizes: ['US 7', 'US 8', 'US 9', 'US 10'],
+      image: '/image/dress shoes 2.svg',
+      // ... (add more details as needed)
+    },
+    {
+      id: 6,
+      name: 'Shoebaru Max',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      price: 120,
+      discountPrice: 100,
+      colors: ['Black', 'White', 'Red'],
+      sizes: ['US 7', 'US 8', 'US 9', 'US 10'],
+      image: '/image/Sandles 2.svg',
+      // ... (add more details as needed)
+    },
+    {
+      id: 7,
+      name: 'Shoebaru Max',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      price: 120,
+      discountPrice: 100,
+      colors: ['Black', 'White', 'Red'],
+      sizes: ['US 7', 'US 8', 'US 9', 'US 10'],
+      image: '/image/Black Boots.svg',
+      // ... (add more details as needed)
+    },
+    {
+      id: 8,
+      name: 'Shoebaru Max',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      price: 120,
+      discountPrice: 100,
+      colors: ['Black', 'White', 'Red'],
+      sizes: ['US 7', 'US 8', 'US 9', 'US 10'],
+      image: '/image/Golden heels.svg',
+      // ... (add more details as needed)
+    },
+    {
+      id: 9,
+      name: 'Shoebaru Max',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      price: 120,
+      discountPrice: 100,
+      colors: ['Black', 'White', 'Red'],
+      sizes: ['US 7', 'US 8', 'US 9', 'US 10'],
+      image: '/image/pair-black-classic-men-new 3.svg',
+      // ... (add more details as needed)
+    },
+    {
+      id: 10,
+      name: 'Shoebaru Max',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      price: 120,
+      discountPrice: 100,
+      colors: ['Black', 'White', 'Red'],
+      sizes: ['US 7', 'US 8', 'US 9', 'US 10'],
+      image: '/image/oswald-elsaboath-_bHENmPJrTA-unsplash 1.svg',
+      // ... (add more details as needed)
+    },
+    {
+      id: 11,
+      name: 'Shoebaru Max',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      price: 120,
+      discountPrice: 100,
+      colors: ['Black', 'White', 'Red'],
+      sizes: ['US 7', 'US 8', 'US 9', 'US 10'],
+      image: '/image/Yellow Shoes.svg',
+      // ... (add more details as needed)
+    },
+    {
+      id: 12,
+      name: 'Shoebaru Max',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      price: 120,
+      discountPrice: 100,
+      colors: ['Black', 'White', 'Red'],
+      sizes: ['US 7', 'US 8', 'US 9', 'US 10'],
+      image: '/image/white converse 1.svg',
+      // ... (add more details as needed)
+    },
   ];
   return products.find((product) => product.id === parseInt(id, 10));
 }

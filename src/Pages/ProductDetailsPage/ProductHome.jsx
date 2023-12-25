@@ -7,32 +7,25 @@ import ColorSelector from './ColorSelector';
 function ProductHome() {
   // Assume you have a list of products
   const products = [
-    { id: 1, name: 'Next Gen Heel', image: '/image/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg', price: 100, discountPrice: 80 },
-    { id: 2, name: 'Shoebaru Max', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 100, discountPrice: 80 },
-    { id: 3, name: 'Product3', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 100, discountPrice: 80 },
-    { id: 4, name: 'product4', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 100, discountPrice: 80 },
-    { id: 5, name: 'product5', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 100, discountPrice: 80 },
-    { id: 6, name: 'Product6', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 100, discountPrice: 80 },
-    { id: 7, name: 'product7', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 100, discountPrice: 80 },
-    { id: 8, name: 'Product8', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 100, discountPrice: 80 },
-    { id: 9, name: 'Product9', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 100, discountPrice: 80 },
-    { id: 10, name: 'Product9', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 100, discountPrice: 80 },
-    { id: 11, name: 'Product9', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 100, discountPrice: 80 },
-    { id: 12, name: 'Product9', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 100, discountPrice: 80 },
+    { id: 1, name: 'Next Gen Heel', image: '/image/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg', price: 130.00, discountPrice: 104.00 },
+    { id: 2, name: 'Shoebaru Max', image: '/image/one-black-sneaker-shoe-isolated-white 2.svg', price: 150.00, discountPrice: 120.00 },
+    { id: 3, name: 'Cloud Stride', image: '/image/one-white-sneaker-shoe-isolated-white 2.svg', price: 120.00, discountPrice: 96.00 },
+    { id: 4, name: 'Footsubishi Max', image: '/image/one-white-sneaker-shoe-isolated-white (1) 2.svg', price: 130.00, discountPrice: 104.00 },
+    { id: 5, name: 'Mystic Journey', image: '/image/dress shoes 2.svg', price: 150.00, discountPrice: 120.00 },
+    { id: 6, name: 'Eclipse Runner', image: '/image/Sandles 2.svg', price: 160.00, discountPrice: 128.00 },
+    { id: 7, name: 'Urban Pulse', image: '/image/Black Boots.svg', price: 180.00, discountPrice: 144.00 },
+    { id: 8, name: 'Elemental Gait', image: '/image/Golden heels.svg', price: 200.00, discountPrice: 160.00 },
+    { id: 9, name: 'Gladiator Pro', image: '/image/pair-black-classic-men-new 3.svg', price: 110.00, discountPrice: 88.00 },
+    { id: 10, name: 'Infinity Walk', image: '/image/oswald-elsaboath-_bHENmPJrTA-unsplash 1.svg', price: 150.00, discountPrice: 120.00 },
+    { id: 11, name: 'Nova Trek', image: '/image/Yellow Shoes.svg', price: 170.00, discountPrice: 136.00 },
+    { id: 12, name: 'Harmony Hops', image: '/image/white converse 1.svg', price: 140.00, discountPrice: 112.00 },
     // ... Add more products as needed
   ];
 
 
   
 
-  // Dummy data for categories (replace with your actual data)
-  const categories = [
-    { name: 'Category 1', available: 10 },
-    { name: 'Category 2', available: 8 },
-    { name: 'Category 3', available: 15 },
-    { name: 'Category 4', available: 5 },
-    { name: 'Category 5', available: 12 },
-  ];
+  
 
   
   const [sortBy, setSortBy] = useState('Relevance');
@@ -81,52 +74,49 @@ function ProductHome() {
     <div className="flex">
       {/* Sidebar on the left */}
       <div className="w-[31%] bg-[#F6F8F9] p-4">
-        {/* Your content for the sidebar goes here */}
-        <h2 className="text-2xl font-semibold mb-4">Sidebar Section</h2>
-        {/* Add other components/content for the sidebar */}
         {/* Categories section on the right */}
-      <div className="ml-8">
+      <div className="ml-8 mt-[151px]">
         <h2 className="text-xl font-semibold mb-4">Categories</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Available</th>
-            </tr>
-          </thead>
-          <tbody>
-            {categories.map((category, index) => (
-              <tr key={index}>
-                <td>{category.name}</td>
-                <td>{category.available}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div>
-      <h2 className="text-xl font-semibold mb-4">Categories</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Available</th>
-            </tr>
-          </thead>
-         
-        </table>
-      </div>
-      <div className="">
+        <div className='flex gap-[160px]'>
+          <p>Men</p>(4)<p></p>
+        </div>
+        <div className='flex gap-[150px]'>
+          <p>Women</p>(4)<p></p>
+        </div>
+        <div className='flex gap-[150px]'>
+          <p>Unise</p>(4)<p></p>
+        </div>
+        <div className='flex gap-[150px]'>
+          <p>Sporty</p>(4)<p></p>
+        </div>
+        <div className='flex gap-[150px]'>
+          <p>Official</p>(4)<p></p>
+        </div>
+        </div>
+        <div className='mt-[68px]'>
+          <h1>
+          FILTER BY PRICE
+          </h1>
+          <div className='bg-[#D9D9D9] w-[336px] h-[21px] mt-[20px]'>
+          </div>
+          <div className='flex gap-[262px] mt-[13px]'>
+            <p>$70</p><p>$250</p>
+          </div>
+        </div>
+      <div className=" mt-[105px]">
       <ColorSelector />
+      </div>
+      <div className=" mt-[105px]">
         <SizeSelector />
       </div>
+      <img className='mt-[47px]' src="public/image/HOMEPAGE/Rectangle 166.svg" alt="" />
     </div>
      
       
       {/* Product Cards on the right */}
       <div className="w-[69%] bg-[#F6F8F9] p-4">
-      <div className="flex items-center gap-[300px] mb-4">
-        <div>
+      <div className="flex ml-[80px] gap-[300px] mt-[62px] mb-4 ">
+        <div className=''>
           <label htmlFor="sortBy">Sort By:</label>
           <select id="sortBy" value={sortBy} onChange={handleSortChange}>
             <option value="Relevance">Relevance</option>
@@ -155,9 +145,9 @@ function ProductHome() {
         </div>
 
         {/* Pagination controls */}
-        <div className="mt-4 flex justify-center w-full">
+        <div className="mt-[83px] flex ml-[80px] w-full  ">
           <button className="mx-2 px-4 py-2 border" onClick={handlePrevPage}>
-            Previous
+          &lt; 
           </button>
           {[...Array(totalPages).keys()].map((page) => (
             <button
@@ -171,7 +161,7 @@ function ProductHome() {
             </button>
           ))}
           <button className="mx-2 px-4 py-2 border" onClick={handleNextPage}>
-            Next
+          &gt;
           </button>
         </div>
       </div>

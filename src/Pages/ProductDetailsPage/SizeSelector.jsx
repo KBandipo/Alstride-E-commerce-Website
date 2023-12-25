@@ -11,6 +11,7 @@ function SizeSelector() {
 
   return (
     <div>
+        <h1>Sizes</h1>
       {/* First line */}
       <div className="flex mb-4">
         {sizes.slice(0, 4).map((size) => (
