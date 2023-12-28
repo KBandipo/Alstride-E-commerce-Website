@@ -17,7 +17,7 @@ function ProductHome() {
     { id: 8, name: 'Elemental Gait', image: '/image/Golden heels.svg', price: 200.00, discountPrice: 160.00 },
     { id: 9, name: 'Gladiator Pro', image: '/image/pair-black-classic-men-new 3.svg', price: 110.00, discountPrice: 88.00 },
     { id: 10, name: 'Infinity Walk', image: '/image/oswald-elsaboath-_bHENmPJrTA-unsplash 1.svg', price: 150.00, discountPrice: 120.00 },
-    { id: 11, name: 'Nova Trek', image: '/image/Yellow Shoes.svg', price: 170.00, discountPrice: 136.00 },
+    { id: 11, name: 'Next Gen Heel', image: '/image/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg', price: 130.00, discountPrice: 104.00 },
     { id: 12, name: 'Harmony Hops', image: '/image/white converse 1.svg', price: 140.00, discountPrice: 112.00 },
     // ... Add more products as needed
   ];
@@ -61,38 +61,69 @@ function ProductHome() {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
 
+  const isHome = location.pathname === '/home';
+  const isShop = location.pathname === '/';
+
   return (
-    <div>
-      <div className='bg-[#F7E7CE] w-full h-[80px] mt-[46px]'>
-        <h1 className='text-center text-[31px] font-bold leading-[40px]'>Shop</h1>
-        <p className='text-center'>
-        <a href='home'>Home</a> / <a href='/'>Shop</a>
-        </p>
-      </div>
+    <div className=''>
+       <div className="bg-[#F7E7CE] w-full h-[80px] ">
+      <h1 className="text-center text-[31px] font-bold leading-[40px]">Shop</h1>
+      <p className="text-center">
+        <a href="/home" className={isHome ? 'text-[#007074]' : 'text-black'}>
+          Home
+        </a>{' '}
+        /{' '}
+        <a href="/" className={isShop ? 'text-[#007074]' : 'text-black'}>
+          Shop
+        </a>
+      </p>
+    </div>
 
       
     <div className="flex">
       {/* Sidebar on the left */}
       <div className="w-[31%] bg-[#F6F8F9] p-4">
         {/* Categories section on the right */}
-      <div className="ml-8 mt-[151px]">
+      <div className="ml-8 mt-[140px]">
         <h2 className="text-xl font-semibold mb-4">Categories</h2>
-        <div className='flex gap-[160px]'>
-          <p>Men</p>(4)<p></p>
-        </div>
-        <div className='flex gap-[150px]'>
-          <p>Women</p>(4)<p></p>
-        </div>
-        <div className='flex gap-[150px]'>
-          <p>Unise</p>(4)<p></p>
-        </div>
-        <div className='flex gap-[150px]'>
-          <p>Sporty</p>(4)<p></p>
-        </div>
-        <div className='flex gap-[150px]'>
-          <p>Official</p>(4)<p></p>
-        </div>
-        </div>
+        <table className="w-full  mt-10">
+      <thead className=" ">
+        
+      </thead>
+      <tbody className='w-full gap-[120px]'>
+        <tr>
+          <td className="">Men</td>
+          <td className="p-4">(4)</td>
+          
+          
+        </tr>
+        <tr>
+          <td className="">Women</td>
+          <td className="p-4">(4)</td>
+          
+        </tr>
+        <tr>
+          <td className="">Unisex</td>
+          
+          <td className="p-4">(4)</td>
+          
+        </tr>
+        <tr>
+          <td className="">Sporty</td>
+       
+          <td className="p-4">(5)</td>
+          
+        </tr>
+        <tr>
+          <td className="">Official</td>
+         
+          <td className="p-4">(5)</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+            </div>
         <div className='mt-[68px]'>
           <h1>
           FILTER BY PRICE

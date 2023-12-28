@@ -5,34 +5,33 @@ function ProductCard({ id, name, image, price, discountPrice }) {
   const hasDiscount = discountPrice && discountPrice < price;
 
   return (
-    <div className=" mx-4 my-4 relative w-[300px] h-[515px] bg-[#FDF8F0] border " >
-    <Link to={`/product/${id}`}>
-      <div className=" p-6 rounded-lg shadow-md h-full">
-        <img className="w-[330px]  object-cover mb-6" src={image} alt={name} />
-        <div className="text-center">
-          <h2 className="text-xl font-semibold ">{name}</h2>
-          <div className="flex justify-center items-center">
-            {hasDiscount && (
-              <>
-                <span className="text-gray-500 line-through mr-2">${price}</span>
-                <span className="text-[#007074]">${discountPrice}</span>
-              </>
-            )}
-            {!hasDiscount && <span className="text-gray-600">${price}</span>}
+    <div className="mx-4 my-4 relative w-[300px] h-[350px] bg-[#FDF8F0] border  hover:transform hover:scale-105">
+      <Link to={`/product/${id}`}>
+        <div className="p-6 rounded-lg shadow-md h-full">
+          <img className="object-cover mb-4" src={image} alt={name} />
+          <div className="text-center">
+            <h2 className="text-xl font-semibold">{name}</h2>
+            <div className="flex justify-center items-center">
+              {hasDiscount && (
+                <>
+                  <span className="text-gray-500 line-through mr-2">${price}</span>
+                  <span className="text-[#007074]">${discountPrice}</span>
+                </>
+              )}
+              {!hasDiscount && <span className="text-gray-600">${price}</span>}
+            </div>
           </div>
         </div>
-      </div>
-    </Link>
-    <div className='absolute bottom-0 left-0 right-0 p-4  flex justify-center items-center'>
-      <Link to="/cart">
-        <img 
-          src="public/image/Carticon.svg" 
+      </Link>
+
+      <Link to={`/product/${id}`}> {/* Ensure the to prop includes the correct product ID */}
+        <img
+          src="/image/Carticon.svg"  
           alt="Cart Icon"
-          className="w-[82px] h-[82px]  cursor-pointer"
+          className="absolute bottom-[-40px] ml-[110px] w-[82px] h-[82px] cursor-pointer"
         />
       </Link>
     </div>
-  </div>
   );
 }
 
