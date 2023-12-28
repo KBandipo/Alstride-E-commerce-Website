@@ -9,7 +9,7 @@ function HeroSection() {
     <>
       <div className="h-[95vh]">
         <Carousel slideInterval={2000}>
-          {/* Carousel content 1 */}
+          {/* Carousel content 1 pauseOnHover */}
           <div className="flex justify-between bg-gradient-to-l from-[#007074] to-[#000]">
             {/* Text(left) Section */}
             <div className="40% pl-[109px] pt-[141px] text-white">
@@ -114,15 +114,15 @@ function HeroSection() {
           </div>
 
           {/* Carousel content 3 */}
-          <div className="box-border flex max-h-[90vh] overflow-hidden">
-            <div className=" max-h-full max-w-[57%] ">
+          <div className="box-border grid max-h-[90vh] grid-cols-[auto_auto] overflow-hidden">
+            <div className=" max-h-full  ">
               <img
                 src="public/homePageImages/alstride photo1.svg"
                 alt="chtree1.svg"
                 className=" h-full w-full"
               />
             </div>
-            <div className="max-h-[90vh] w-[43%] bg-[#007074]">
+            <div className="max-h-[90vh] bg-[#007074]">
               <img
                 src="public/homePageImages/full-shot-smiley-man-with-shopping-bags1.svg"
                 alt="pexels-karolina-grabowska"
