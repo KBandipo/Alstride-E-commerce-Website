@@ -1,5 +1,3 @@
-import React from "react";
-
 function Button({ title, iconsrc, iconAlt, borderColor, textColor }) {
   return (
     <>
