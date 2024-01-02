@@ -24,7 +24,35 @@ function FreeShipping() {
           textdescription="Back guarantee under 5 days"
         />
       </div>
-      <div></div>
+
+      {/* Christmas sales */}
+      <div className="flex justify-center bg-[#F7E7CE]">
+        <div className=" grid w-[95%] sm:grid-cols-[1fr_1fr] ">
+          <div className="self-center ">
+            <h4 className="text-[31px] font-medium leading-[40px] text-[#444] ">
+              Christmas and New Year Sales!
+            </h4>
+            <h6 className="mt-[16px] text-[20px] font-normal leading-[24px] text-black ">
+              A whopping 40% off on some of our selected shoes! Offer ends in 48
+              hours
+            </h6>
+          </div>
+          <div className="flex h-full  justify-between">
+            <div className="self-center ">
+              <button className="cursor-pointer rounded-[4px] bg-[#00666A] bg-[18px] px-[40px] py-[16px] font-medium leading-[24px] text-white">
+                Shop Now
+              </button>
+            </div>
+            <div>
+              <img
+                src="public/homePageImages/Christmass-tree.svg"
+                alt="Christmass-tree"
+                className="h-full w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
