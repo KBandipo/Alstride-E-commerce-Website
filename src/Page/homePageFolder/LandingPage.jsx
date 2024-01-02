@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import FreeShipping from "./FreeShipping";
 import DiscountSection from "./DiscountSection";
+import LatestDrop from "./LatestDrop";
 
 function LandingPage() {
   return (
@@ -13,6 +14,7 @@ function LandingPage() {
         <HeroSection />
         <FreeShipping />
         <DiscountSection />
+        <LatestDrop />
       </div>
       <Footer />
     </>
