@@ -25,7 +25,7 @@ function DiscountSection() {
 
   return (
     <>
-      <div className="mt-[30px]  grid grid-cols-1 gap-6 overflow-hidden sm:grid-cols-3">
+      <div className="mb-[155px] mt-[30px] grid grid-cols-1 gap-6 overflow-hidden sm:grid-cols-3">
         {discountedProducts.map((product) => (
           <div
             key={product.id}
