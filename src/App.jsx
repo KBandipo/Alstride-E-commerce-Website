@@ -1,17 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import SignUp from './Page/SignupPageFolder/SignUp';
-import EmailVerification from './Page/SignupPageFolder/EmailVerification';
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ResetPassword from "./Page/resetPassword/ResetPassword";
+import UpdatePassword from "./Page/updatePasswordPage/updatePassword";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<SignUp />} />
-        <Route path="/email-verification" element={<EmailVerification />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Routes>
+          {/* <Route path="/" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} /> */}
+          <Route path="/" element={<ResetPassword />} />
+          <Route path="/update-password" element={<UpdatePassword />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
