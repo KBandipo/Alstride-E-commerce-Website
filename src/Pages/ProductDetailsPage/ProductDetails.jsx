@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 import QuantityButton from './QuantityButton';
 import ProductCard from './ProductCard'; // Import the ProductCard component
@@ -45,7 +45,8 @@ function duplicateProduct(originalProduct, newId) {
 function ProductDetails() {
   const { id } = useParams();
   const location = useLocation();
-  const { state, dispatch } = useCart();
+  const { dispatch } = useCart();
+  
 
   // Define the conditions for each link to be active
   const isHome = location.pathname === '/home';
@@ -80,21 +81,19 @@ function ProductDetails() {
   const [quantity, setQuantity] = useState(1);
  
 
-  const handleAddToCart = (product) => {
-    try {
-      console.log('Adding to cart:', product);
-      dispatch({ type: 'ADD_TO_CART', payload: product });
-    } catch (error) {
-      console.error('Error adding to cart:', error);
-    }
+  const handleAddToCart = () => {
+    // Dispatch an action to add the product to the cart
+    dispatch({
+      type: 'ADD_TO_CART',
+      payload: {
+        id: productDetails.id,
+        name: productDetails.name,
+        quantity: quantity,
+        // Add other product details as needed
+      },
+    });
+    console.log(`Added ${productDetails.name} to the cart.`);
   };
-
-  // Use useEffect to trigger alert when cartItems change
-  useEffect(() => {
-    if (state.cartItems.length > 0) {
-      alert('Successfully added to cart!');
-    }
-  }, [state.cartItems]);
 
   const handleAddToWishlist = () => {
     // Add logic to add the product to the wishlist
@@ -176,8 +175,7 @@ function ProductDetails() {
       <div className='w-[500px] mx-auto md:ml-[100px]'>
         <div className='mt-[80px]'>
           <h2 className="text-[32px] text-[#444] font-bold mb-2 leading-10">{productDetails.name}</h2>
-          <div className="flex items-center mb-4">
-           
+          <div className="flex items-center mb-4 gap-3">
             {productDetails.discountPrice < productDetails.price && (
               <span className="text-[#000] font-medium text-[20px] leading-8 line-through">${productDetails.price}</span>
             )}
@@ -260,7 +258,7 @@ function ProductDetails() {
               <div className='mt-[23px]'>
               <button
             className="bg-[#F6F8F9] w-[150px] h-[45px] justify-center text-[#007074] rounded inline-flex items-center border border-[#007074] border-solid"
-            onClick={() => handleAddToCart(productDetails)}
+            onClick={handleAddToCart}
           >
             Add to Cart
           </button>

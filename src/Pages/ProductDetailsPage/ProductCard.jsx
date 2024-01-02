@@ -1,29 +1,11 @@
-// Original ProductCard.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useCart } from '../Cartfolder/CartContext';
 
-const ProductCard = ({ id, name, image, price, discountPrice }) => {
-  const { dispatch } = useCart();
-
-  const handleAddToCart = () => {
-    // Dispatch an action to add the product to the cart
-    dispatch({
-      type: 'ADD_TO_CART',
-      payload: {
-        id,
-        name,
-        image,
-        price,
-        quantity: 1, // You can set the initial quantity as needed
-      },
-    });
-  };
-
+function ProductCard({ id, name, image, price, discountPrice }) {
   const hasDiscount = discountPrice && discountPrice < price;
 
   return (
-    <div className="mx-4 my-4 relative h-[259px] w-[200px] lg:w-[300px] lg:h-[350px] bg-[#FDF8F0] border  hover:transform hover:scale-105">
+    <div className="mx-4 my-4 relative  w-[300px] h-[350px] bg-[#FDF8F0] border  hover:transform hover:scale-105">
       <Link to={`/product/${id}`}>
         <div className="p-6 rounded-lg shadow-md h-full">
           <img className="object-cover mb-4" src={image} alt={name} />
@@ -42,11 +24,15 @@ const ProductCard = ({ id, name, image, price, discountPrice }) => {
         </div>
       </Link>
 
-      <button onClick={handleAddToCart} className="absolute bottom-[-40px] ml-[110px] w-[82px] h-[82px] cursor-pointer">
-        <img src="/image/Carticon.svg" alt="Cart Icon" />
-      </button>
+      <Link to={`/product/${id}`}> {/* Ensure the to prop includes the correct product ID */}
+        <img
+          src="/image/Carticon.svg"  
+          alt="Cart Icon"
+          className="absolute bottom-[-40px] ml-[110px] w-[82px] h-[82px] cursor-pointer"
+        />
+      </Link>
     </div>
   );
-};
+}
 
 export default ProductCard;
