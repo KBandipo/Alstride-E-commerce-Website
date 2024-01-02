@@ -65,7 +65,7 @@ function ProductHome() {
   const isShop = location.pathname === '/';
 
   return (
-    <div className=''>
+    <div className='bg-[#F6F8F9]'>
        <div className="bg-[#F7E7CE] w-full h-[80px] ">
       <h1 className="text-center text-[31px] font-bold leading-[40px]">Shop</h1>
       <p className="text-center">
@@ -80,51 +80,49 @@ function ProductHome() {
     </div>
 
       
-    <div className="flex">
+    <div className="flex flex-col-reverse md:flex-row">
       {/* Sidebar on the left */}
-      <div className="w-[31%] bg-[#F6F8F9] p-4">
+      <div className="w-full md:w-[31%] bg-[#F6F8F9] p-10 md:p-4 mx-auto ">
         {/* Categories section on the right */}
       <div className="ml-8 mt-[140px]">
         <h2 className="text-xl font-semibold mb-4">Categories</h2>
-        <table className="w-full  mt-10">
-      <thead className=" ">
+        <div className="w-full  mt-10">
+      
         
-      </thead>
-      <tbody className='w-full gap-[120px]'>
-        <tr>
-          <td className="">Men</td>
-          <td className="p-4">(4)</td>
+        <div className='flex gap-[325px] md:gap-[235px]'>
+          <p className="">Men</p>
+          <p className="">(4)</p>
           
           
-        </tr>
-        <tr>
-          <td className="">Women</td>
-          <td className="p-4">(4)</td>
+          </div>
+          <div className='flex gap-[300px] md:gap-[210px]'>
+          <p className="">Women</p>
+          <p className="">(4)</p>
           
-        </tr>
-        <tr>
-          <td className="">Unisex</td>
+          </div>
+          <div className='flex gap-[310px] md:gap-[220px]'>
+          <p className="">Unisex</p>
           
-          <td className="p-4">(4)</td>
+          <p className="">(4)</p>
           
-        </tr>
-        <tr>
-          <td className="">Sporty</td>
+          </div>
+          <div className='flex gap-[310px] md:gap-[220px]'>
+          <p className="">Sporty</p>
        
-          <td className="p-4">(5)</td>
+          <p className="">(5)</p>
           
-        </tr>
-        <tr>
-          <td className="">Official</td>
+          </div>
+          <div className='flex gap-[310px] md:gap-[220px]'>
+          <p className="">Official</p>
          
-          <td className="p-4">(5)</td>
+          <p className="">(5)</p>
           
-        </tr>
+          </div>
         
-      </tbody>
-    </table>
+      
+      </div>
             </div>
-        <div className='mt-[68px]'>
+        <div className='mt-[68px] '>
           <h1>
           FILTER BY PRICE
           </h1>
@@ -140,30 +138,31 @@ function ProductHome() {
       <div className=" mt-[105px]">
         <SizeSelector />
       </div>
-      <img className='mt-[47px]' src="public/image/HOMEPAGE/Rectangle 166.svg" alt="" />
+      <img className='hidden sm:block mt-[47px]' src="public/image/HOMEPAGE/Rectangle 166.svg" alt="" />
+
     </div>
      
       
       {/* Product Cards on the right */}
-      <div className="w-[69%] bg-[#F6F8F9] p-4">
-      <div className="flex ml-[80px] gap-[300px] mt-[62px] mb-4 ">
+      <div className="w-full md:w-[69%] bg-[#F6F8F9] p-4">
+      <div className="flex ml-[20px] md:ml-[80px] gap-[80px] md:gap-[300px] mt-[62px] mb-4 ">
         <div className=''>
-          <label htmlFor="sortBy">Sort By:</label>
-          <select id="sortBy" value={sortBy} onChange={handleSortChange}>
+          <label htmlFor="sortBy" className='text-[#444] text-[15px] md:text-[16px] font-normal'>Sort By:</label>
+          <select id="sortBy" value={sortBy} onChange={handleSortChange} className='text-[#444]'>
             <option value="Relevance">Relevance</option>
             <option value="Color">Color</option>
             <option value="Price">Price</option>
           </select>
         </div>
-        <div>
+        <div className='text-[#444] text-[15px] md:text-[16px]'>
           Showing {startIndex + 1}-
           {startIndex + visibleProducts.length} of {products.length} results
         </div>
       </div>
 
-        <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center">
           {visibleProducts.map((product) => (
-            <div key={product.id} className=" max-w-[calc(50% - 1rem)] mx-4 my-4">
+            <div key={product.id} className="max-w-[calc(50% - 1rem)] mx-4 my-4">
               <ProductCard
                 id={product.id}
                 name={product.name}
@@ -175,8 +174,12 @@ function ProductHome() {
           ))}
         </div>
 
-        {/* Pagination controls */}
-        <div className="mt-[83px] flex ml-[80px] w-full  ">
+       
+      </div>
+    </div>
+     {/* Pagination controls */}
+     <div className='w-[90%] mt-[83px] mx-auto h-[60px] justify-center  items-center border border-[#A8B6BF] border-solid'>
+     <div className=" flex mt-[5px] md:ml-[500px] w-full  ">
           <button className="mx-2 px-4 py-2 border" onClick={handlePrevPage}>
           &lt; 
           </button>
@@ -195,7 +198,6 @@ function ProductHome() {
           &gt;
           </button>
         </div>
-      </div>
     </div>
     </div>
     
