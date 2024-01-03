@@ -1,29 +1,34 @@
+// CartPage.js
 import React from 'react';
-import { useCart } from './CartContext';
+import { useCart } from './cartContext';
+import CartItem from './CartItem';  // Update the import statement
+import cartData from './cartData';
 
-function Cart() {
+const Cart = () => {
   const { cartState } = useCart();
-  const { cartItems } = cartState;
+
+  // Filter the products based on the items in the cart
+  const cartProducts = cartState.cartItems.map((cartItem) => {
+    const product = cartData.find((p) => p.id === cartItem.id);
+    return { ...product, quantity: cartItem.quantity };
+  });
 
   return (
     <div>
+      <div className='bg-[#F7E7CE] w-full h-[80px] '></div>
       <h2>Shopping Cart</h2>
-      {cartItems.length === 0 ? (
+      {cartProducts.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
         <ul>
-          {cartItems.map((item) => (
-            <li key={item.id}>
-              <img src={item.image} alt={item.name} />
-              <p>{item.name}</p>
-              <p>Quantity: {item.quantity}</p>
-              {/* Add other product details */}
-            </li>
+          {cartProducts.map((item) => (
+            <CartItem key={item.id} item={item} />
           ))}
         </ul>
       )}
     </div>
   );
-}
+};
+
 
 export default Cart;

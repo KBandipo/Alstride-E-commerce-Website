@@ -145,34 +145,35 @@ function ProductHome() {
       
       {/* Product Cards on the right */}
       <div className="w-full md:w-[69%] bg-[#F6F8F9] p-4">
-      <div className="flex ml-[20px] md:ml-[80px] gap-[80px] md:gap-[300px] mt-[62px] mb-4 ">
+      <div className="flex ml-[20px] md:ml-[110px] gap-[80px] md:gap-[300px] mt-[62px] mb-4 ">
         <div className=''>
-          <label htmlFor="sortBy" className='text-[#444] text-[15px] md:text-[16px] font-normal'>Sort By:</label>
-          <select id="sortBy" value={sortBy} onChange={handleSortChange} className='text-[#444]'>
+          <label htmlFor="sortBy" className='text-[#444] text-[15px] md:text-[20px] font-normal'>Sort By:</label>
+          <select id="sortBy" value={sortBy} onChange={handleSortChange} className='text-[#444] md:text-[20px]'>
             <option value="Relevance">Relevance</option>
             <option value="Color">Color</option>
             <option value="Price">Price</option>
           </select>
         </div>
-        <div className='text-[#444] text-[15px] md:text-[16px]'>
+        <div className='text-[#444] text-[15px] md:text-[20px]'>
           Showing {startIndex + 1}-
           {startIndex + visibleProducts.length} of {products.length} results
         </div>
       </div>
 
       <div className="flex flex-wrap justify-center">
-          {visibleProducts.map((product) => (
-            <div key={product.id} className="max-w-[calc(50% - 1rem)] mx-4 my-4">
-              <ProductCard
-                id={product.id}
-                name={product.name}
-                image={product.image}
-                price={product.price}
-                discountPrice={product.discountPrice}
-              />
-            </div>
-          ))}
-        </div>
+  {visibleProducts.map((product) => (
+    <div key={product.id} className="w-fullnnn``` sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 p-2">
+      <ProductCard
+        id={product.id}
+        name={product.name}
+        image={product.image}
+        price={product.price}
+        discountPrice={product.discountPrice}
+      />
+    </div>
+  ))}
+</div>
+
 
        
       </div>
