@@ -8,6 +8,7 @@ const cartData = [
       price: 130.00, 
       discountPrice: 104.00,
       description: 'The "Next Gen Heel" blends timeless elegance with modern flair, perfect for the trendsetting woman. Crafted from premium red leather, it exudes style and confidence. Its pointed toe design adds sophistication, ideal for various outfits...',
+      
     },
 
     {
@@ -16,7 +17,6 @@ const cartData = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         price: 150.00,
         discountPrice: 120.00,
-       
         image: '/image/one-black-sneaker-shoe-isolated-white 2.svg',
         // ... (add more details as needed)
       },

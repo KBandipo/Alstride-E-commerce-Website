@@ -8,14 +8,14 @@ import Navigation from './Pages/Cartfolder/Navigation';
 function App() {
   return (
     
-    <Router>
+    {/* <Router>
       <Navigation/>
       <Routes>
         <Route path="/" element={<ProductHome />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" component={Cart} />
       </Routes>
-    </Router>
+    </Router>*/}
   );
 }
 

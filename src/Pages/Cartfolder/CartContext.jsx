@@ -21,10 +21,6 @@ const addToCart = (product) => ({
   payload: product,
 });
 
-const removeFromCart = (productId) => ({
-  type: REMOVE_FROM_CART,
-  payload: { id: productId },
-});
 
 const updateQuantity = (productId, quantity) => ({
   type: UPDATE_QUANTITY,
@@ -77,17 +73,31 @@ const cartReducer = (state, action) => {
       return state;
   }
 };
+const removeFromCart = (productId) => {
+  dispatch({ type: 'REMOVE_FROM_CART', payload: { productId } });
+};
+
+const toggleItemSelection = (itemId) => {
+  setCartState((prev) => {
+    const updatedCart = prev.cartItems.map((item) =>
+      item.id === itemId ? { ...item, selected: !item.selected } : item
+    );
+    return { ...prev, cartItems: updatedCart };
+  });
+};
 
 // Create the CartProvider component
 export const CartProvider = ({ children }) => {
   const [cartState, dispatch] = useReducer(cartReducer, initialState);
 
   return (
-    <CartContext.Provider value={{ cartState, dispatch, addToCart, removeFromCart, updateQuantity }}>
+    <CartContext.Provider   value={{ cartState, dispatch, addToCart, removeFromCart, updateQuantity, toggleItemSelection }}
+    >
       {children}
     </CartContext.Provider>
   );
 };
+
 
 // Create a custom hook to access the cart state, dispatch function, and action creators
 export const useCart = () => {

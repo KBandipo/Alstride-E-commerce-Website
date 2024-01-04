@@ -161,14 +161,14 @@ function ProductHome() {
       </div>
 
       <div className="flex flex-wrap justify-center">
-  {visibleProducts.map((product) => (
-    <div key={product.id} className="w-fullnnn``` sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 p-2">
-      <ProductCard
-        id={product.id}
-        name={product.name}
-        image={product.image}
-        price={product.price}
-        discountPrice={product.discountPrice}
+          {visibleProducts.map((product) => (
+          <div key={product.id} className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 p-2">
+          <ProductCard
+          id={product.id}
+          name={product.name}
+          image={product.image}
+          price={product.price}
+          discountPrice={product.discountPrice}
       />
     </div>
   ))}

@@ -82,18 +82,27 @@ function ProductDetails() {
  
 
   const handleAddToCart = () => {
-    // Dispatch an action to add the product to the cart
-    dispatch({
-      type: 'ADD_TO_CART',
-      payload: {
-        id: productDetails.id,
-        name: productDetails.name,
-        quantity: quantity,
-        // Add other product details as needed
-      },
-    });
-    console.log(`Added ${productDetails.name} to the cart.`);
+    if (selectedSize && selectedColor) {
+      // Dispatch an action to add the product to the cart with selected size and color
+      dispatch({
+        type: 'ADD_TO_CART',
+        payload: {
+          id: productDetails.id,
+          name: productDetails.name,
+          quantity,
+          selectedSize,
+          selectedColor,
+          // Add other product details as needed
+        },
+      });
+      console.log(`Added ${productDetails.name} to the cart with size ${selectedSize} and color ${selectedColor}.`);
+    } else {
+      // Handle case where size or color is not selected
+      alert('Please select size and color before adding to cart.');
+    }
   };
+
+ 
 
   const handleAddToWishlist = () => {
     // Add logic to add the product to the wishlist
@@ -112,6 +121,9 @@ function ProductDetails() {
     duplicateProduct(existingProducts.find(product => product.id === 8), 15),
   ];
 
+  
+
+  
   return (
    
     <div className=" w-full bg-[#F6F8F9]">
@@ -132,6 +144,11 @@ function ProductDetails() {
           </span>
         </p>
       </div>
+      
+      <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                   <img  src="public/image/iconamoon_heart-thin.svg" alt="wishlist" />
+              </a>
+           
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div className='relative w-[400px] h-[300px] mx-auto  lg:ml-[100px] md:w-[500px] md:h-[500px] mt-[80px] object-cover mb-6 p-6 rounded-lg shadow-md bg-[#FDF8F0]'>
@@ -224,8 +241,6 @@ function ProductDetails() {
         ))}
       </div>
 
-     
-        
            </div>
 
           <div className="mb-4">
@@ -242,8 +257,7 @@ function ProductDetails() {
                 ))}
               </div>
               </div>
-
-   
+              
             <div className='flex gap-[60px] mt-[58px]'>
               <div className="mb-4">
                 <label htmlFor="quantity" className="mr-2 font-semibold">
