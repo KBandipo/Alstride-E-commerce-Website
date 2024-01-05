@@ -7,8 +7,8 @@ import { CartProvider } from './Pages/Cartfolder/CartContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   {/*<CartProvider>*/}
+   <CartProvider>
       <App />
-    {/*</CartProvider>*/}
+    </CartProvider>
   </React.StrictMode>,
 )

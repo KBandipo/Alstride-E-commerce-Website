@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function SignUp() {
   const navigate = useNavigate();
@@ -269,14 +270,15 @@ function SignUp() {
                       <p className="w-[220px] h-[22px] flex-shrink-0 text-[18px] font-normal leading-[24px] text-[#000]">
                           Already have an account?
                         </p>
+                        <Link  to="/sign-in">
                 <button type="button"className="w-[60px] h-[22px] flex items-center text-[#007074] justify-center flex-shrink-0">
-                       SignIn
-                      </button>
+                       Sign In
+                      </button></Link>
                   </div>
               
                  <button type="submit"
                   className="bg-[#007074] text-[#fff] md:flex flex-col justify-center items-center w-[222px] sm:w-[137px] h-[56px]   flex-shrink-0 rounded-md  order-1 sm:order-2">
-                 SignUp
+                 Sign Up
                      </button>
               </div>
                {/* Social Login Section ( */}

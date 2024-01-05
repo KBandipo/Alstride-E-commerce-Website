@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
- 
+import { Link } from 'react-router-dom';
 
 function SignIn() {
     const [isFocused, setIsFocused] = useState(false);
@@ -89,10 +89,7 @@ function SignIn() {
   
     const passwordStrength = getPasswordStrength();
   
-    const handleForgotPassword = () => {
-      console.log('Forgot Password clicked');
-    };
-  
+   
     const handleRememberMeChange = () => {
       setRememberMe(!rememberMe);
     };
@@ -196,9 +193,10 @@ function SignIn() {
         Remember Me
       </label>
     </div>
-    <button type="button" onClick={handleForgotPassword} className="text-[#444] text-[16px] font-medium leading-[24px]">
+    <Link to="/reset-password">
+    <button type="button"className="text-[#444] text-[16px] font-medium leading-[24px]">
       Forgot Password?
-    </button>
+    </button></Link>
   </div>
 
            {/* Sign In and Sign Up Buttons  */}
@@ -207,13 +205,14 @@ function SignIn() {
                       <p className="w-[220px] h-[22px] flex-shrink-0 text-[18px] font-normal leading-[24px] text-[#000]">
                       Don’t have an account?
                         </p>
+                <Link to="/sign-up" > 
                 <button type="button"className="w-[60px] h-[22px] flex items-center text-[#007074] justify-center flex-shrink-0">
-                       SignUp
-                      </button>
+                       Sign Up
+                      </button></Link>
                   </div>
                  <button type="submit"
                   className="bg-[#007074] text-[#fff] md:flex flex-col justify-center items-center w-[222px] sm:w-[137px] h-[56px]   flex-shrink-0 rounded-md  order-1 sm:order-2">
-                 SignIn
+                 Sign In
                      </button>
               </div>
                {/* Social Login Section ( */}
