@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import FreeShippingComponent from "./HomeComponents/FreeShippingComponent";
 
 function FreeShipping() {
@@ -39,9 +41,11 @@ function FreeShipping() {
           </div>
           <div className="flex h-full  justify-between">
             <div className="self-center ">
-              <button className="cursor-pointer rounded-[4px] bg-[#00666A] bg-[18px] px-[40px] py-[16px] font-medium leading-[24px] text-white">
-                Shop Now
-              </button>
+              <Link to="/sign-in">
+                <button className="cursor-pointer rounded-[4px] bg-[#00666A] bg-[18px] px-[40px] py-[16px] font-medium leading-[24px] text-white">
+                  Shop Now
+                </button>
+              </Link>
             </div>
             <div>
               <img

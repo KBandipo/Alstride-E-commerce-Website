@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function DiscountSection() {
   // discount Products
@@ -41,9 +42,11 @@ function DiscountSection() {
             {/* Add to Cart Button */}
 
             <div className="bg-[#1D1D1DE6] text-center">
-              <button className="py-[40px]  text-[20px] font-bold leading-[40px] text-white ">
-                {product.text}
-              </button>
+              <Link to="/sign-in">
+                <button className="py-[40px]  text-[20px] font-bold leading-[40px] text-white ">
+                  {product.text}
+                </button>
+              </Link>
             </div>
           </div>
         ))}

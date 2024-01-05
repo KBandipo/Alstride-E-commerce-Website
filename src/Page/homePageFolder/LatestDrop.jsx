@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function LatestDrop() {
   const latestShoes = [
@@ -34,7 +35,7 @@ function LatestDrop() {
 
   return (
     <>
-      <div>
+      <div className="">
         <h3 className="text-center text-[31px] font-medium leading-[48px] text-[#007074] ">
           The Latest Drops
         </h3>
@@ -46,9 +47,9 @@ function LatestDrop() {
           />
         </div>
       </div>
-      <div className="mb-[155px] mt-[30px] flex flex-nowrap space-x-[50px] overflow-hidden ">
+      <div className="mb-[155px] mt-[30px] flex h-[1000px] flex-nowrap space-x-[50px] overflow-hidden">
         {latestShoes.map((shoe) => (
-          <div key={shoe.id} className="h-[1314px] w-[700px] shrink-0">
+          <div key={shoe.id} className="h-[90%] w-[41%] shrink-0">
             {/* Product Image */}
 
             <div
@@ -65,12 +66,12 @@ function LatestDrop() {
               </div>
             </div>
 
-            <div className="mt-[32px] text-center ">
+            <div className="mt-[32px] pb-[155px] text-center">
               <h4 className="mb-[52px] text-[31px] font-bold leading-[40px] text-[#474C50] ">
                 {shoe.description}
               </h4>
               <button className="rounded-[5px] border-[1px] border-solid border-black bg-white px-[80px] py-[25px] text-[31px] font-medium leading-[40px] text-[#474C50]">
-                <a href="/shop">Shop Now</a>
+                <Link to="/sign-in">Shop Now</Link>
               </button>
             </div>
           </div>

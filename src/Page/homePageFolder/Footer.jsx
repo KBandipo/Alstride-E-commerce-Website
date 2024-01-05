@@ -4,11 +4,11 @@ import FooterParagraph from "./HomeComponents/FooterParagraph";
 function Footer() {
   return (
     <footer className="flex justify-center bg-black ">
-      <div className="flex w-[90%] flex-col-reverse justify-between pb-[35px]  pt-[62px] sm:sm:flex-row">
+      <div className="flex w-[90%] flex-col-reverse justify-between gap-4 pb-8 pt-8 sm:gap-[25px]  sm:pb-[35px] sm:pt-[62px]  md:flex-row lg:gap-[40px]">
         {/* Left container */}
-        <div className="w-[40%] text-[#F6F8F9]">
+        <div className="w-full text-[#F6F8F9]  md:w-[40%]">
           {/* top  container*/}
-          <div className="grid grid-cols-[auto_1fr_auto] gap-[5%] ">
+          <div className="grid grid-cols-[auto_1fr_auto] gap-5  sm:gap-[5%] ">
             {/* About Alstide */}
             <div>
               <h3 className="text-[20px] font-bold leading-normal ">
@@ -62,21 +62,21 @@ function Footer() {
             <img
               src="public/homePageImages/payment-methods.svg"
               alt="payment-methods"
-              className="h-auto w-[181px] "
+              className="h-auto w-44 sm:w-[181px] "
             />
           </div>
-          <div className="flex justify-between text-[18px] font-normal leading-[24px]">
+          <div className="flex justify-between text-base font-normal leading-[24px] md:text-[18px]">
             <p>Copyright 2023-Astride</p>
             <p>All Right Reserved</p>
           </div>
         </div>
         {/* Right container */}
-        <div className="flex w-[35%] justify-center bg-[#007074] text-white sm:self-center">
-          <div className="w-[88%] py-[53px]">
-            <h6 className="text-[20px] font-bold leading-[24px] ">
+        <div className="flex w-full justify-center bg-[#007074] text-white sm:self-center md:w-[40%]">
+          <div className="w-[88%]  py-10 lg:py-[53px]">
+            <h6 className="text-sm font-bold sm:text-base md:text-base lg:text-[20px] lg:leading-[24px] ">
               SIGN UP TO ALSTRIDE NEWSLETTER
             </h6>
-            <p className="mb-[42px] mt-[24px] w-[76%] text-[16px] font-normal leading-[24px] ">
+            <p className="mb-8 mt-4 w-[76%] text-sm font-normal leading-[24px] md:mb-[42px] md:mt-[24px] md:text-[16px] ">
               Subscribe to our newsletter to get updates on our latest offers
             </p>
 
@@ -90,7 +90,7 @@ function Footer() {
               Subscribe
             </button>
 
-            <h6 className="mb-[31px] mt-[64px] text-[20px] font-bold leading-[24px] ">
+            <h6 className="mb-[31px] mt-[64px] text-base font-bold leading-[24px] md:text-[20px] ">
               Find Us
             </h6>
 
