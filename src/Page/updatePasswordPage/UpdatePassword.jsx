@@ -312,7 +312,7 @@ function UpdatePassword() {
                 continue your access
               </p>
 
-              <Link to="/shop">
+              <Link to="/sign-in">
                 <button
                   className="cursor-pointer rounded bg-[#00666A] px-4 py-2 text-sm font-medium leading-6 text-white md:px-6 md:py-3 md:text-base lg:px-8 lg:py-[16px] lg:text-[18px] xl:px-[40px]"
                   onClick={() => setSuccessMessageVisible(false)}

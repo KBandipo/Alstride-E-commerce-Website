@@ -127,7 +127,7 @@ function ResetPassword() {
                   <p className="text-sm font-normal leading-6 md:text-base lg:text-[18px]">
                     Don’t have an account?
                     <Link
-                      to="/sign-up"
+                      to="/sign-in"
                       className="text-[16px] font-medium leading-4 text-[#007074] hover:cursor-pointer md:text-[18px] md:leading-6"
                     >
                       Sign In
