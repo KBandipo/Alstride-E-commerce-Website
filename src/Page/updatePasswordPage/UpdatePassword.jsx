@@ -266,13 +266,14 @@ function UpdatePassword() {
                 </div>
                 {/* button */}
                 <div className="text-center">
-                  <button
-                    type="submit"
-                    href="#resetPassword"
-                    className="cursor-pointer rounded bg-[#00666A] px-4 py-2 text-sm font-medium leading-6 text-white md:px-6 md:py-3 md:text-base lg:px-8 lg:py-[16px] lg:text-[18px] xl:px-[40px] "
-                  >
-                    Update Password
-                  </button>
+                  <Link to="reset-Password">
+                    <button
+                      type="submit"
+                      className="cursor-pointer rounded bg-[#00666A] px-4 py-2 text-sm font-medium leading-6 text-white md:px-6 md:py-3 md:text-base lg:px-8 lg:py-[16px] lg:text-[18px] xl:px-[40px] "
+                    >
+                      Update Password
+                    </button>
+                  </Link>
                 </div>
               </form>
             </div>
