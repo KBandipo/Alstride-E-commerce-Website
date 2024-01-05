@@ -1,6 +1,6 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ResetPassword from "./Page/resetPassword/ResetPassword";
-
 import UpdatePassword from "./Page/updatePasswordPage/updatePassword";
 import LandingPage from "./Page/homePageFolder/LandingPage";
 
