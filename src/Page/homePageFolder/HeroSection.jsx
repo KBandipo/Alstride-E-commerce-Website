@@ -21,7 +21,7 @@ function HeroSection() {
     // Automatically change the slide every 2000ms (2 seconds)
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev === 2 ? 0 : prev + 1));
-    }, 100000);
+    }, 2000);
 
     // Clear the interval on component unmount
     return () => clearInterval(interval);
@@ -153,7 +153,7 @@ function HeroSection() {
     // Carousel content 3
     <div
       key={3}
-      className="box-border grid max-h-full grid-rows-[auto_auto] overflow-hidden sm:grid-cols-[auto_auto]"
+      className="box-border grid max-h-full grid-rows-[auto_1fr] overflow-hidden sm:grid-cols-[auto_auto]"
     >
       <div className=" h-full  ">
         <img
