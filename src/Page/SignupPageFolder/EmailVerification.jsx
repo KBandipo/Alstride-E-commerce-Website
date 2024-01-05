@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
 
 
 function EmailVerification() {
@@ -72,9 +73,9 @@ function EmailVerification() {
                     type="submit"
                     className="bg-[#007074] mx-auto text-[#fff] mt-[50px] flex flex-col justify-center items-center w-[222px] sm:w-[137px] h-[56px] flex-shrink-0 rounded-md"
                          >
-                        SignUp
+                        Sign Up
                     </button>
-            
+                    
                    <div className="flex items-center justify-center mt-[25px] ">
                        <button>
                           &larr; Back
