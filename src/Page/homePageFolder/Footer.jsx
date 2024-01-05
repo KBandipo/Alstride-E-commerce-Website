@@ -23,8 +23,8 @@ function Footer() {
               <h3 className="text-[20px] font-bold leading-normal ">
                 Quick Links
               </h3>
-              <FooterParagraph paragraphText="Home" textLink="#" />
-              <FooterParagraph paragraphText="Shops" textLink="#" />
+              <FooterParagraph paragraphText="Home" textLink="/" />
+              <FooterParagraph paragraphText="Shops" textLink="/shop" />
               <FooterParagraph paragraphText="About Us" textLink="#" />
               <FooterParagraph paragraphText="Contact Us" textLink="#" />
             </div>
