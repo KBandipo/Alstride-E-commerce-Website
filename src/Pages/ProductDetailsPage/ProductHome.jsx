@@ -179,7 +179,7 @@ function ProductHome() {
       </div>
     </div>
      {/* Pagination controls */}
-     <div className='w-[90%] mt-[83px] mx-auto h-[60px] justify-center  items-center border border-[#A8B6BF] border-solid'>
+     <div className='w-[90%] mb-[108px] mt-[83px] mx-auto h-[60px] justify-center  items-center border border-[#A8B6BF] border-solid'>
      <div className=" flex mt-[5px] md:ml-[500px] w-full  ">
           <button className="mx-2 px-4 py-2 border" onClick={handlePrevPage}>
           &lt; 

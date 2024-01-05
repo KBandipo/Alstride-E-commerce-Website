@@ -3,6 +3,8 @@ import { Link, useParams, useLocation } from 'react-router-dom';
 import QuantityButton from './QuantityButton';
 import ProductCard from './ProductCard'; // Import the ProductCard component
 import { useCart } from '../Cartfolder/cartContext';
+import AccountHeader from './AccountHeader';
+import Footer from '../../Page/homePageFolder/Footer';
 
 const existingProducts = [
   {
@@ -80,8 +82,8 @@ function ProductDetails() {
   const [selectedSize, setSelectedSize] = useState('');
   const [quantity, setQuantity] = useState(1);
  
-
   const handleAddToCart = () => {
+    // Assuming you have productDetails, selectedSize, and selectedColor available in the component state
     if (selectedSize && selectedColor) {
       // Dispatch an action to add the product to the cart with selected size and color
       dispatch({
@@ -101,6 +103,7 @@ function ProductDetails() {
       alert('Please select size and color before adding to cart.');
     }
   };
+
 
  
 
@@ -125,9 +128,9 @@ function ProductDetails() {
 
   
   return (
-   
     <div className=" w-full bg-[#F6F8F9]">
-       <div className='bg-[#F7E7CE] w-full h-[80px] '>
+      <AccountHeader/>
+       <div className='bg-[#F7E7CE] w-full h-[80px] mt-[45px] '>
         <h1 className='text-center text-[31px] font-bold leading-[40px]'>Shop</h1>
         <p className='text-center'>
         <Link to='/home' className={isHome ? 'text-[#007074]' : 'text-black'}>
@@ -407,7 +410,7 @@ function ProductDetails() {
     </div>
   </div>
 </div>
-<div className="mt-8">
+<div className="mt-8 mb-[108px]">
   <h2 className="text-2xl font-semibold mb-4 text-center">Related Products</h2>
   <div className="flex flex-col items-center gap-[140px] md:flex-row md:flex-wrap md:justify-center md:gap-8 lg:gap-12 xl:gap-16">
     {relatedProducts.slice(0, 3).map(product => (
@@ -423,7 +426,7 @@ function ProductDetails() {
   </div>
 </div>
 
-
+<Footer/>
     </div>
     
   );

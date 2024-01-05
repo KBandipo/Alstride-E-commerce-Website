@@ -125,9 +125,9 @@ function SignIn() {
                <img className=" md:hidden" src="public/image/alstrideVector2.svg" alt="alstrideVector2" />
                 </div>
                 
-                  <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                  <Link to="/">
                    <img  src="/image/PREVIOUS ICON.svg" alt="previous link" />
-              </a>
+                   </Link>
         </nav>
     <div className="md:w-[56%] mx-auto ">
       <h3 className=" max-w-full text-[31px] text-center leading-[48px] md:text-[39px] font-bold  text-[#444]  ">

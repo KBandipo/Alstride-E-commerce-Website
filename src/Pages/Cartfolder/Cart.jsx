@@ -2,6 +2,9 @@ import React from 'react';
 import { useCart } from './cartContext';
 import CartItem from './CartItem';  // Update the import statement
 import cartData from './cartData';
+import Footer from '../../Page/homePageFolder/Footer';
+import AccountHeader from '../ProductDetailsPage/AccountHeader';
+
 
 const Cart = () => {  
   const { cartState, removeFromCart } = useCart();
@@ -45,7 +48,8 @@ const Cart = () => {
   
   return (
     <div>
-      <div className='bg-[#F7E7CE] w-full h-[80px] flex items-center'>
+     <AccountHeader/>
+      <div className='bg-[#F7E7CE] w-full h-[80px] flex items-center mt-[45px]'>
   <div className='flex ml-[100px]'>
     <h1 className=' font-bold text-[#444]'>Cart</h1>
     <div className='flex bg-[#F7E7CE] w-[175px] h-[30px] justify-center items-center border border-[#C5CED4] border-solid rounded-full ml-4'>
@@ -65,14 +69,14 @@ const Cart = () => {
           <ul>
           {cartProducts.map((item) => (
     <CartItem
-      key={item.id}
-      item={item}
-      onRemove={() => handleRemove(item.id)}
-      onUpdateQuantity={(newQuantity) => updateQuantity(item.id, newQuantity)}
-      onSelect={() => toggleItemSelection(item.id)}
-      selectedColor={item.selectedColor} // Pass selectedColor as a prop
-      selectedSize={item.selectedSize}   // Pass selectedSize as a prop
-    />
+    key={item.id}
+    item={item}
+    onClick={() => handleRemove(item.id)}  
+    onUpdateQuantity={(newQuantity) => updateQuantity(item.id, newQuantity)}
+    onSelect={() => toggleItemSelection(item.id)}
+    selectedColor={item.selectedColor}
+    selectedSize={item.selectedSize}
+  />
   ))}
 </ul>
           <div className='ml-[1200px]'>
@@ -110,7 +114,7 @@ const Cart = () => {
       <button className='bg-[#F6F8F9] ml-[25px] w-[87px] h-[56px] justify-center text-[#000]  rounded inline-flex items-center border border-[#007074] border-solid'>Apply</button>
       </div>
       <button className='ml-[100px] mt-[140px] text-[#007074] text-[18px]'>Security and Privacy</button>
-      <div className='flex w-[90%] mt-[83px] ml-[100px] h-[80px]   items-center border border-[#A8B6BF] border-solid'>
+      <div className='flex w-[90%] mt-[83px] ml-[100px] h-[80px] mb-[80px]  items-center border border-[#A8B6BF] border-solid'>
       <input
             type="checkbox"
             id="selectAll"
@@ -124,6 +128,7 @@ const Cart = () => {
        <button className='bg-[#007074] w-[160px]  h-[56px] text-white px-4 py-2 rounded'
        onClick={handleCheckout}>Checkout</button></div>
        </div>
+       <Footer/>
     </div>
   );
 };

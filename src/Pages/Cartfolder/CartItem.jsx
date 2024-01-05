@@ -1,9 +1,15 @@
 // CartItem.js
 import React, { useState } from 'react';
 import QuantityButton from '../ProductDetailsPage/QuantityButton';
+import { useCart } from './cartContext';
 
-const CartItem = ({ item, onRemove, onUpdateQuantity, onSelect, selectedColor, selectedSize }) => {
+const CartItem = ({ item, onUpdateQuantity, onSelect, selectedColor, selectedSize }) => {
   const [quantity, setQuantity] = useState(item.quantity);
+  const { removeFromCart } = useCart(); // Use the useCart hook here
+
+  const handleRemove = () => {
+    removeFromCart(item.id);
+  };
 
   const handleQuantityChange = (newQuantity) => {
     setQuantity(newQuantity);
@@ -21,6 +27,7 @@ const CartItem = ({ item, onRemove, onUpdateQuantity, onSelect, selectedColor, s
         id={`select-${item.id}`}
         checked={item.selected}
         onChange={handleSelectChange}
+        className='rounded-lg'
       />
 
       <div className="w-[600px] h-[650px] bg-[#FDF8F0] rounded-lg shadow-md">
@@ -33,7 +40,7 @@ const CartItem = ({ item, onRemove, onUpdateQuantity, onSelect, selectedColor, s
       <div className="ml-4 mt-4">
         <div className='flex gap-[300px]'>
           <p className="text-[25px] text-[#444] font-bold mb-2">{item.name}</p>
-          <button onClick={() => onRemove(item.id)} className="text-[#444]  font-normal border ">
+          <button onClick={() => handleRemove(item.id)} className="text-[#444]  font-normal border ">
             Remove
           </button>
         </div>
