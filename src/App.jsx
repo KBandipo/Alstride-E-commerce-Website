@@ -1,7 +1,7 @@
 import React from "react";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import UpdatePassword from "./Page/updatePasswordPage/UpdatePass";
+import UpdatePassword from "./Page/updatePasswordPage/UpdatePassword";
 import LandingPage from "./Page/homePageFolder/LandingPage";
 import ProductDetails from "./Pages/ProductDetailsPage/ProductDetails";
 import ProductHome from "./Pages/ProductDetailsPage/ProductHome";
