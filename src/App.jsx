@@ -5,12 +5,13 @@ import UpdatePassword from "./Page/updatePasswordPage/UpdatePassword";
 import LandingPage from "./Page/homePageFolder/LandingPage";
 import ProductDetails from "./Pages/ProductDetailsPage/ProductDetails";
 import ProductHome from "./Pages/ProductDetailsPage/ProductHome";
-import Cart from "./Pages/Cartfolder/Cart";
+
 // import Navigation from './Pages/Cartfolder/Navigation';
 import SignIn from "./Page/SignInPagefolder/SignIn";
 import SignUp from "./Page/SignupPageFolder/SignUp";
 import EmailVerification from "./Page/SignupPageFolder/EmailVerification";
 import ResetPassword from "./Page/resetPassword/ResetPassword";
+import Cart from "./Pages/Cartfolder/Cart";
 
 function App() {
   return (
