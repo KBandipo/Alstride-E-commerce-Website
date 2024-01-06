@@ -11,7 +11,7 @@ import SignIn from "./Page/SignInPagefolder/SignIn";
 import SignUp from "./Page/SignupPageFolder/SignUp";
 import EmailVerification from "./Page/SignupPageFolder/EmailVerification";
 import ResetPassword from "./Page/resetPassword/ResetPassword";
-import Cart from "./Pages/Cartfolder/Cart";
+import Cart from "./Pages/Cartfolde/Cart";
 
 function App() {
   return (
