@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
 import QuantityButton from "./QuantityButton";
 import ProductCard from "./ProductCard"; // Import the ProductCard component
-import { useCart } from "../Cartfolde/cartContext";
+import { useCart } from "../Cartfolder/cartContext";
 
 const existingProducts = [
   {
