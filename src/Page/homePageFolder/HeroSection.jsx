@@ -52,7 +52,7 @@ function HeroSection() {
           <div className="flex justify-center sm:block">
             <Button
               title="Shop Now"
-              iconsrc="public/homePageImages/arrow-right-icons.svg"
+              iconsrc="/homePageImages/arrow-right-icons.svg"
               iconAlt="arrow-right-icons"
               borderColor="[#FEFDFA]"
             />
@@ -97,7 +97,7 @@ function HeroSection() {
             <div className="w-[64%] bg-[#FEFDFA] px-[7px] text-[20px] font-bold leading-[24px] ">
               <h6 className=" pt-[8px]">GLADIATOR PRO</h6>
               <h6 className="font-medium ">Men’s Shoes</h6>
-              <img src="public/homePageImages/stars.svg" alt="stars" />
+              <img src="/homePageImages/stars.svg" alt="stars" />
               <h6>$110</h6>
             </div>
             <img
@@ -129,7 +129,7 @@ function HeroSection() {
           <div className="flex justify-center">
             <Button
               title="Shop Now"
-              iconsrc="public/homePageImages/arrow-down-icons.svg"
+              iconsrc="/homePageImages/arrow-down-icons.svg"
               iconAlt="arrow-down-icons"
               borderColor="border-[#007074]"
               textColor="text-[#007074]"
@@ -144,7 +144,7 @@ function HeroSection() {
       />
 
       <img
-        src="public/homePageImages/pexels-karolina-grabowska.svg"
+        src="/homePageImages/pexels-karolina-grabowska.svg"
         alt="pexels-karolina-grabowska"
         className="absolute right-[3%] top-[0%] h-auto w-[43%]"
       />
@@ -157,14 +157,14 @@ function HeroSection() {
     >
       <div className=" h-full  ">
         <img
-          src="public/homePageImages/alstride photo1.svg"
+          src="/homePageImages/alstride photo1.svg"
           alt="chtree1.svg"
           className=" h-full w-full object-cover sm:max-w-[90vh]"
         />
       </div>
       <div className="max-h-full bg-[#007074]">
         <img
-          src="public/homePageImages/full-shot-smiley-man-with-shopping-bags1.svg"
+          src="/homePageImages/full-shot-smiley-man-with-shopping-bags1.svg"
           alt="pexels-karolina-grabowska"
           className=" h-full w-full object-cover"
         />

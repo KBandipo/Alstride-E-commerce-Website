@@ -42,7 +42,7 @@ function LatestDrop() {
 
         <div className="flex justify-end">
           <img
-            src="public/homePageImages/slode-indicator.svg"
+            src="/homePageImages/slode-indicator.svg"
             alt="slode-indicator"
           />
         </div>

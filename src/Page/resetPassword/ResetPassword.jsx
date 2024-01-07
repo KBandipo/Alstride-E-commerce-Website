@@ -55,7 +55,7 @@ function ResetPassword() {
           <div className="flex items-center justify-between px-3 pt-3">
             <div>
               <img
-                src="/public/image/blueLogo.svg"
+                src="/image/blueLogo.svg"
                 alt="blueLogo"
                 className="h-[16px] w-[110px] sm:h-[24px] sm:w-[164px] md:hidden"
               />
@@ -100,7 +100,7 @@ function ResetPassword() {
                   {!isEmailValid && (
                     <div className="flex items-center gap-[10px] ">
                       <img
-                        src="/public/image/iconWarning.svg"
+                        src="/image/iconWarning.svg"
                         alt="iconWarning.svg"
                         className=" h-[18px] w-[20px] object-cover"
                       />
