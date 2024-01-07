@@ -69,7 +69,7 @@ function ProductHome() {
        <div className="bg-[#F7E7CE] w-full h-[80px] ">
       <h1 className="text-center text-[31px] font-bold leading-[40px]">Shop</h1>
       <p className="text-center">
-        <a href="/home" className={isHome ? 'text-[#007074]' : 'text-black'}>
+        <a href="/account-home" className={isHome ? 'text-[#007074]' : 'text-black'}>
           Home
         </a>{' '}
         /{' '}
@@ -80,9 +80,9 @@ function ProductHome() {
     </div>
 
       
-    <div className="flex flex-col-reverse md:flex-row">
+    <div className="flex items-center justify-center flex-col-reverse md:flex-row">
       {/* Sidebar on the left */}
-      <div className="w-full md:w-[31%] bg-[#F6F8F9] p-10 md:p-4 mx-auto ">
+      <div className="w-full md:w-[31%] bg-[#F6F8F9] p-10 md:ml-[40px] mx-auto ">
         {/* Categories section on the right */}
       <div className="ml-8 mt-[140px]">
         <h2 className="text-xl font-semibold mb-4">Categories</h2>
@@ -144,7 +144,7 @@ function ProductHome() {
      
       
       {/* Product Cards on the right */}
-      <div className="w-full md:w-[69%] bg-[#F6F8F9] p-4">
+      <div className="w-full md:w-[69%] bg-[#F6F8F9] ">
       <div className="flex ml-[20px] md:ml-[110px] gap-[80px] md:gap-[300px] mt-[62px] mb-4 ">
         <div className=''>
           <label htmlFor="sortBy" className='text-[#444] text-[15px] md:text-[20px] font-normal'>Sort By:</label>
@@ -179,8 +179,8 @@ function ProductHome() {
       </div>
     </div>
      {/* Pagination controls */}
-     <div className='w-[90%] mb-[108px] mt-[83px] mx-auto h-[60px] justify-center  items-center border border-[#A8B6BF] border-solid'>
-     <div className=" flex mt-[5px] md:ml-[500px] w-full  ">
+     <div className='w-[90%] mb-[108px] mt-[83px] mx-auto h-[80px] justify-center  items-center border border-[#A8B6BF] border-solid'>
+     <div className=" flex mt-[10px] md:ml-[500px] w-full  ">
           <button className="mx-2 px-4 py-2 border" onClick={handlePrevPage}>
           &lt; 
           </button>

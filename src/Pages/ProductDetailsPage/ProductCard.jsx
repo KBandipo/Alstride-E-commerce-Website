@@ -5,7 +5,7 @@ function ProductCard({ id, name, image, price, discountPrice }) {
   const hasDiscount = discountPrice && discountPrice < price;
 
   return (
-    <div className="mx-4 my-4 relative   md:w-[300px] h-[350px] bg-[#FDF8F0] border  hover:transform hover:scale-105">
+    <div className="mx-4 my-4 relative   w-[300px] h-[350px] bg-[#FDF8F0] border  hover:transform hover:scale-105">
       <Link to={`/product/${id}`}>
         <div className="p-6 rounded-lg shadow-md h-full">
           <img className="object-cover mb-4" src={image} alt={name} />

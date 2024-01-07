@@ -11,6 +11,7 @@ import SignIn from './Page/SignInPagefolder/SignIn';
 import SignUp from './Page/SignupPageFolder/SignUp';
 import EmailVerification from './Page/SignupPageFolder/EmailVerification';
 import ProductPage from './Pages/ProductDetailsPage/ProductPage';
+import AccountHome from './Pages/ProductDetailsPage/AccountHome';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
            <Route path="/product-home" element={<ProductPage />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} component={Cart} />
+          <Route path="/account-home" element={<AccountHome />} />
         </Routes>
       </Router>
     </>

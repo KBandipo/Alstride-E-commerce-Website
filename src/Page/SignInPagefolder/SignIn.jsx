@@ -158,7 +158,7 @@ function SignIn() {
             </div>
             )}
             </div>
-  <div className="mt-[36px] relative">
+          <div className="mt-[36px] relative">
           <label htmlFor="password" className="text-[18px] font-normal leading-normal text-[#444]">
           Password
           </label>
@@ -210,6 +210,7 @@ function SignIn() {
                        Sign Up
                       </button></Link>
                   </div>
+                  
                  <button type="submit"
                   className="bg-[#007074] text-[#fff] md:flex flex-col justify-center items-center w-[222px] sm:w-[137px] h-[56px]   flex-shrink-0 rounded-md  order-1 sm:order-2">
                  Sign In

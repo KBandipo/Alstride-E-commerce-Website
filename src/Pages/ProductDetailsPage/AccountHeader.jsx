@@ -134,8 +134,8 @@ function AccountHeader() {
                 showLinks ? "flex" : ""
               }`}
             >
-              <li className="text-[#007074]">
-                <Link to="/">Home</Link>
+              <li className="text-[#007074] gap-3">
+                <Link to="/account-home">Home</Link>
               </li>
               <li>
                 <Link to="/product-home">Shop</Link>
@@ -209,7 +209,7 @@ function AccountHeader() {
                 className="h-[24px] w-[1px] bg-[#000] "
               />
               <li>
-                <Link to="/sign-in">Logout</Link>
+                <Link to="/">Logout</Link>
               </li>
             </ul>
 
@@ -236,10 +236,10 @@ function AccountHeader() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/sign-in">Sign In</Link>
+            <Link to="/account">Account</Link>
           </li>
           <li>
-            <Link to="/sign-up">Register</Link>
+            <Link to="/">Logout</Link>
           </li>
           <li>
             <Link to="/product-home">Shop</Link>

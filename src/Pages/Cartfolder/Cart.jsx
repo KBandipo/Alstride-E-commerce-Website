@@ -47,7 +47,7 @@ const Cart = () => {
 
   
   return (
-    <div>
+    <div className='w-full'>
      <AccountHeader/>
       <div className='bg-[#F7E7CE] w-full h-[80px] flex items-center mt-[45px]'>
   <div className='flex ml-[100px]'>
@@ -79,7 +79,7 @@ const Cart = () => {
   />
   ))}
 </ul>
-          <div className='ml-[1200px]'>
+          <div className='md:ml-[1200px]'>
           <input
             type="checkbox"
             id="selectAll"
@@ -107,14 +107,14 @@ const Cart = () => {
         </>
         
       )}
-      <div className='ml-[100px] mt-[100px] '>
+      <div className='md:ml-[100px] mt-[100px] '>
       <input type="text" 
       placeholder='Enter Voucher Code'
       className='w-[418px] h-[56px] flex-shrink-0 border border-solid border-[#9B9B9B66]'/>
       <button className='bg-[#F6F8F9] ml-[25px] w-[87px] h-[56px] justify-center text-[#000]  rounded inline-flex items-center border border-[#007074] border-solid'>Apply</button>
       </div>
       <button className='ml-[100px] mt-[140px] text-[#007074] text-[18px]'>Security and Privacy</button>
-      <div className='flex w-[90%] mt-[83px] ml-[100px] h-[80px] mb-[80px]  items-center border border-[#A8B6BF] border-solid'>
+      <div className='flex w-full md:w-[90%] mt-[83px] md:ml-[100px] h-[80px] mb-[80px]  items-center border border-[#A8B6BF] border-solid'>
       <input
             type="checkbox"
             id="selectAll"
@@ -123,7 +123,7 @@ const Cart = () => {
           <label htmlFor="selectAll" className="ml-2">
             Select All
           </label>
-          <div className='flex md:ml-[900px] justify-center items-center'>
+          <div className='flex ml-[100px] md:ml-[900px] justify-center items-center'>
       <p> ${totalCost.toFixed(2)}</p>
        <button className='bg-[#007074] w-[160px]  h-[56px] text-white px-4 py-2 rounded'
        onClick={handleCheckout}>Checkout</button></div>

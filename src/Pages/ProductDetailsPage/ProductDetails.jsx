@@ -133,7 +133,7 @@ function ProductDetails() {
        <div className='bg-[#F7E7CE] w-full h-[80px] mt-[45px] '>
         <h1 className='text-center text-[31px] font-bold leading-[40px]'>Shop</h1>
         <p className='text-center'>
-        <Link to='/home' className={isHome ? 'text-[#007074]' : 'text-black'}>
+        <Link to='/account-home' className={isHome ? 'text-[#007074]' : 'text-black'}>
             Home
           </Link>{' '}
           /{' '}
@@ -147,13 +147,17 @@ function ProductDetails() {
           </span>
         </p>
       </div>
-      
-      <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-                   <img  src="public/image/iconamoon_heart-thin.svg" alt="wishlist" />
-              </a>
-           
+
+      <Link to="/wishlist">
+      <div className='rounded-full justify-center items-center border border-[#007074] mt-[40px] w-[65px] h-[65px] ml-[1200px]'>
+          <img 
+          className='mt-[10px] ml-[10px]'
+          src="/image/iconamoon_heart-thin.svg" alt="wishlist" />
+        </div>
+        </Link>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
       <div className='relative w-[400px] h-[300px] mx-auto  lg:ml-[100px] md:w-[500px] md:h-[500px] mt-[80px] object-cover mb-6 p-6 rounded-lg shadow-md bg-[#FDF8F0]'>
       {/* Main Image */}
       <img
