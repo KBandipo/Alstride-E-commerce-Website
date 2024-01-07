@@ -7,19 +7,19 @@ function DiscountSection() {
     {
       id: 1,
       name: "Flat forms",
-      image: "public/homePageImages/discount-image-1.svg",
+      image: "/homePageImages/discount-image-1.svg",
       text: "Up to 20% off  Flat forms",
     },
     {
       id: 2,
       name: "Mens Shoes",
-      image: "public/homePageImages/discount-image-2.svg",
+      image: "/homePageImages/discount-image-2.svg",
       text: "Up to 40% off Mens Shoes",
     },
     {
       id: 3,
       name: "Sneakers",
-      image: "public/homePageImages/discount-image-3.svg",
+      image: "/homePageImages/discount-image-3.svg",
       text: "Up to 20% off Sneakers",
     },
   ];

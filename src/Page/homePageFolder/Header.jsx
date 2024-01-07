@@ -111,7 +111,7 @@ function Header() {
               </select>
             </div>
             <img
-              src="public/homePageImages/u_globe.svg"
+              src="/homePageImages/u_globe.svg"
               alt="u_globe"
               className="sm:hidden"
             />
@@ -143,14 +143,14 @@ function Header() {
             </ul>
 
             <img
-              src="/public/image/blueLogo.svg"
+              src="/image/blueLogo.svg"
               alt="blueLogo"
               className="h-[16px] w-[110px] sm:hidden sm:h-[24px] sm:w-[164px]"
             />
           </nav>
 
           <img
-            src="/public/image/blueLogo.svg"
+            src="/image/blueLogo.svg"
             alt="blueLogo"
             className="hidden h-[16px] w-[110px] sm:flex sm:h-[24px] sm:w-[164px]"
           />

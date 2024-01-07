@@ -8,45 +8,42 @@ function ShopCollection() {
       id: 1,
       name: "Next Gen Heel",
       image:
-        "public/homePageImages/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg",
+        "/homePageImages/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg",
       price: 130.0,
       discountPrice: 104.0,
     },
     {
       id: 2,
       name: "Shoebaru Max",
-      image:
-        "public/homePageImages/one-black-sneaker-shoe-isolated-white 2.svg",
+      image: "/homePageImages/one-black-sneaker-shoe-isolated-white 2.svg",
       price: 150.0,
       discountPrice: 120.0,
     },
     {
       id: 3,
       name: "Cloud Stride",
-      image:
-        "public/homePageImages/one-white-sneaker-shoe-isolated-white 2.svg",
+      image: "/homePageImages/one-white-sneaker-shoe-isolated-white 2.svg",
       price: 120.0,
       discountPrice: 96.0,
     },
     {
       id: 4,
       name: "Footsubishi Max",
-      image:
-        "public/homePageImages/one-white-sneaker-shoe-isolated-white (1) 2.svg",
+      image: "/homePageImages/one-white-sneaker-shoe-isolated-white (1) 2.svg",
       price: 130.0,
       discountPrice: 104.0,
     },
     {
       id: 5,
       name: "Mystic Journey",
-      image: "public/homePageImages/pair-black-classic-men-new 3.svg",
+      image: "/homePageImages/pair-black-classic-men-new 3.svg",
       price: 110.0,
       discountPrice: 88.0,
     },
     {
       id: 6,
       name: "Eclipse Runner",
-      image: "public/homePageImages/white converse 1.svg",
+      image: "/homePageImages/white converse 1.svg",
       price: 140.0,
       discountPrice: 112.0,
     },
@@ -54,15 +51,14 @@ function ShopCollection() {
       id: 7,
       name: "Next Gen Heel",
       image:
-        "public/homePageImages/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg",
+        "/homePageImages/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg",
       price: 130.0,
       discountPrice: 104.0,
     },
     {
       id: 8,
       name: "Shoebaru Max",
-      image:
-        "public/homePageImages/one-black-sneaker-shoe-isolated-white 2.svg",
+      image: "/homePageImages/one-black-sneaker-shoe-isolated-white 2.svg",
       price: 150.0,
       discountPrice: 120.0,
     },
@@ -70,7 +66,7 @@ function ShopCollection() {
       id: 9,
       name: "Cloud Stride",
       image:
-        "public/homePageImages/one-white-sneaker-shoe-isolated-white 2.svg",
+        "/homePageImages/one-white-sneaker-shoe-isolated-white 2.svg",
       price: 120.0,
       discountPrice: 96.0,
     },
@@ -78,21 +74,21 @@ function ShopCollection() {
       id: 10,
       name: "Footsubishi Max",
       image:
-        "public/homePageImages/one-white-sneaker-shoe-isolated-white (1) 2.svg",
+        "/homePageImages/one-white-sneaker-shoe-isolated-white (1) 2.svg",
       price: 130.0,
       discountPrice: 104.0,
     },
     {
       id: 11,
       name: "Mystic Journey",
-      image: "public/homePageImages/pair-black-classic-men-new 3.svg",
+      image: "/homePageImages/pair-black-classic-men-new 3.svg",
       price: 110.0,
       discountPrice: 88.0,
     },
     {
       id: 12,
       name: "Eclipse Runner",
-      image: "public/homePageImages/white converse 1.svg",
+      image: "/homePageImages/white converse 1.svg",
       price: 140.0,
       discountPrice: 112.0,
     },
@@ -282,7 +278,7 @@ function ShopCollection() {
 
           <img
             className="mt-[47px]"
-            src="public/homePageImages/Category-Section-Image.svg"
+            src="/homePageImages/Category-Section-Image.svg"
             alt="Category-Section-Image"
           />
         </div>

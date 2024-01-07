@@ -60,7 +60,7 @@ function Footer() {
               Payment Methods
             </h3>
             <img
-              src="public/homePageImages/payment-methods.svg"
+              src="/homePageImages/payment-methods.svg"
               alt="payment-methods"
               className="h-auto w-44 sm:w-[181px] "
             />
