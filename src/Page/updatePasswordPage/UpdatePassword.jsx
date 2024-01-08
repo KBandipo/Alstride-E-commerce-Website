@@ -289,7 +289,7 @@ function UpdatePassword() {
         {/* Success Message Overlay */}
         {successMessageVisible && (
           <div className="fixed inset-0 flex items-center  justify-center bg-black/30 backdrop-blur-[1px] backdrop-filter">
-            <div className=" absolute h-full w-full rounded bg-white px-6 py-[40px] text-center shadow-md sm:right-[22%] sm:h-auto sm:w-[62%] md:right-[22%] md:w-[24%]">
+            <div className=" absolute h-auto w-[62%] rounded bg-white px-6 py-[40px] text-center shadow-md sm:right-[22%] md:right-[22%] md:w-[24%]">
               <div className="flex w-full items-center justify-between px-3 pt-3">
                 {/* I created an empty div here */}
                 <div></div>
@@ -302,7 +302,7 @@ function UpdatePassword() {
               <img
                 src="/image/resetPasswordSuccessIcon.svg"
                 alt="resetPasswordSuccessIcon"
-                className="mx-auto h-[100px] w-[100px]"
+                className="mx-auto hidden h-[100px] w-[100px]"
               />
               <h2 className="mt-3 text-[21px] font-medium leading-normal text-[#444] ">
                 Password Reset!
