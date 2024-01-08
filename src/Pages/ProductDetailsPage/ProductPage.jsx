@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../../Page/homePageFolder/Footer'
 import ProductHome from './ProductHome'
-import AccountHeader from './AccountHeader'
+import AccountHeader from '../AccountPagedetails/AccountHeader'
 
 
 function ProductPage() {

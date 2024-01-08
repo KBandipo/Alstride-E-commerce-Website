@@ -21,7 +21,7 @@ const CartItem = ({ item, onUpdateQuantity, onSelect, selectedColor, selectedSiz
   };
 
   return (
-    <div className="flex w-screen border-b border-gray-200  mt-[100px] gap-6">
+    <div className="flex w-screen border-b border-gray-200 ml-[100px] mt-[100px] gap-6">
       <input
         type="checkbox"
         id={`select-${item.id}`}
@@ -41,17 +41,17 @@ const CartItem = ({ item, onUpdateQuantity, onSelect, selectedColor, selectedSiz
         <div className='flex gap-4 md:gap-[150px]'>
           <p className="text-[20px] md:w-[300px] md:text-[25px] text-[#444] font-bold mb-2">{item.name}</p>
           <button
-  onClick={() => handleRemove(item.id)}
-  className="text-[#444] font-normal border hidden md:inline-block" // Hidden on screens smaller than md
->
-  Remove
-</button>
-<span
-  onClick={() => handleRemove(item.id)}
-  className="text-[#444] font-normal border inline-block md:hidden" // Shown on screens smaller than md
->
-  &#x2715; {/* This is the 'x' character in HTML entities */}
-</span>
+          onClick={() => handleRemove(item.id)}
+            className="text-[#444] font-normal  hidden md:inline-block" // Hidden on screens smaller than md
+            >
+            Remove
+          </button>
+            <span
+            onClick={() => handleRemove(item.id)}
+        className="text-[#444] font-normal inline-block md:hidden" // Shown on screens smaller than md
+        >
+        &#x2715; {/* This is the 'x' character in HTML entities */}
+      </span>
         </div>
         <p className="text-[#444] text-[15px] w-[450px] hidden md:block">{item.description}</p>
 
@@ -72,11 +72,13 @@ const CartItem = ({ item, onUpdateQuantity, onSelect, selectedColor, selectedSiz
           </div>
         </div>
               <div className='flex md:block'>
-        <div className="flex md:mt-[30px]  justify-center items-center  w-[128px] h-[50px] rounded-full border border-[#444444]">
+        <div className="flex md:mt-[30px]  justify-center items-center h-[40px]  md:w-[128px] md:h-[50px] rounded-full border border-[#444444]">
           {/* Color Box */}
-        <p>Color: {item.selectedColor}</p>
+        <p className=''>Color: {item.selectedColor}</p>
       {/* You can add an icon or text inside the color box if needed */}
-    <img src="public/image/Line 16.svg" alt="" />
+    <img 
+    className='h-[40px] md:h-full'
+    src="public/image/Line 16.svg" alt="" />
     {/* Size Label */}
     <p>Size: {item.selectedSize}</p>
   </div>

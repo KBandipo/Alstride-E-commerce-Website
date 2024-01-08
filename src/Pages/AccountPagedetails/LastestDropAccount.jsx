@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-function LatestDrop() {
+function LatestDropAccount() {
   const latestShoes = [
     {
       id: 1,
@@ -82,4 +82,4 @@ function LatestDrop() {
   );
 }
 
-export default LatestDrop;
+export default LatestDropAccount;

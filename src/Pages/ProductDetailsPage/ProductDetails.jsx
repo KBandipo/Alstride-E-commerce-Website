@@ -3,7 +3,7 @@ import { Link, useParams, useLocation } from 'react-router-dom';
 import QuantityButton from './QuantityButton';
 import ProductCard from './ProductCard'; // Import the ProductCard component
 import { useCart } from '../Cartfolder/cartContext';
-import AccountHeader from './AccountHeader';
+import AccountHeader from '../AccountPagedetails/AccountHeader';
 import Footer from '../../Page/homePageFolder/Footer';
 
 const existingProducts = [

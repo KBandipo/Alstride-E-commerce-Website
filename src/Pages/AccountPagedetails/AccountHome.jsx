@@ -1,12 +1,12 @@
 import React from "react";
 import HeroSection from "../../Page/homePageFolder/HeroSection";
 import Footer from "../../Page/homePageFolder/Footer";
-import FreeShipping from "../../Page/homePageFolder/FreeShipping";
 import DiscountSection from "../../Page/homePageFolder/DiscountSection";
-import LatestDrop from "../../Page/homePageFolder/LatestDrop";
-import ShopCollection from "../../Page/homePageFolder/ShopCollection";
 import TestimonialSection from "../../Page/homePageFolder/TestimonialSection";
 import AccountHeader from "./AccountHeader";
+import FreeShippingAccount from "./FreeShippingAccount";
+import ShopCollectionAccount from "./ShopCollectionAccount";
+import LatestDropAccount from "./LastestDropAccount";
 
 function AccountHome() {
   return (
@@ -14,10 +14,10 @@ function AccountHome() {
       <AccountHeader />
       <div className="mx-auto w-[90%]">
         <HeroSection />
-        <FreeShipping />
+        <FreeShippingAccount/>
         <DiscountSection />
-        <LatestDrop />
-        <ShopCollection />
+        <LatestDropAccount/>
+       <ShopCollectionAccount/>
         <TestimonialSection />
       </div>
       <Footer />

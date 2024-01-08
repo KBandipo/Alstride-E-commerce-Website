@@ -11,7 +11,7 @@ import SignIn from './Page/SignInPagefolder/SignIn';
 import SignUp from './Page/SignupPageFolder/SignUp';
 import EmailVerification from './Page/SignupPageFolder/EmailVerification';
 import ProductPage from './Pages/ProductDetailsPage/ProductPage';
-import AccountHome from './Pages/ProductDetailsPage/AccountHome';
+import AccountHome from './Pages/AccountPagedetails/AccountHome';
 
 
 function App() {

@@ -80,58 +80,46 @@ function ProductHome() {
     </div>
 
       
-    <div className="flex items-center justify-center flex-col-reverse md:flex-row">
-      {/* Sidebar on the left */}
-      <div className="w-full md:w-[31%] bg-[#F6F8F9] p-10 md:ml-[40px] mx-auto ">
-        {/* Categories section on the right */}
-      <div className="ml-8 mt-[140px]">
-        <h2 className="text-xl font-semibold mb-4">Categories</h2>
-        <div className="w-full  mt-10">
-      
-        
-        <div className='flex gap-[325px] md:gap-[235px]'>
-          <p className="">Men</p>
-          <p className="">(4)</p>
-          
-          
-          </div>
-          <div className='flex gap-[300px] md:gap-[210px]'>
-          <p className="">Women</p>
-          <p className="">(4)</p>
-          
-          </div>
-          <div className='flex gap-[310px] md:gap-[220px]'>
-          <p className="">Unisex</p>
-          
-          <p className="">(4)</p>
-          
-          </div>
-          <div className='flex gap-[310px] md:gap-[220px]'>
-          <p className="">Sporty</p>
-       
-          <p className="">(5)</p>
-          
-          </div>
-          <div className='flex gap-[310px] md:gap-[220px]'>
-          <p className="">Official</p>
-         
-          <p className="">(5)</p>
-          
-          </div>
-        
-      
-      </div>
+    <div className="flex flex-col-reverse justify-between bg-[#F6F8F9]  md:flex-row">
+        {/* Sidebar on the left */}
+        <div className="w-full p-4 md:w-[28%]">
+          {/* Categories section on the right */}
+          <div className="">
+            <h2 className="mb-4 text-xl font-semibold">Categories</h2>
+            <div className="mt-10  w-full">
+              <div className="flex gap-[240px]">
+                <p className="">Men</p>
+                <p className="">(4)</p>
+              </div>
+              <div className="flex gap-[210px]">
+                <p className="">Women</p>
+                <p className="">(4)</p>
+              </div>
+              <div className="flex gap-[220px]">
+                <p className="">Unisex</p>
+
+                <p className="">(4)</p>
+              </div>
+              <div className="flex gap-[220px]">
+                <p className="">Sporty</p>
+
+                <p className="">(5)</p>
+              </div>
+              <div className="flex gap-[220px]">
+                <p className="">Official</p>
+
+                <p className="">(5)</p>
+              </div>
             </div>
-        <div className='mt-[68px] '>
-          <h1>
-          FILTER BY PRICE
-          </h1>
-          <div className='bg-[#D9D9D9] w-[336px] h-[21px] mt-[20px]'>
           </div>
-          <div className='flex gap-[262px] mt-[13px]'>
-            <p>$70</p><p>$250</p>
+          <div className="mt-[68px]">
+            <h1>FILTER BY PRICE</h1>
+            <div className="mt-[20px] h-[21px] w-[336px] bg-[#D9D9D9]"></div>
+            <div className="mt-[13px] flex gap-[262px]">
+              <p>$70</p>
+              <p>$250</p>
+            </div>
           </div>
-        </div>
       <div className=" mt-[105px]">
       <ColorSelector />
       </div>
