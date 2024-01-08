@@ -96,6 +96,7 @@ function ResetPassword() {
                       !isEmailValid && "border-red-500"
                     }`}
                     placeholder="Enter a valid email address"
+                    required
                   />
                   {!isEmailValid && (
                     <div className="flex items-center gap-[10px] ">

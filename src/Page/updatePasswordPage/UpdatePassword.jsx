@@ -228,6 +228,7 @@ function UpdatePassword() {
                     onChange={(e) => setNewPassword(e.target.value)}
                     className=" mt-1 h-12 w-full rounded border-[0.6px] border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] py-3 pl-3 text-[12px] font-normal leading-6 sm:text-[14px] md:mt-2 md:h-14 md:py-[18px] md:pl-[17px] lg:mt-[3px] lg:h-[60px] lg:text-[16px]"
                     placeholder="Enter password"
+                    required
                   />
                   <span
                     className="absolute right-[5%] top-[30%] cursor-pointer py-3 text-[12px] font-normal leading-6 text-[#444] sm:text-[14px] md:py-[18px] lg:top-[28%] lg:text-[16px] xl:top-[30%]"
@@ -252,6 +253,7 @@ function UpdatePassword() {
                     id="Password"
                     className=" mt-1 h-12 w-full rounded border-[0.6px] border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] py-3 pl-3 text-[12px] font-normal leading-6 sm:text-[14px] md:mt-2 md:h-14 md:py-[18px] md:pl-[17px] lg:mt-[3px] lg:h-[60px] lg:text-[16px]"
                     placeholder="Enter password"
+                    required
                   />
 
                   <span
@@ -289,7 +291,7 @@ function UpdatePassword() {
         {/* Success Message Overlay */}
         {successMessageVisible && (
           <div className="fixed inset-0 flex items-center  justify-center bg-black/30 backdrop-blur-[1px] backdrop-filter">
-            <div className=" absolute h-full w-full rounded bg-white px-6 py-[40px] text-center shadow-md sm:right-[22%] sm:h-auto sm:w-[62%] md:right-[22%] md:w-[24%]">
+            <div className=" absolute h-auto w-[62%] rounded bg-white px-6 py-[40px] text-center shadow-md sm:right-[22%] md:right-[22%] md:w-[24%]">
               <div className="flex w-full items-center justify-between px-3 pt-3">
                 {/* I created an empty div here */}
                 <div></div>
@@ -302,7 +304,7 @@ function UpdatePassword() {
               <img
                 src="/image/resetPasswordSuccessIcon.svg"
                 alt="resetPasswordSuccessIcon"
-                className="mx-auto h-[100px] w-[100px]"
+                className="mx-auto hidden h-[100px] w-[100px]"
               />
               <h2 className="mt-3 text-[21px] font-medium leading-normal text-[#444] ">
                 Password Reset!
