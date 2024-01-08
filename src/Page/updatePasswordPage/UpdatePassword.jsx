@@ -228,6 +228,7 @@ function UpdatePassword() {
                     onChange={(e) => setNewPassword(e.target.value)}
                     className=" mt-1 h-12 w-full rounded border-[0.6px] border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] py-3 pl-3 text-[12px] font-normal leading-6 sm:text-[14px] md:mt-2 md:h-14 md:py-[18px] md:pl-[17px] lg:mt-[3px] lg:h-[60px] lg:text-[16px]"
                     placeholder="Enter password"
+                    required
                   />
                   <span
                     className="absolute right-[5%] top-[30%] cursor-pointer py-3 text-[12px] font-normal leading-6 text-[#444] sm:text-[14px] md:py-[18px] lg:top-[28%] lg:text-[16px] xl:top-[30%]"
@@ -252,6 +253,7 @@ function UpdatePassword() {
                     id="Password"
                     className=" mt-1 h-12 w-full rounded border-[0.6px] border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] py-3 pl-3 text-[12px] font-normal leading-6 sm:text-[14px] md:mt-2 md:h-14 md:py-[18px] md:pl-[17px] lg:mt-[3px] lg:h-[60px] lg:text-[16px]"
                     placeholder="Enter password"
+                    required
                   />
 
                   <span
