@@ -188,7 +188,7 @@ function UpdatePassword() {
           <div className="flex w-full items-center justify-between px-3 pt-3">
             <div>
               <img
-                src="/public/image/blueLogo.svg"
+                src="/image/blueLogo.svg"
                 alt="blueLogo"
                 className="h-[16px] w-[110px] sm:h-[24px] sm:w-[164px] md:hidden"
               />
