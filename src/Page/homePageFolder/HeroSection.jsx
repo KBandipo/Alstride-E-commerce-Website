@@ -42,10 +42,10 @@ function HeroSection() {
             <span className="font-bold "> leads to success</span>
           </h1>
 
-          <h2 className="lg:[leading-64px] mt-2  text-2xl font-bold sm:mt-3 md:text-3xl lg:mt-[42px] lg:text-[40px] ">
+          <h2 className="lg:[leading-64px] mt-2  text-2xl font-bold sm:mt-3 md:text-3xl lg:mt-[20px] lg:text-[40px] ">
             FOOTSUBISHI MAX
           </h2>
-          <p className="mb-4  mt-2  text-xl font-normal sm:text-2xl md:mb-[83px]  md:mt-[28px] md:text-[31px] md:leading-[40px] lg:mt-[35px] ">
+          <p className="mb-4  mt-2  text-xl font-normal sm:text-2xl md:mb-[10px]  md:mt-[28px]  md:leading-[40px] lg:mt-[35px] ">
             Unique designs that blend fashion with functionality.
           </p>
 
@@ -82,7 +82,7 @@ function HeroSection() {
             <div className="w-[64%] bg-[#FEFDFA] px-[7px] text-[20px] font-bold leading-[24px] ">
               <h6 className=" pt-[8px]">NEXTGEN HEEL</h6>
               <h6 className="font-medium ">Ladie’s Shoes</h6>
-              <img src="public/homePageImages/stars.svg" alt="stars" />
+              <img src="/homePageImages/stars.svg" alt="stars" />
               <h6>$130</h6>
             </div>
             <img
