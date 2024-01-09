@@ -1,25 +1,27 @@
 import React from "react";
-
+import DeliveryMethod from "./CheckoutPages/DeliveryMethod";
+import VoucherCode from "./CheckoutPages/VoucherCode";
+import ShippingMethod from "./CheckoutPages/ShippingMethod";
+import OrderSummary from "./CheckoutPages/OrderSummary";
 function Checkout() {
   return (
     <section>
       {/* Upper Section: */}
-      <div>
+      <div className="flex  items-center justify-between">
         {/*  Delivery method (Right)  */}
-        <div className="bg-#FEFDFA) w-[56%] shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)] "></div>
+        <DeliveryMethod />
         {/* Left */}
-        <div className="w-[41%]">
-          {/* Voucher code */}
-          <div></div>
-          {/* Shipping method  */}
-          <div></div>
+        <div className="flex w-[41%] flex-col justify-between self-stretch ">
+          {/* Voucher code and Shipping method  */}
+          <VoucherCode />
+          <ShippingMethod />
         </div>
       </div>
 
       {/* Down Section: */}
-      <div>
+      <div className="my-[100px]">
         {/* Right Order summary*/}
-        <div className="w-[56%]"></div>
+        <OrderSummary />
         {/* Left Payment Method */}
         <div className="w-[41%]"></div>
       </div>
