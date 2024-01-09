@@ -93,7 +93,7 @@ function DeliveryMethod() {
           </label>
         </div>
         {/* First,Last Name and other details */}
-        <div className="ml-[6.5%] mt-[30px] w-[52%]">
+        <div className="ml-[6.5%] mt-[30px] w-[70%]">
           <input
             id="firstName"
             type="text"
@@ -130,9 +130,12 @@ function DeliveryMethod() {
           </p>
         </div>
         {/* City, State/Region and Zip/Postal*/}
-        <div className="ml-[6.5%] mt-[30px] grid grid-cols-[auto_auto_auto] items-start text-[18px] font-normal leading-[24px] text-[#444] ">
+        <div className="ml-[6.5%] mt-[30px] grid grid-cols-1 gap-[20px] md:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col ">
-            <label htmlFor="city" className="">
+            <label
+              htmlFor="city"
+              className="text-[18px] font-normal leading-[24px] text-[#444]"
+            >
               City*
             </label>
             <input
@@ -145,9 +148,12 @@ function DeliveryMethod() {
               required
             />
           </div>
-
-          <div className="">
-            <label htmlFor="state" className="">
+          {/* State/Region */}
+          <div className="flex flex-col">
+            <label
+              htmlFor="state"
+              className="text-[18px] font-normal leading-[24px] text-[#444]"
+            >
               State / Region*
             </label>
             <select
@@ -166,8 +172,14 @@ function DeliveryMethod() {
             </select>
           </div>
 
-          <div className="">
-            <label htmlFor="zipCode">Zip/Postal Code*</label>
+          {/* Zip/Postal Code */}
+          <div className="flex flex-col">
+            <label
+              htmlFor="zipCode"
+              className="text-[18px] font-normal leading-[24px] text-[#444]"
+            >
+              Zip/Postal Code*
+            </label>
             <input
               type="text"
               id="zipCode"
@@ -179,7 +191,7 @@ function DeliveryMethod() {
             />
           </div>
         </div>
-        <div className="ml-[6.5%] mt-[20px] flex w-[52%] flex-col">
+        <div className="ml-[6.5%] mt-[20px] flex w-[70%] flex-col">
           <label
             className="text-[18px] font-normal leading-[24px] text-[#444] "
             htmlFor="country"
