@@ -1,7 +1,7 @@
 import React, {useState } from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 import QuantityButton from './QuantityButton';
-import ProductCard from './ProductCard'; // Import the ProductCard component
+import ProductCard from './ProductCard'; 
 import { useCart } from '../Cartfolder/cartContext';
 import AccountHeader from '../AccountPagedetails/AccountHeader';
 import Footer from '../../Page/homePageFolder/Footer';
@@ -55,7 +55,7 @@ function ProductDetails() {
   const isShop = location.pathname === '/';
   const isProduct = location.pathname === `/product/${id}`;
 
-  // Fetch product details based on the id (you need to implement this)
+  // Fetch product details based on the id
   const productDetails = getProductDetailsById(id);
   const [activePages, setActivePages] = useState({
     part1: 'Description',
@@ -83,7 +83,7 @@ function ProductDetails() {
   const [quantity, setQuantity] = useState(1);
  
   const handleAddToCart = () => {
-    // Assuming you have productDetails, selectedSize, and selectedColor available in the component state
+    
     if (selectedSize && selectedColor) {
       // Dispatch an action to add the product to the cart with selected size and color
       dispatch({
@@ -92,8 +92,8 @@ function ProductDetails() {
           id: productDetails.id,
           name: productDetails.name,
           quantity,
-          selectedSize,
-          selectedColor,
+          selectedSize, 
+          selectedColor, 
           // Add other product details as needed
         },
       });
@@ -149,7 +149,7 @@ function ProductDetails() {
       </div>
 
       <Link to="/wishlist">
-      <div className='rounded-full justify-center items-center border border-[#007074] mt-[40px] w-[65px] h-[65px] ml-[1200px]'>
+      <div className='rounded-full justify-center items-center border border-[#007074] mt-[40px] w-[65px] h-[65px] ml-[300px] md:ml-[700px] xl:ml-[1200px] lg:ml-[950px]'>
           <img 
           className='mt-[10px] ml-[10px]'
           src="/image/iconamoon_heart-thin.svg" alt="wishlist" />
@@ -449,7 +449,7 @@ function getProductDetailsById(id) {
       image: '/image/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg',
       // ... (add more details as needed)
     },
-    // ... (list of other products)
+    
     {
       id: 2,
       name: 'Shoebaru Max',
@@ -559,6 +559,7 @@ function getProductDetailsById(id) {
       image: '/image/white converse 1.svg',
       // ... (add more details as needed)
     },
+    // ... (list of other products)
   ];
   return products.find((product) => product.id === parseInt(id, 10));
 }

@@ -7,21 +7,21 @@ function LatestDropAccount() {
     {
       id: 1,
       name: "Men’s Shoes",
-      image: "public/homePageImages/latest-drop-1.svg",
+      image: "/homePageImages/latest-drop-1.svg",
       discount: "UP TO 20% OFF",
       description: "Shoes for every occasion",
     },
     {
       id: 2,
       name: "Women’s Shoes",
-      image: "public/homePageImages/latest-drop-2.svg",
+      image: "/homePageImages/latest-drop-2.svg",
       discount: "UP TO 20% OFF",
       description: "Everyday Comfort",
     },
     {
       id: 3,
       name: "Heels",
-      image: "public/homePageImages/latest-drop-3.svg",
+      image: "/homePageImages/latest-drop-3.svg",
       discount: "UP TO 20% OFF",
       description: "Open-Air Elegance",
     },
@@ -43,7 +43,7 @@ function LatestDropAccount() {
 
         <div className="flex justify-end">
           <img
-            src="public/homePageImages/slode-indicator.svg"
+            src="/homePageImages/slode-indicator.svg"
             alt="slode-indicator"
           />
         </div>

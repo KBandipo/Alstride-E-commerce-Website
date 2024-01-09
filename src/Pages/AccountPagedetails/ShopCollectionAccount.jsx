@@ -282,7 +282,7 @@ function ShopCollectionAccount() {
 
           <img
             className="mt-[47px]"
-            src="public/homePageImages/Category-Section-Image.svg"
+            src="/homePageImages/Category-Section-Image.svg"
             alt="Category-Section-Image"
           />
         </div>

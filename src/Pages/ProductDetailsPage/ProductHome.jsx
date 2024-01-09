@@ -81,9 +81,9 @@ function ProductHome() {
 
       
     <div className="flex flex-col-reverse justify-between bg-[#F6F8F9]  md:flex-row">
-        {/* Sidebar on the left */}
+        
         <div className="w-full p-4 md:w-[28%]">
-          {/* Categories section on the right */}
+          
           <div className="">
             <h2 className="mb-4 text-xl font-semibold">Categories</h2>
             <div className="mt-10  w-full">
