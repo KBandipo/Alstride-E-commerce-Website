@@ -4,10 +4,13 @@ import VoucherCode from "./CheckoutPages/VoucherCode";
 import ShippingMethod from "./CheckoutPages/ShippingMethod";
 import OrderSummary from "./CheckoutPages/OrderSummary";
 import PaymentMethods from "./CheckoutPages/PaymentMethods";
+import AccountHeader from "../../Pages/AccountPagedetails/AccountHeader";
+import Footer from "../homePageFolder/Footer";
 
 function Checkout() {
   return (
     <section>
+      <AccountHeader/>
       <div className="mx-auto mb-[100px] w-[90%]">
         <div className=" ">
           <div className="flex w-full justify-end ">
@@ -60,6 +63,7 @@ function Checkout() {
           </a>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 }

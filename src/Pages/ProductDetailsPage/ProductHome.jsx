@@ -65,7 +65,7 @@ function ProductHome() {
   const isShop = location.pathname === '/';
 
   return (
-    <div className='bg-[#F6F8F9] w-full'>
+    <div className='bg-[#F6F8F9] max-w-[100vw]'>
        <div className="bg-[#F7E7CE] w-full h-[80px] ">
       <h1 className="text-center text-[31px] font-bold leading-[40px]">Shop</h1>
       <p className="text-center">
@@ -73,7 +73,7 @@ function ProductHome() {
           Home
         </a>{' '}
         /{' '}
-        <a href="/" className={isShop ? 'text-[#007074]' : 'text-black'}>
+        <a href="/product-home" className={isShop ? 'text-[#007074]' : 'text-black'}>
           Shop
         </a>
       </p>
