@@ -29,7 +29,7 @@ function ProductCardComp({ id, name, image, price, discountPrice }) {
       <Link to={`/product/${id}`}>
         {/* Ensure the to prop includes the correct product ID */}
         <img
-          src="public/homePageImages/cartIcon.svg"
+          src="/homePageImages/cartIcon.svg"
           alt="Cart Icon"
           className="absolute bottom-[-15%] right-[42%] h-[82px] w-[82px] cursor-pointer"
         />

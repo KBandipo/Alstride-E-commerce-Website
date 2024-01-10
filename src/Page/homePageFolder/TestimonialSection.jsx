@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 
 function TestimonialSection() {
   const imagePaths = [
-    "public/homePageImages/Customer Review 1.svg",
-    "public/homePageImages/Customer Review 2.svg",
-    "public/homePageImages/Customer Review 3.svg",
-    "public/homePageImages/Customer Review 4.svg",
-    "public/homePageImages/Customer Review Comment 5.svg",
-    "public/homePageImages/Customer Review Comment 6.svg",
-    "public/homePageImages/Customer Review Comment 7.svg",
-    "public/homePageImages/Customer Review Comment 8.svg",
+    "/homePageImages/Customer Review 1.svg",
+    "/homePageImages/Customer Review 2.svg",
+    "/homePageImages/Customer Review 3.svg",
+    "/homePageImages/Customer Review 4.svg",
+    "/homePageImages/Customer Review Comment 5.svg",
+    "/homePageImages/Customer Review Comment 6.svg",
+    "/homePageImages/Customer Review Comment 7.svg",
+    "/homePageImages/Customer Review Comment 8.svg",
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
