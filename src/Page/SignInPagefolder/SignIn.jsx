@@ -125,9 +125,9 @@ function SignIn() {
                <img className=" md:hidden" src="public/image/alstrideVector2.svg" alt="alstrideVector2" />
                 </div>
                 
-                  <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                  <Link to="/">
                    <img  src="/image/PREVIOUS ICON.svg" alt="previous link" />
-              </a>
+                   </Link>
         </nav>
     <div className="md:w-[56%] mx-auto ">
       <h3 className=" max-w-full text-[31px] text-center leading-[48px] md:text-[39px] font-bold  text-[#444]  ">
@@ -158,7 +158,7 @@ function SignIn() {
             </div>
             )}
             </div>
-  <div className="mt-[36px] relative">
+          <div className="mt-[36px] relative">
           <label htmlFor="password" className="text-[18px] font-normal leading-normal text-[#444]">
           Password
           </label>
@@ -210,6 +210,7 @@ function SignIn() {
                        Sign Up
                       </button></Link>
                   </div>
+                  
                  <button type="submit"
                   className="bg-[#007074] text-[#fff] md:flex flex-col justify-center items-center w-[222px] sm:w-[137px] h-[56px]   flex-shrink-0 rounded-md  order-1 sm:order-2">
                  Sign In

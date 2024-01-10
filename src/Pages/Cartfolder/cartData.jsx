@@ -1,4 +1,3 @@
-// cartData.js
 
 const cartData = [
     { 
@@ -8,8 +7,10 @@ const cartData = [
       price: 130.00, 
       discountPrice: 104.00,
       description: 'The "Next Gen Heel" blends timeless elegance with modern flair, perfect for the trendsetting woman. Crafted from premium red leather, it exudes style and confidence. Its pointed toe design adds sophistication, ideal for various outfits...',
-      
-    },
+      selectedColor: 'red', 
+    selectedSize: '38',  
+  },
+    
 
     {
         id: 2,
@@ -18,7 +19,8 @@ const cartData = [
         price: 150.00,
         discountPrice: 120.00,
         image: '/image/one-black-sneaker-shoe-isolated-white 2.svg',
-        // ... (add more details as needed)
+        selectedColor: '', 
+        selectedSize: '',  
       },
 
       {
@@ -28,7 +30,8 @@ const cartData = [
         price: 120.00,
         discountPrice: 96.00,
         image: '/image/one-white-sneaker-shoe-isolated-white 2.svg',
-        // ... (add more details as needed)
+        selectedColor: '', 
+        selectedSize: '',  
       },
 
       {
@@ -39,9 +42,9 @@ const cartData = [
         discountPrice: 104.00,
        
         image: '/image/one-white-sneaker-shoe-isolated-white (1) 2.svg',
-        // ... (add more details as needed)
+        selectedColor: '',
+        selectedSize: '',  
       },
-
       {
         id: 5,
         name: 'Mystic Journey',
@@ -50,18 +53,18 @@ const cartData = [
         discountPrice: 100,
        
         image: '/image/dress shoes 2.svg',
-        // ... (add more details as needed)
+        selectedColor: '', 
+        selectedSize: '',  
       },
-
       {
         id: 6,
         name: 'Eclipse Runner',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         price: 150.00,
         discountPrice: 120.00,
-       
         image: '/image/Sandles 2.svg',
-        // ... (add more details as needed)
+        selectedColor: '', 
+        selectedSize: '',  
       },
       {
         id: 7,
@@ -69,7 +72,6 @@ const cartData = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         price: 160.00,
         discountPrice: 128.00,
-        
         image: '/image/Black Boots.svg',
         // ... (add more details as needed)
       },
@@ -79,7 +81,6 @@ const cartData = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         price: 120,
         discountPrice: 100,
-       
         image: '/image/Golden heels.svg',
         // ... (add more details as needed)
       },
