@@ -35,7 +35,7 @@ function OrderSummary() {
   }, [subtotal, shipping, tax]);
 
   return (
-    <div className="w-[56%] bg-[#FEFDFA] pb-[50px] shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)]">
+    <div className="sm:w-[56%] w-full bg-[#FEFDFA] pb-[50px] shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)]">
       <h3 className="mb-[50px] pt-[30px] text-center text-[31px] font-bold leading-[24px] text-[#444] ">
         Order Summary
       </h3>

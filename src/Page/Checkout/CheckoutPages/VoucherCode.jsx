@@ -14,7 +14,7 @@ function VoucherCode() {
   };
 
   return (
-    <div className="bg-[#FEFDFA] py-[50px] pl-3  shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)]">
+    <div className="bg-[#FEFDFA] py-[30px] pl-3  shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)]">
       {/* Voucher code */}
 
       <label
@@ -24,7 +24,7 @@ function VoucherCode() {
         Voucher Code
       </label>
 
-      <div className="flex space-x-2">
+      <div className="flex flex-col space-x-2 space-y-2 sm:flex-row">
         <input
           type="text"
           id="voucherCode"
@@ -33,14 +33,15 @@ function VoucherCode() {
           value={voucherCode}
           onChange={handleInputChange}
         />
-
-        <button
-          type="button"
-          onClick={handleApplyClick}
-          className="rounded-[4px] border-[1px] border-solid border-[#007074] px-[24px] py-[8px] text-[14px] font-medium leading-[24px] text-[#696969] shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)] hover:bg-[#007074] hover:text-white "
-        >
-          Apply
-        </button>
+        <div className="text-center">
+          <button
+            type="button"
+            onClick={handleApplyClick}
+            className="max-h-full rounded-[4px] border-[1px] border-solid border-[#007074] px-[24px] py-[8px] text-[14px] font-medium leading-[24px] text-[#696969] shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)] hover:bg-[#007074] hover:text-white "
+          >
+            Apply
+          </button>
+        </div>
       </div>
     </div>
   );
