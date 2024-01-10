@@ -4,6 +4,8 @@ import CartItem from './CartItem';
 import cartData from './cartData';
 import Footer from '../../Page/homePageFolder/Footer';
 import AccountHeader from '../AccountPagedetails/AccountHeader';
+import { Link } from 'react-router-dom';
+
 
 const Cart = () => {
   const { cartState, removeFromCart, toggleItemSelection, updateQuantity } = useCart();
@@ -40,7 +42,7 @@ const Cart = () => {
   const totalItemsInCart = cartProducts.reduce((total, item) => total + (item.quantity || 0), 0);
 
   return (
-    <div className='w-[100%]'>
+    <div className='max-w-[100vw]'>
     <AccountHeader />
     <div className='bg-[#F7E7CE] w-full h-[80px] flex items-center mt-[45px]'>
       <div className='flex md:ml-[100px]'>
@@ -121,10 +123,11 @@ const Cart = () => {
           </label></div>
           <div className='flex ml-[100px] md:ml-[500px] lg:ml-[600px] xl:ml-[850px] justify-center items-center'>
           <p className='text-[#444] text-[25px] font-bold'> ${totalCost.toFixed(2)}</p>
+            <Link to="/checkout">
             <button className='bg-[#007074] md:w-[160px]  h-[56px] text-white px-4 py-2 rounded'
             onClick={handleCheckout}>
             Checkout ({totalItemsInCart})
-          </button></div>
+          </button></Link></div>
        </div>
        <Footer/>
     </div>

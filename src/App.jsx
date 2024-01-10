@@ -16,11 +16,13 @@ import ResetPassword from "./Page/resetPassword/ResetPassword";
 import ProductPage from "./Pages/ProductDetailsPage/ProductPage";
 import AccountHome from "./Pages/AccountPagedetails/AccountHome";
 import ProductHome from "./Pages/ProductDetailsPage/ProductHome";
+import Checkout from "./Page/Checkout/Checkout";
 
 
 function App() {
   return (
     <>
+    
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -29,10 +31,9 @@ function App() {
           <Route path="/email-verification" element={<EmailVerification />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/update-password" element={<UpdatePassword />} />
-
           <Route path="/product-home" element={<ProductPage />} />
           <Route path="/product-home" element={<ProductHome />} />
-
+          <Route path="/checkout" element={<Checkout/>} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} component={Cart} />
           <Route path="/account-home" element={<AccountHome />} />
