@@ -69,7 +69,7 @@ function ProductHome() {
        <div className="bg-[#F7E7CE] w-full h-[80px] ">
       <h1 className="text-center text-[31px] font-bold leading-[40px]">Shop</h1>
       <p className="text-center">
-        <a href="/home" className={isHome ? 'text-[#007074]' : 'text-black'}>
+        <a href="/account-home" className={isHome ? 'text-[#007074]' : 'text-black'}>
           Home
         </a>{' '}
         /{' '}
@@ -80,58 +80,46 @@ function ProductHome() {
     </div>
 
       
-    <div className="flex flex-col-reverse md:flex-row">
-      {/* Sidebar on the left */}
-      <div className="w-full md:w-[31%] bg-[#F6F8F9] p-10 md:p-4 mx-auto ">
-        {/* Categories section on the right */}
-      <div className="ml-8 mt-[140px]">
-        <h2 className="text-xl font-semibold mb-4">Categories</h2>
-        <div className="w-full  mt-10">
-      
+    <div className="flex flex-col-reverse justify-between bg-[#F6F8F9]  md:flex-row">
         
-        <div className='flex gap-[325px] md:gap-[235px]'>
-          <p className="">Men</p>
-          <p className="">(4)</p>
+        <div className="w-full p-4 md:w-[28%]">
           
-          
-          </div>
-          <div className='flex gap-[300px] md:gap-[210px]'>
-          <p className="">Women</p>
-          <p className="">(4)</p>
-          
-          </div>
-          <div className='flex gap-[310px] md:gap-[220px]'>
-          <p className="">Unisex</p>
-          
-          <p className="">(4)</p>
-          
-          </div>
-          <div className='flex gap-[310px] md:gap-[220px]'>
-          <p className="">Sporty</p>
-       
-          <p className="">(5)</p>
-          
-          </div>
-          <div className='flex gap-[310px] md:gap-[220px]'>
-          <p className="">Official</p>
-         
-          <p className="">(5)</p>
-          
-          </div>
-        
-      
-      </div>
+          <div className="">
+            <h2 className="mb-4 text-xl font-semibold">Categories</h2>
+            <div className="mt-10  w-full">
+              <div className="flex gap-[240px]">
+                <p className="">Men</p>
+                <p className="">(4)</p>
+              </div>
+              <div className="flex gap-[210px]">
+                <p className="">Women</p>
+                <p className="">(4)</p>
+              </div>
+              <div className="flex gap-[220px]">
+                <p className="">Unisex</p>
+
+                <p className="">(4)</p>
+              </div>
+              <div className="flex gap-[220px]">
+                <p className="">Sporty</p>
+
+                <p className="">(5)</p>
+              </div>
+              <div className="flex gap-[220px]">
+                <p className="">Official</p>
+
+                <p className="">(5)</p>
+              </div>
             </div>
-        <div className='mt-[68px] '>
-          <h1>
-          FILTER BY PRICE
-          </h1>
-          <div className='bg-[#D9D9D9] w-[336px] h-[21px] mt-[20px]'>
           </div>
-          <div className='flex gap-[262px] mt-[13px]'>
-            <p>$70</p><p>$250</p>
+          <div className="mt-[68px]">
+            <h1>FILTER BY PRICE</h1>
+            <div className="mt-[20px] h-[21px] w-[336px] bg-[#D9D9D9]"></div>
+            <div className="mt-[13px] flex gap-[262px]">
+              <p>$70</p>
+              <p>$250</p>
+            </div>
           </div>
-        </div>
       <div className=" mt-[105px]">
       <ColorSelector />
       </div>
@@ -144,7 +132,7 @@ function ProductHome() {
      
       
       {/* Product Cards on the right */}
-      <div className="w-full md:w-[69%] bg-[#F6F8F9] p-4">
+      <div className="w-full md:w-[69%] bg-[#F6F8F9] ">
       <div className="flex ml-[20px] md:ml-[110px] gap-[80px] md:gap-[300px] mt-[62px] mb-4 ">
         <div className=''>
           <label htmlFor="sortBy" className='text-[#444] text-[15px] md:text-[20px] font-normal'>Sort By:</label>
@@ -179,8 +167,8 @@ function ProductHome() {
       </div>
     </div>
      {/* Pagination controls */}
-     <div className='w-[90%] mt-[83px] mx-auto h-[60px] justify-center  items-center border border-[#A8B6BF] border-solid'>
-     <div className=" flex mt-[5px] md:ml-[500px] w-full  ">
+     <div className='w-[90%] mb-[108px] mt-[83px] mx-auto h-[80px] justify-center  items-center border border-[#A8B6BF] border-solid'>
+     <div className=" flex mt-[10px] md:ml-[500px] w-full  ">
           <button className="mx-2 px-4 py-2 border" onClick={handlePrevPage}>
           &lt; 
           </button>

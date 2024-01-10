@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import { Link, useParams, useLocation } from "react-router-dom";
-import QuantityButton from "./QuantityButton";
-import ProductCard from "./ProductCard"; // Import the ProductCard component
-import { useCart } from "../Cartfolder/cartContext";
+import React, {useState } from 'react';
+import { Link, useParams, useLocation } from 'react-router-dom';
+import QuantityButton from './QuantityButton';
+import ProductCard from './ProductCard'; 
+import { useCart } from '../Cartfolder/cartContext';
+import AccountHeader from '../AccountPagedetails/AccountHeader';
+import Footer from '../../Page/homePageFolder/Footer';
 
 const existingProducts = [
   {
@@ -52,7 +54,7 @@ function ProductDetails() {
   const isShop = location.pathname === "/";
   const isProduct = location.pathname === `/product/${id}`;
 
-  // Fetch product details based on the id (you need to implement this)
+  // Fetch product details based on the id
   const productDetails = getProductDetailsById(id);
   const [activePages, setActivePages] = useState({
     part1: "Description",
@@ -81,6 +83,7 @@ function ProductDetails() {
   const [quantity, setQuantity] = useState(1);
 
   const handleAddToCart = () => {
+    
     if (selectedSize && selectedColor) {
       // Dispatch an action to add the product to the cart with selected size and color
       dispatch({
@@ -89,8 +92,8 @@ function ProductDetails() {
           id: productDetails.id,
           name: productDetails.name,
           quantity,
-          selectedSize,
-          selectedColor,
+          selectedSize, 
+          selectedColor, 
           // Add other product details as needed
         },
       });
@@ -102,6 +105,7 @@ function ProductDetails() {
       alert("Please select size and color before adding to cart.");
     }
   };
+
 
   const handleAddToWishlist = () => {
     // Add logic to add the product to the wishlist
@@ -131,12 +135,12 @@ function ProductDetails() {
 
   return (
     <div className=" w-full bg-[#F6F8F9]">
-      <div className="h-[80px] w-full bg-[#F7E7CE] ">
-        <h1 className="text-center text-[31px] font-bold leading-[40px]">
-          Shop
-        </h1>
-        <p className="text-center">
-          <Link to="/home" className={isHome ? "text-[#007074]" : "text-black"}>
+      <AccountHeader/>
+       <div className='bg-[#F7E7CE] w-full h-[80px] mt-[45px] '>
+        <h1 className='text-center text-[31px] font-bold leading-[40px]'>Shop</h1>
+        <p className='text-center'>
+        <Link to='/account-home' className={isHome ? 'text-[#007074]' : 'text-black'}>
+
             Home
           </Link>{" "}
           /{" "}
@@ -150,9 +154,39 @@ function ProductDetails() {
         </p>
       </div>
 
-      <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-        <img src="public/image/iconamoon_heart-thin.svg" alt="wishlist" />
-      </a>
+      <Link to="/wishlist">
+      <div className='rounded-full justify-center items-center border border-[#007074] mt-[40px] w-[65px] h-[65px] ml-[300px] md:ml-[700px] xl:ml-[1200px] lg:ml-[950px]'>
+          <img 
+          className='mt-[10px] ml-[10px]'
+          src="/image/iconamoon_heart-thin.svg" alt="wishlist" />
+        </div>
+        </Link>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <div className='relative w-[400px] h-[300px] mx-auto  lg:ml-[100px] md:w-[500px] md:h-[500px] mt-[80px] object-cover mb-6 p-6 rounded-lg shadow-md bg-[#FDF8F0]'>
+      {/* Main Image */}
+      <img
+        className="mx-auto mb- w-[500px] "
+        src={currentImage}
+        alt={productDetails.name}
+      />
+      {productDetails.id === 1 && (
+      <div>
+      
+
+      {/* Smaller Containers */}
+      <div className="flex absolute bottom-[-110px] gap-6 justify-between ">
+        <div
+          className="w-[150px] h-[100px] border border-[#007074] border-soli cursor-pointer rounded-lg shadow-md"
+          onClick={() => handleSwitchImage(image1)}
+        >
+          <img
+            className="w-full h-full object-cover rounded-md"
+            src={image1}
+            alt="Image 1"
+          />
+        </div>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="relative mx-auto mb-6 mt-[80px]  h-[300px] w-[400px] rounded-lg bg-[#FDF8F0] object-cover p-6 shadow-md md:h-[500px] md:w-[500px] lg:ml-[100px]">
@@ -524,6 +558,58 @@ function ProductDetails() {
         </div>
       </div>
     </div>
+
+    <div className=' w-[full] h-[1px] bg-[#99A6AE]'></div>
+    {/* Content for the Delivery, Returns, and Warranty pages */}
+    <div>
+      {/* Content for the Delivery page */}
+      {activePages.part2 === 'Delivery' && (
+        <div>
+          <p className='mt-4 text-[16px] font-normal text-[#444] leading-[24px]'>Fast & Reliable Shipping
+            Standard Delivery: Estimated 3-5 business days. Shipping cost: $4.99.
+            Express Delivery: Estimated 1-2 business days. Shipping cost: $9.99.
+            Free Standard Shipping on orders over $50.
+          </p>
+
+          <p className='mt-8 text-[16px] font-normal text-[#444] leading-[24px]'>Tracking Your Order
+            Receive a tracking number via email once your order is dispatched.
+          </p>
+        </div>
+      )}
+      {/* Content for the Returns page */}
+      {activePages.part2 === 'Returns' && (
+        <div>
+          <p>Returns Content...</p>
+        </div>
+      )}
+      {/* Content for the Warranty page */}
+      {activePages.part2 === 'Warranty' && (
+        <div>
+          <p>Warranty Content...</p>
+        </div>
+      )}
+    </div>
+  </div>
+</div>
+<div className="mt-8 mb-[108px]">
+  <h2 className="text-2xl font-semibold mb-4 text-center">Related Products</h2>
+  <div className="flex flex-col items-center gap-[140px] md:flex-row md:flex-wrap md:justify-center md:gap-8 lg:gap-12 xl:gap-16">
+    {relatedProducts.slice(0, 3).map(product => (
+      <ProductCard
+        key={product.id}  
+        id={product.id}
+        name={product.name}
+        image={product.image}
+        price={product.price}
+        discountPrice={product.discountPrice}
+      />
+    ))}
+  </div>
+</div>
+
+<Footer/>
+    </div>
+    
   );
 }
 
@@ -541,7 +627,7 @@ function getProductDetailsById(id) {
       image: "/image/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg",
       // ... (add more details as needed)
     },
-    // ... (list of other products)
+    
     {
       id: 2,
       name: "Shoebaru Max",
@@ -651,6 +737,7 @@ function getProductDetailsById(id) {
       image: "/image/white converse 1.svg",
       // ... (add more details as needed)
     },
+    // ... (list of other products)
   ];
   return products.find((product) => product.id === parseInt(id, 10));
 }
