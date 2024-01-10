@@ -73,7 +73,7 @@ function ProductHome() {
           Home
         </a>{' '}
         /{' '}
-        <a href="/" className={isShop ? 'text-[#007074]' : 'text-black'}>
+        <a href="/product-home" className={isShop ? 'text-[#007074]' : 'text-black'}>
           Shop
         </a>
       </p>
