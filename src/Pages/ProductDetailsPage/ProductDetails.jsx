@@ -137,7 +137,7 @@ function ProductDetails() {
             Home
           </Link>{' '}
           /{' '}
-          <Link to='/' className={isShop ? 'text-[#007074]' : 'text-black'}>
+          <Link to='/product-home' className={isShop ? 'text-[#007074]' : 'text-black'}>
             Shop
           </Link>{' '}
           /{' '}

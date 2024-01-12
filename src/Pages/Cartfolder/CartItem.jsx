@@ -36,7 +36,7 @@ const CartItem = ({ item, onUpdateQuantity, onSelect }) => {
   };
 
   return (
-    <div className="flex w-screen  lg:ml-[100px] mt-[100px] gap-6">
+    <div className="flex  lg:ml-[100px] mt-[100px] gap-6">
       <input
         type="checkbox"
         id={`select-${item.id}`}
