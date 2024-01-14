@@ -26,18 +26,43 @@ function LatestDrop() {
     },
     {
       id: 4,
-      name: "Sandals",
-      image: "public/homePageImages/latest-drop-boots.svg",
+      name: "Boots",
+      image: "/homePageImages/latest-drop-boots.svg",
       discount: "UP TO 20% OFF",
-      description: "Elegance Trek",
+      description: "Built for durability",
     },
+
     {
       id: 5,
-      name: "Shoes",
-      image: "public/homePageImages/latest-drop-sandals.svg",
+      name: "Sneakers",
+      image: "/homePageImages/discount-image-3.svg",
       discount: "UP TO 20% OFF",
       description: "Elegance Trek",
     },
+
+    {
+      id: 6,
+      name: "Mens Shoes",
+      image: "/homePageImages/discount-image-2.svg",
+      discount: "UP TO 20% OFF",
+      description: "Elegance Trek",
+    },
+
+    // {
+    //   id: 7,
+    //   name: "Flat forms",
+    //   image: "/homePageImages/discount-image-1.svg",
+    //   discount: "UP TO 20% OFF",
+    //   description: "Elegance Trek",
+    // },
+
+    // {
+    //   id: 8,
+    //   name: "Sandals",
+    //   image: "/homePageImages/latest-drop-sandals.svg",
+    //   discount: "UP TO 20% OFF",
+    //   description: "Elegance Trek",
+    // },
   ];
 
   const itemsPerPage = 3;
