@@ -65,16 +65,14 @@ function ShopCollection() {
     {
       id: 9,
       name: "Cloud Stride",
-      image:
-        "/homePageImages/one-white-sneaker-shoe-isolated-white 2.svg",
+      image: "/homePageImages/one-white-sneaker-shoe-isolated-white 2.svg",
       price: 120.0,
       discountPrice: 96.0,
     },
     {
       id: 10,
       name: "Footsubishi Max",
-      image:
-        "/homePageImages/one-white-sneaker-shoe-isolated-white (1) 2.svg",
+      image: "/homePageImages/one-white-sneaker-shoe-isolated-white (1) 2.svg",
       price: 130.0,
       discountPrice: 104.0,
     },
@@ -131,7 +129,7 @@ function ShopCollection() {
 
   return (
     <div className="">
-      <h3 className="text-center text-[31px] font-medium leading-[48px] text-[#007074] ">
+      <h3 className="py-[100px] text-center text-[31px] font-medium leading-[48px] text-[#007074] ">
         Shop our Collection
       </h3>
       <div className="flex flex-col-reverse justify-between bg-[#F6F8F9]  md:flex-row">

@@ -31,10 +31,10 @@ function FreeShipping() {
       <div className="flex justify-center bg-[#F7E7CE]">
         <div className=" grid w-[95%] sm:grid-cols-[1fr_1fr] ">
           <div className="self-center ">
-            <h4 className="text-[31px] font-medium leading-[40px] text-[#444] ">
+            <h4 className="text-base font-medium text-[#444] sm:text-lg lg:text-[31px] lg:leading-[40px] ">
               Christmas and New Year Sales!
             </h4>
-            <h6 className="mt-[16px] text-[20px] font-normal leading-[24px] text-black ">
+            <h6 className="mt-[16px] text-sm font-normal text-black sm:text-base lg:text-[20px] lg:leading-[24px] ">
               A whopping 40% off on some of our selected shoes! Offer ends in 48
               hours
             </h6>
