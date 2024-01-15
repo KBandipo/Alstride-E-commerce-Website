@@ -37,10 +37,10 @@ function TestimonialSection() {
   return (
     <>
       <div className="mt-[60px] text-center">
-        <h3 className="text-[31px] font-medium leading-[48px] text-[#007074] ">
+        <h3 className="text-2xl font-medium text-[#007074] sm:text-3xl lg:text-[31px] lg:leading-[48px] ">
           Wondering whether to go ahead with your purchase?
         </h3>
-        <h5 className="text-[25px] font-normal leading-[32px] text-[#444] ">
+        <h5 className="text-base font-normal text-[#444] sm:text-lg lg:text-xl xl:text-[25px] xl:leading-[32px] ">
           Browse through our customer reviews
         </h5>
       </div>

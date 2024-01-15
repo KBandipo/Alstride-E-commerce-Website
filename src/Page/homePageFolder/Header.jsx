@@ -122,7 +122,7 @@ function Header() {
       {/* buttom */}
       <div className="flex justify-center bg-[#F6F8F9] py-1 sm:py-2">
         <div className="flex w-[90%] items-center justify-between">
-          <nav className="w-[100%] sm:w-[24%]">
+          <nav className=" w-[40%]">
             <ul
               className={` hidden items-center space-x-[5px] text-sm font-normal leading-[24px] text-[#444] sm:flex sm:text-base lg:text-[18px] ${
                 showLinks ? "flex" : ""
@@ -152,7 +152,7 @@ function Header() {
           <img
             src="/image/blueLogo.svg"
             alt="blueLogo"
-            className="hidden h-[16px] w-[110px] sm:flex sm:h-[24px] sm:w-[164px]"
+            className="hidden h-full w-[10%] sm:block  sm:w-[10%]"
           />
 
           <div className="flex items-center space-x-[30px]">
