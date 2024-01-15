@@ -42,7 +42,7 @@ function FreeShipping() {
           <div className="flex h-full  justify-between">
             <div className="self-center ">
               <Link to="/sign-in">
-                <button className="cursor-pointer rounded-[4px] bg-[#00666A] bg-[18px] px-[40px] py-[16px] font-medium leading-[24px] text-white">
+                <button className="cursor-pointer rounded-[4px] bg-[#00666A]  px-[20px] py-[10px] text-sm font-medium text-white sm:px-[40px] sm:py-[16px] sm:text-base lg:text-[18px] lg:leading-[24px]">
                   Shop Now
                 </button>
               </Link>

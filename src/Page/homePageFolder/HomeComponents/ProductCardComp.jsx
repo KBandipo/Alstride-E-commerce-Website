@@ -5,7 +5,7 @@ function ProductCardComp({ id, name, image, price, discountPrice }) {
   const hasDiscount = discountPrice && discountPrice < price;
 
   return (
-    <div className="relative w-full border bg-[#FDF8F0] hover:scale-105 hover:transform  md:h-[350px] ">
+    <div className="relative mb-[30px] w-full border bg-[#FDF8F0] hover:scale-105 hover:transform md:h-[350px] ">
       <Link to={`/product/${id}`}>
         <div className="h-full rounded-lg p-6 shadow-md">
           <img className="mb-4 object-cover" src={image} alt={name} />
@@ -31,7 +31,7 @@ function ProductCardComp({ id, name, image, price, discountPrice }) {
         <img
           src="/homePageImages/cartIcon.svg"
           alt="Cart Icon"
-          className="absolute bottom-[-15%] right-[42%] h-[82px] w-[82px] cursor-pointer"
+          className="absolute bottom-[-15%] right-[42%] h-[75px] w-[75px] cursor-pointer sm:bottom-[-10%] sm:right-[32%] lg:bottom-[-12%] lg:right-[42%]"
         />
       </Link>
     </div>

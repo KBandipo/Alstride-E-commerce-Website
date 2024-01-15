@@ -34,12 +34,12 @@ function HeroSection() {
       className="h-full w-full justify-between bg-gradient-to-l from-[#007074] to-[#000] sm:flex"
     >
       {/* Text(left) Section  */}
-      <div className="sm:w-40% w-full pt-[30px] text-white sm:pl-[80px] sm:pt-[40px] md:pl-[109px] md:pt-[60px]">
-        <div className="text-center sm:text-left">
+      <div className="sm:w-40% relative w-full pt-[30px] text-white sm:pl-[80px] sm:pt-[40px] md:pl-[109px] md:pt-[60px]">
+        <div className="text-center sm:text-left ">
           <h1 className=" text-3xl font-normal sm:text-4xl md:text-5xl lg:text-[61px] lg:leading-[72px] ">
             Every little step
             <br className="hidden sm:inline" />
-            <span className="font-bold "> leads to success</span>
+            <span className=" font-bold "> leads to success</span>
           </h1>
 
           <h2 className="lg:[leading-64px] mt-2  text-2xl font-bold sm:mt-3 md:text-3xl lg:mt-[20px] lg:text-[40px] ">
@@ -57,7 +57,7 @@ function HeroSection() {
               borderColor="[#FEFDFA]"
             />
           </div>
-          <div className=" h hidden w-full overflow-hidden">
+          <div className="absolute right-[5%] top-[30%] w-[80px]  overflow-hidden  sm:hidden">
             <img
               src="/homePageImages/one-white-sneaker-shoe-isolated-white.svg"
               alt="one-white-sneaker-shoe-isolated-white"
