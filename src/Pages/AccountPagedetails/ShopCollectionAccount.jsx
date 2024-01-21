@@ -1,100 +1,92 @@
 import React, { useState } from "react";
-import ProductCard from "../ProductDetailsPage/ProductCard";
+import ProductCardComp from "../../Page/homePageFolder/HomeComponents/ProductCardComp";
 
 function ShopCollectionAccount() {
- //List of products
- const products = [
+  const products = [
     {
       id: 1,
       name: "Next Gen Heel",
       image:
-        "public/homePageImages/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg",
+        "/homePageImages/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg",
       price: 130.0,
       discountPrice: 104.0,
     },
     {
       id: 2,
       name: "Shoebaru Max",
-      image:
-        "public/homePageImages/one-black-sneaker-shoe-isolated-white 2.svg",
+      image: "/homePageImages/one-black-sneaker-shoe-isolated-white 2.svg",
       price: 150.0,
       discountPrice: 120.0,
     },
     {
       id: 3,
       name: "Cloud Stride",
-      image:
-        "public/homePageImages/one-white-sneaker-shoe-isolated-white 2.svg",
+      image: "/homePageImages/one-white-sneaker-shoe-isolated-white 2.svg",
       price: 120.0,
       discountPrice: 96.0,
     },
     {
       id: 4,
       name: "Footsubishi Max",
-      image:
-        "public/homePageImages/one-white-sneaker-shoe-isolated-white (1) 2.svg",
+      image: "/homePageImages/one-white-sneaker-shoe-isolated-white (1) 2.svg",
       price: 130.0,
       discountPrice: 104.0,
     },
     {
       id: 5,
-      name: "Mystic Journey",
-      image: "public/homePageImages/pair-black-classic-men-new 3.svg",
+      name: "Gladiator Pro",
+      image: "/homePageImages/pair-black-classic-men-new 3.svg",
       price: 110.0,
       discountPrice: 88.0,
     },
     {
       id: 6,
-      name: "Eclipse Runner",
-      image: "public/homePageImages/white converse 1.svg",
+      name: "Harmony Hops",
+      image: "/homePageImages/white converse 1.svg",
       price: 140.0,
       discountPrice: 112.0,
     },
     {
       id: 7,
-      name: "Next Gen Heel",
-      image:
-        "public/homePageImages/women-s-red-high-heel-shoes-formal-fashion (1) 2.svg",
-      price: 130.0,
-      discountPrice: 104.0,
-    },
-    {
-      id: 8,
-      name: "Shoebaru Max",
-      image:
-        "public/homePageImages/one-black-sneaker-shoe-isolated-white 2.svg",
+      name: "Infinity Walk",
+      image: "/homePageImages/oswald-elsaboath-infinity-walk.svg",
       price: 150.0,
       discountPrice: 120.0,
     },
     {
+      id: 8,
+      name: "Nova Trek",
+      image: "/homePageImages/Yellow_Shoes.svg",
+      price: 170.0,
+      discountPrice: 136.0,
+    },
+    {
       id: 9,
-      name: "Cloud Stride",
-      image:
-        "public/homePageImages/one-white-sneaker-shoe-isolated-white 2.svg",
-      price: 120.0,
-      discountPrice: 96.0,
+      name: "Mystic Journey",
+      image: "/homePageImages/dress_shoes.svg",
+      price: 150.0,
+      discountPrice: 120.0,
     },
     {
       id: 10,
-      name: "Footsubishi Max",
-      image:
-        "public/homePageImages/one-white-sneaker-shoe-isolated-white (1) 2.svg",
-      price: 130.0,
-      discountPrice: 104.0,
+      name: "Urban Pulse",
+      image: "/homePageImages/Black_Boots.svg",
+      price: 180.0,
+      discountPrice: 144.0,
     },
     {
       id: 11,
-      name: "Mystic Journey",
-      image: "public/homePageImages/pair-black-classic-men-new 3.svg",
-      price: 110.0,
-      discountPrice: 88.0,
+      name: "Eclipse Runner",
+      image: "/homePageImages/Sandles_2.svg",
+      price: 160.0,
+      discountPrice: 128.0,
     },
     {
       id: 12,
-      name: "Eclipse Runner",
-      image: "public/homePageImages/white converse 1.svg",
-      price: 140.0,
-      discountPrice: 112.0,
+      name: "Elemental Gait",
+      image: "/homePageImages/Golden_heels.svg",
+      price: 200.0,
+      discountPrice: 160.0,
     },
   ];
 
@@ -134,13 +126,13 @@ function ShopCollectionAccount() {
   const [selectedSize, setSelectedSize] = useState("");
 
   return (
-    <div className="">
-      <h3 className="text-center text-[31px] font-medium leading-[48px] text-[#007074] ">
+    <div className=" box-border ">
+      <h3 className="py-[100px] text-center text-[31px] font-medium leading-[48px] text-[#007074] ">
         Shop our Collection
       </h3>
       <div className="flex flex-col-reverse justify-between bg-[#F6F8F9]  md:flex-row">
         {/* Sidebar on the left */}
-        <div className="w-full p-4 md:w-[28%]">
+        <div className="w-full p-4  md:w-[28%] ">
           {/* Categories section on the right */}
           <div className="">
             <h2 className="mb-4 text-xl font-semibold">Categories</h2>
@@ -288,11 +280,14 @@ function ShopCollectionAccount() {
         </div>
 
         {/* Product Cards on the right */}
-        <div className="w-full p-4 sm:w-[69%]">
-          <div className="grid grid-cols-1 gap-y-[68px] sm:grid-cols-[1fr_1fr] sm:gap-x-[14%]">
+        <div className="w-full self-stretch p-4 md:w-[60%]">
+          <div className="flex flex-wrap justify-between ">
             {visibleProducts.map((product) => (
-              <div key={product.id} className="w-full">
-                <ProductCard
+              <div
+                key={product.id}
+                className="mb-4 w-full p-2 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2"
+              >
+                <ProductCardComp
                   id={product.id}
                   name={product.name}
                   image={product.image}
@@ -327,6 +322,7 @@ function ShopCollectionAccount() {
         </button>
       </div>
     </div>
-    );
+  );
 }
+
 export default ShopCollectionAccount
