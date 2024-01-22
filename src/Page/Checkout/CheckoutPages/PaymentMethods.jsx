@@ -73,7 +73,7 @@ function PaymentMethods() {
           </label>
         </div>
         <img
-          src="/image/payment-methods.svg"
+          src="/homePageImages/payment-methods.svg"
           alt="payment methods image"
           className="my-[30px] sm:my-0"
         />

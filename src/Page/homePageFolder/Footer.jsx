@@ -66,7 +66,7 @@ function Footer() {
             />
           </div>
           <div className="flex justify-between text-base font-normal leading-[24px] md:text-[18px]">
-            <p>Copyright 2023-Astride</p>
+            <p>Copyright 2023-Alstride</p>
             <p>All Right Reserved</p>
           </div>
         </div>
