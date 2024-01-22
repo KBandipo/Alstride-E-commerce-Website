@@ -26,11 +26,6 @@ function AccountHeader() {
     setShowLinks(!showLinks);
   };
 
-  const { cartState } = useCart();
-
-  const cartItemsCount = cartState.cartItems.reduce((total, item) => total + item.quantity, 0);
-
-
   return (
     <header className=" w-full ">
       {/* top */}
@@ -117,7 +112,7 @@ function AccountHeader() {
               </select>
             </div>
             <img
-              src="public/homePageImages/u_globe.svg"
+              src="/homePageImages/u_globe.svg"
               alt="u_globe"
               className="sm:hidden"
             />
@@ -126,15 +121,15 @@ function AccountHeader() {
       </div>
 
       {/* buttom */}
-      <div className="flex justify-center bg-[#F6F8F9] py-1 sm:py-2 shadow-md">
+      <div className="flex justify-center bg-[#F6F8F9] py-1 sm:py-2">
         <div className="flex w-[90%] items-center justify-between">
-          <nav className="w-[100%] sm:w-[24%]">
+          <nav className=" w-[40%]">
             <ul
               className={` hidden items-center space-x-[5px] text-sm font-normal leading-[24px] text-[#444] sm:flex sm:text-base lg:text-[18px] ${
                 showLinks ? "flex" : ""
               }`}
             >
-              <li className="text-[#007074] gap-3">
+              <li className="text-[#007074]">
                 <Link to="/account-home">Home</Link>
               </li>
               <li>
@@ -158,7 +153,7 @@ function AccountHeader() {
           <img
             src="/image/blueLogo.svg"
             alt="blueLogo"
-            className="hidden h-[16px] w-[110px] sm:flex sm:h-[24px] sm:w-[164px]"
+            className="hidden h-full w-[10%] sm:block  sm:w-[10%]"
           />
 
           <div className="flex items-center space-x-[30px]">
@@ -182,20 +177,14 @@ function AccountHeader() {
                 </Link>
               </li>
               {/* Cart Link */}
-              <li className="relative">
-              <Link to="/cart" className="flex items-center">
-              <img
-               src="/homePageImages/Shopping-bag-Icon.svg"
-               alt="Shopping-bag-Icon"
-              className="mr-2" // Adjust margin as needed
-              />
-             {cartItemsCount > 0 && (
-              <span className="w-[10] h-[10] bg-[#007074] text-white rounded-full px-2 py-1 absolute top-0 right-0 text-xs">
-            {cartItemsCount}
-            </span>
-            )}
-          </Link>
-           </li>
+              <li>
+                <Link to="/cart" className="">
+                  <img
+                    src="/homePageImages/Shopping-bag-Icon.svg"
+                    alt="Shopping-bag-Icon"
+                  />
+                </Link>
+              </li>
             </ul>
 
             {/* Sign-in and Sign-up link */}
@@ -233,7 +222,7 @@ function AccountHeader() {
       {showLinks && (
         <ul className="mt-0 flex flex-col space-y-0  text-base sm:hidden sm:text-lg">
           <li className="text-[#007074]">
-            <Link to="/">Home</Link>
+            <Link to="/account-home">Home</Link>
           </li>
           <li>
             <Link to="/account">Account</Link>

@@ -132,7 +132,7 @@ function Header() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/product-home">Shop</Link>
+                <Link to="/sign-in">Shop</Link>
               </li>
               <li>
                 <Link to="/about-us">About Us</Link>
@@ -230,7 +230,7 @@ function Header() {
             <Link to="/sign-up">Register</Link>
           </li>
           <li>
-            <Link to="/product-home">Shop</Link>
+            <Link to="/sign-in">Shop</Link>
           </li>
           <li>
             <Link to="/about-us">About Us</Link>

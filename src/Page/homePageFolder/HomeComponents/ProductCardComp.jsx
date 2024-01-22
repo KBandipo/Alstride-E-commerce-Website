@@ -6,7 +6,7 @@ function ProductCardComp({ id, name, image, price, discountPrice }) {
 
   return (
     <div className="relative mb-[30px] w-full border bg-[#FDF8F0] hover:scale-105 hover:transform md:h-[350px] ">
-      <Link to={`/product/${id}`}>
+      <Link to="/sign-in">
         <div className="h-full rounded-lg p-6 shadow-md">
           <img className="mb-4 object-cover" src={image} alt={name} />
           <div className="text-center">
@@ -26,7 +26,7 @@ function ProductCardComp({ id, name, image, price, discountPrice }) {
         </div>
       </Link>
 
-      <Link to={`/product/${id}`}>
+      <Link to="/sign-in">
         {/* Ensure the to prop includes the correct product ID */}
         <img
           src="/homePageImages/cartIcon.svg"
