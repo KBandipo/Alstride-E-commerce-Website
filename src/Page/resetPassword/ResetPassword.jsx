@@ -60,9 +60,11 @@ function ResetPassword() {
                 className="h-[16px] w-[110px] sm:h-[24px] sm:w-[164px] md:hidden"
               />
             </div>
-            <a href="#previous">
+
+            {/* Previous button */}
+            <Link to="/sign-in">
               <img src="/image/previousIcon.svg" alt="previousIcon" />
-            </a>
+            </Link>
           </div>
 
           {/* Inner Container */}
