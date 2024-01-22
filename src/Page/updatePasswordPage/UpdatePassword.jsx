@@ -195,9 +195,9 @@ function UpdatePassword() {
             </div>
 
             {/* previous button */}
-            <button>
+            <Link to="/reset-password">
               <img src="/image/previousIcon.svg" alt="previousIcon" />
-            </button>
+            </Link>
           </div>
 
           {/* Inner Container */}
