@@ -26,6 +26,10 @@ function AccountHeader() {
     setShowLinks(!showLinks);
   };
 
+  const { cartState } = useCart();
+
+  const cartItemsCount = cartState.cartItems.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <header className=" w-full ">
       {/* top */}
@@ -177,14 +181,21 @@ function AccountHeader() {
                 </Link>
               </li>
               {/* Cart Link */}
-              <li>
-                <Link to="/cart" className="">
-                  <img
-                    src="/homePageImages/Shopping-bag-Icon.svg"
-                    alt="Shopping-bag-Icon"
-                  />
-                </Link>
-              </li>
+              <li className="relative">
+              <Link to="/cart" className="flex items-center">
+              <img
+               src="/homePageImages/Shopping-bag-Icon.svg"
+               alt="Shopping-bag-Icon"
+              className="mr-2" // Adjust margin as needed
+              />
+             {cartItemsCount > 0 && (
+              <span className="w-[10] h-[10] bg-[#007074] text-white rounded-full px-2 py-1 absolute top-0 right-0 text-xs">
+            {cartItemsCount}
+            </span>
+            )}
+          </Link>
+           </li>
+
             </ul>
 
             {/* Sign-in and Sign-up link */}
