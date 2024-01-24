@@ -101,8 +101,8 @@ function PaymentMethods() {
         </div>
 
         {/* Expiry Date */}
-        <div className="mt-4 flex justify-between">
-          <div className=" w-1/2">
+        <div className="mt-4 flex justify-between space-x-1">
+          <div className=" w-[45%]">
             <label
               htmlFor="expiryDate"
               className="text-[18px] font-normal leading-[24px]"
@@ -121,7 +121,7 @@ function PaymentMethods() {
           </div>
 
           {/* CVV Code */}
-          <div className=" w-1/2">
+          <div className=" w-[45%] ">
             <label
               htmlFor="cvvCode"
               className="text-[18px] font-normal leading-[24px]"

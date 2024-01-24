@@ -117,7 +117,7 @@ function HeroSection() {
     >
       {/* Main(center) content */}
       <div className="relative z-[5] w-[65%]  pt-[80px] text-center">
-        <h1 className="mb-[65px] bg-[#f7e7ce17] pt-[55px] text-3xl font-normal md:pt-0 lg:text-5xl xl:text-[61px]  xl:leading-[72px]">
+        <h1 className="mb-[65px] bg-[#f7e7ce17] pt-[55px] text-3xl font-normal sm:pl-[80px] md:pt-0 lg:text-5xl xl:text-[61px]  xl:leading-[72px]">
           Step into style, <br />
           <span className="font-bold ">STRIDE WITH CONFIDENCE!</span>
         </h1>

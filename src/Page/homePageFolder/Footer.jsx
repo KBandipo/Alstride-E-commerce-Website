@@ -3,7 +3,7 @@ import FooterParagraph from "./HomeComponents/FooterParagraph";
 
 function Footer() {
   return (
-    <footer className="flex justify-center bg-black ">
+    <footer className="flex justify-center bg-black " id="footer">
       <div className="flex w-[90%] flex-col-reverse justify-between gap-4 pb-8 pt-8 sm:gap-[25px]  sm:pb-[35px] sm:pt-[62px]  md:flex-row lg:gap-[40px]">
         {/* Left container */}
         <div className="w-full text-[#F6F8F9]  md:w-[40%]">

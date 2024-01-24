@@ -19,12 +19,12 @@ function VoucherCode() {
 
       <label
         htmlFor="voucherCode"
-        className="text-[31px] font-bold leading-[24px] text-[#444] "
+        className="pl-[18px] text-[31px] font-bold leading-[24px] text-[#444] "
       >
         Voucher Code
       </label>
 
-      <div className="flex flex-col space-x-2 space-y-2 sm:flex-row">
+      <div className="flex flex-col space-x-2 space-y-2 pl-[18px] sm:flex-row sm:space-y-0">
         <input
           type="text"
           id="voucherCode"
