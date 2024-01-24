@@ -33,7 +33,7 @@ function Header() {
           {/* Social media */}
           <ul className="flex items-center justify-between">
             <li>
-              <a href="#">
+              <a href="https://www.pinterest.com/">
                 <img
                   src="/homePageImages/Pro-Pinterest-Icon.svg"
                   alt="Pro- Pinterest Icon"
@@ -42,7 +42,7 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.instagram.com/">
                 <img
                   src="/homePageImages/Instagram-Icon.svg"
                   alt="Instagram Icon"
@@ -51,7 +51,7 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.facebook.com/">
                 <img
                   src="/homePageImages/Pro-Facebook-Icon.svg"
                   alt="Pro-Facebook-Icon"
@@ -119,12 +119,12 @@ function Header() {
         </div>
       </div>
 
-      {/* buttom */}
+      {/* buttom section*/}
       <div className="flex justify-center bg-[#F6F8F9] py-1 sm:py-2">
         <div className="flex w-[90%] items-center justify-between">
           <nav className=" w-[40%]">
             <ul
-              className={` hidden items-center space-x-[5px] text-sm font-normal leading-[24px] text-[#444] sm:flex sm:text-base lg:text-[18px] ${
+              className={` hidden items-center space-x-[5px] text-sm font-normal leading-[24px] text-[#444] sm:flex sm:text-base lg:space-x-[20px] lg:text-[18px] ${
                 showLinks ? "flex" : ""
               }`}
             >
@@ -132,7 +132,7 @@ function Header() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/sign-in">Shop</Link>
+                <Link to="/product-home">Shop</Link>
               </li>
               <li>
                 <Link to="/about-us">About Us</Link>

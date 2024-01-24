@@ -36,7 +36,7 @@ function DiscountSection() {
             <img
               src={product.image}
               alt={product.name}
-              className="h-full w-full object-cover"
+              className="h-[60vh] w-full object-cover"
             />
 
             {/* Add to Cart Button */}
