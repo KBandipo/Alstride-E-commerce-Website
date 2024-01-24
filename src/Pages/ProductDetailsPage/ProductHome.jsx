@@ -126,31 +126,9 @@ function ProductHome() {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
 
-  const isHome = location.pathname === "/home";
-  const isShop = location.pathname === "/";
-
   return (
-    <div className="max-w-[100vw] bg-[#F6F8F9]">
-      <div className="h-[80px] w-full bg-[#F7E7CE] ">
-        <h1 className="text-center text-[31px] font-bold leading-[40px]">
-          Shop
-        </h1>
-        <p className="text-center">
-          <a
-            href="/account-home"
-            className={isHome ? "text-[#007074]" : "text-black"}
-          >
-            Home
-          </a>{" "}
-          /{" "}
-          <a
-            href="/product-home"
-            className={isShop ? "text-[#007074]" : "text-black"}
-          >
-            Shop
-          </a>
-        </p>
-      </div>
+    <div className="max-w-full bg-[#F6F8F9]">
+      
 
       <div className="flex flex-col-reverse justify-between bg-[#F6F8F9]  md:flex-row">
         <div className="w-full p-4 md:w-[28%]">
@@ -205,7 +183,7 @@ function ProductHome() {
 
         {/* Product Cards on the right */}
         <div className="w-full bg-[#F6F8F9] md:w-[69%] ">
-          <div className="mb-4 ml-[20px] mt-[62px] flex gap-[80px] md:ml-[110px] md:gap-[300px] ">
+          <div className="mb-4 ml-[20px] mt-[62px] flex gap-[80px] md:ml-[110px] md:gap-[200px] ">
             <div className="">
               <label
                 htmlFor="sortBy"

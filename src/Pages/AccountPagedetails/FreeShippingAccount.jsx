@@ -7,7 +7,7 @@ import FreeShippingComponent from '../../Page/homePageFolder/HomeComponents/Free
 function FreeShippingAccount() {
   return (
     <>
-      <div className="mb-[33px] mt-[24px] grid gap-[10px] sm:grid-cols-[1fr_1fr_1fr]">
+       <div className="mb-[33px] mt-[24px] grid gap-[10px] sm:grid-cols-[1fr_1fr_1fr]">
         <FreeShippingComponent
           imageSource="/homePageImages/delivery-concept-portrait-happy-african-american-delivery-man-red-cloth-holding-box-package-isolated-grey-studio-background-copy-space.svg"
           imageAlt="delivery-concept-portrait-happy-african-american-delivery-man-red-cloth-holding-box-package"
@@ -41,9 +41,9 @@ function FreeShippingAccount() {
             </h6>
           </div>
           <div className="flex h-full  justify-between">
-            <div className="self-center ">
+            <div className="self-center pt-[40px] sm:pl-12 sm:pt-0">
               <Link to="/sign-in">
-                <button className="cursor-pointer rounded-[4px] bg-[#00666A]  px-[20px] py-[10px] text-sm font-medium text-white sm:px-[40px] sm:py-[16px] sm:text-base lg:text-[18px] lg:leading-[24px]">
+                <button className="cursor-pointer rounded-[4px] bg-[#00666A]   px-[10px] py-[5px] text-sm font-medium text-white  lg:px-[40px] lg:py-[16px] lg:text-[18px] lg:leading-[24px]">
                   Shop Now
                 </button>
               </Link>

@@ -21,7 +21,7 @@ function LatestDropAccount() {
     {
       id: 3,
       name: "Heels",
-      image: "/homePageImages/latest-drop-3.svg",
+      image: "public/homePageImages/new-heels-latest-drop-3.svg",
       discount: "UP TO 20% OFF",
       description: "Open-Air Elegance",
     },

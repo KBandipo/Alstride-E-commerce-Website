@@ -128,8 +128,8 @@ function AccountHeader() {
       <div className="flex justify-center bg-[#F6F8F9] py-1 sm:py-2">
         <div className="flex w-[90%] items-center justify-between">
           <nav className=" w-[40%]">
-            <ul
-              className={` hidden items-center space-x-[5px] text-sm font-normal leading-[24px] text-[#444] sm:flex sm:text-base lg:text-[18px] ${
+          <ul
+              className={` hidden items-center space-x-[5px] text-sm font-normal leading-[24px] text-[#444] sm:flex sm:text-base lg:space-x-[20px] lg:text-[18px] ${
                 showLinks ? "flex" : ""
               }`}
             >
@@ -140,13 +140,12 @@ function AccountHeader() {
                 <Link to="/product-home">Shop</Link>
               </li>
               <li>
-                <Link to="/about-us">About Us</Link>
+                <a href="#footer">About Us</a>
               </li>
               <li>
-                <Link to="/contact-us">Contact Us</Link>
+                <a href="#footer">Contact Us</a>
               </li>
             </ul>
-
             <img
               src="/image/blueLogo.svg"
               alt="blueLogo"
@@ -245,10 +244,10 @@ function AccountHeader() {
             <Link to="/product-home">Shop</Link>
           </li>
           <li>
-            <Link to="/about-us">About Us</Link>
+            <a href="#footer">About Us</a>
           </li>
           <li>
-            <Link to="/contact-us">Contact Us</Link>
+            <a href="#footer">Contact Us</a>
           </li>
         </ul>
       )}

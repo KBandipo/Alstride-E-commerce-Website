@@ -132,7 +132,7 @@ function Header() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/product-home">Shop</Link>
+                <Link to="/sign-in">Shop</Link>
               </li>
               <li>
                 <a href="#footer">About Us</a>
@@ -233,10 +233,10 @@ function Header() {
             <Link to="/sign-in">Shop</Link>
           </li>
           <li>
-            <Link to="/about-us">About Us</Link>
+            <a href="#footer">About Us</a>
           </li>
           <li>
-            <Link to="/contact-us">Contact Us</Link>
+            <a href="#footer">Contact Us</a>
           </li>
         </ul>
       )}
