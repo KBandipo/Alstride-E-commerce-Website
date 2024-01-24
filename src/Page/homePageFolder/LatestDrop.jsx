@@ -20,7 +20,7 @@ function LatestDrop() {
     {
       id: 3,
       name: "Heels",
-      image: "/homePageImages/latest-drop-3.svg",
+      image: "public/homePageImages/new-heels-latest-drop-3.svg",
       discount: "UP TO 20% OFF",
       description: "Open-Air Elegance",
     },
@@ -96,17 +96,17 @@ function LatestDrop() {
       </div>
       {/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */}
       {/* Slides */}
-      <div className="relative mt-[30px] box-border flex flex-col-reverse justify-between sm:flex-row  sm:flex-wrap ">
+      <div className="relative  mt-[30px] flex flex-col-reverse justify-between sm:flex-row  sm:flex-wrap ">
         {latestShoes
           .slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)
           .map((shoe) => (
             <div
               key={shoe.id}
-              className="mb-[250px] h-[80vh] w-full px-2 sm:mt-0 sm:h-[70vh] sm:w-[50%] lg:mb-[150px] lg:w-[33%]"
+              className="mb-[150px] h-[90vh] w-full px-2 sm:mt-0 sm:w-[50%] lg:w-[33%]"
             >
               {/* Product Image */}
               <div
-                className="flex h-full w-full items-center justify-center bg-cover bg-center bg-no-repeat"
+                className="flex h-[84%] w-auto items-center justify-center bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: `url(${shoe.image})` }}
               >
                 <div className="text-[#FEFDFA]">
@@ -119,7 +119,7 @@ function LatestDrop() {
                 </div>
               </div>
 
-              <div className="mb-[50px] mt-[32px] text-center">
+              <div className="mb-[155px] mt-[32px] text-center">
                 <h4 className="mb-[52px] text-lg font-bold leading-[40px] text-[#474C50] sm:text-xl md:text-2xl lg:text-3xl xl:text-[31px]">
                   {shoe.description}
                 </h4>
