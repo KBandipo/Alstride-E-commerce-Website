@@ -21,7 +21,7 @@ function HeroSection() {
     // Automatically change the slide every 2000ms (2 seconds)
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev === 2 ? 0 : prev + 1));
-    }, 2000);
+    }, 20000);
 
     // Clear the interval on component unmount
     return () => clearInterval(interval);
