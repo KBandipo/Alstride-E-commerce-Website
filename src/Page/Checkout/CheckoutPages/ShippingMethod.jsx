@@ -47,7 +47,7 @@ function ShippingMethod() {
 
       {shippingOptions.map(({ option, price, description }, index) => (
         <div key={index}>
-          <div className="flex w-full items-center justify-between pl-[24px]">
+          <div className="flex w-full items-center justify-between px-[24px]">
             <div className="flex items-center space-x-2">
               <span>
                 <input
@@ -67,7 +67,7 @@ function ShippingMethod() {
             {description}
           </p>
           {index !== shippingOptions.length - 1 && (
-            <div className="h-[1px] w-full bg-[#444444B3] "></div>
+            <div className="my-[15px] h-[1px] w-full bg-[#444444B3] "></div>
           )}
         </div>
       ))}
