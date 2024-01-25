@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import ProductCardComp from "../../Page/homePageFolder/HomeComponents/ProductCardComp";
+// import ProductCardComp from "../../Page/homePageFolder/HomeComponents/ProductCardComp";
+import AccProductCardComp from "./AccountPageComponent/AccProductCardComp";
 
 function ShopCollectionAccount() {
   const products = [
@@ -130,9 +131,9 @@ function ShopCollectionAccount() {
       <h3 className="py-[100px] text-center text-[31px] font-medium leading-[48px] text-[#007074] ">
         Shop our Collection
       </h3>
-      <div className="flex flex-col-reverse justify-between overflow-hidden bg-[#F6F8F9]  md:flex-row">
+      <div className="flex flex-col-reverse justify-between bg-[#F6F8F9]  md:flex-row">
         {/* Sidebar on the left */}
-        <div className="w-full p-4  md:w-[22%] lg:w-[30%] ">
+        <div className="w-full p-4  md:w-[28%] ">
           {/* Categories section on the right */}
           <div className="">
             <h2 className="mb-4 text-xl font-semibold">Categories</h2>
@@ -171,12 +172,12 @@ function ShopCollectionAccount() {
             </div>
           </div>
           <div className="mb-4">
-            <h2 className="mb-2 text-2xl  font-semibold">Colour</h2>
+            <h2 className="mb-2 text-2xl font-semibold">Colour</h2>
             <div className="flex items-center ">
               {colors.map((color) => (
                 <div
                   key={color}
-                  className={`color-box mr-4 overflow-hidden ${
+                  className={`color-box mr-4 ${
                     selectedColor === color
                       ? "border-2 border-blue-500"
                       : "border-2 border-gray-300"
@@ -287,7 +288,7 @@ function ShopCollectionAccount() {
                 key={product.id}
                 className="mb-4 w-full p-2 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2"
               >
-                <ProductCardComp
+                <AccProductCardComp
                   id={product.id}
                   name={product.name}
                   image={product.image}
