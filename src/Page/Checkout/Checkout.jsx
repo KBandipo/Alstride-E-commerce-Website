@@ -10,7 +10,7 @@ import Footer from "../homePageFolder/Footer";
 function Checkout() {
   return (
     <section>
-      <AccountHeader/>
+      <AccountHeader />
       <div className="mx-auto mb-[100px] w-[90%]">
         <div className=" ">
           <div className="flex w-full justify-end ">
@@ -26,7 +26,7 @@ function Checkout() {
         </div>
 
         {/* Upper Section: */}
-        <div className=" flex flex-col items-center justify-between sm:flex-row">
+        <div className=" flex flex-col items-center justify-between space-y-[20px] sm:flex-row sm:space-y-0">
           {/*  Delivery method (Right)  */}
           <DeliveryMethod />
           {/* Left */}
@@ -38,7 +38,7 @@ function Checkout() {
         </div>
 
         {/* Down Section: */}
-        <div className="my-[100px] flex flex-col justify-between sm:flex-row">
+        <div className="my-[100px] flex flex-col justify-between space-y-[20px] sm:flex-row sm:space-y-0">
           {/* Right Order summary*/}
           <OrderSummary />
           {/* Left Payment Method */}
@@ -63,7 +63,7 @@ function Checkout() {
           </a>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </section>
   );
 }

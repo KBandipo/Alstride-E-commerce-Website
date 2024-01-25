@@ -14,7 +14,7 @@ function VoucherCode() {
   };
 
   return (
-    <div className="bg-[#FEFDFA] py-[30px] pl-3  shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)]">
+    <div className="mb-[20px] bg-[#FEFDFA] py-[30px] pl-3 shadow-[0_2px_10px_0px_rgba(0,0,0,0.10)] sm:mb-0">
       {/* Voucher code */}
 
       <label
@@ -37,7 +37,7 @@ function VoucherCode() {
           <button
             type="button"
             onClick={handleApplyClick}
-            className="max-h-full rounded-[4px] border-[1px] border-solid border-[#007074] px-[24px] py-[8px] text-[14px] font-medium leading-[24px] text-[#696969] shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)] hover:bg-[#007074] hover:text-white "
+            className="max-h-full rounded-[4px] border-[1px] border-solid border-[#007074] px-[24px] py-[8px] text-[14px] font-medium leading-[24px] text-[#696969] shadow-[0_2px_20px_0px_rgba(0,0,0,0.10)] hover:bg-[#007074] hover:text-white "
           >
             Apply
           </button>
