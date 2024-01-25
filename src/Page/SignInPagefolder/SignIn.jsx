@@ -169,6 +169,7 @@ function SignIn() {
                   className={`h-[60px] w-full flex-shrink-0 rounded border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF] transition-colors duration-300 hover:border-[#00666A] md:w-full ${
                     validateField(email) ? "border-red-500" : ""
                   }`}
+                  required
                 />
                 {!email && !isFocused && (
                   <div className="mt-2 flex items-center">
@@ -193,6 +194,7 @@ function SignIn() {
                     value={password}
                     onChange={(e) => handleChange(e, setPassword)}
                     className="h-[60px] w-full flex-shrink-0 rounded border border-solid border-[#9B9B9B66] bg-[#E4E8EBBF]  transition-colors duration-300 hover:border-[#00666A] md:w-full"
+                    required
                   />
                   <span
                     onClick={() => setShowPassword(!showPassword)}
