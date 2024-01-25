@@ -212,7 +212,7 @@ function ShopCollectionAccount() {
                     type="text"
                     value={size}
                     readOnly
-                    className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2"
+                    className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2 text-center"
                     style={{
                       borderColor:
                         selectedSize === size ? "#3182CE" : "#99A6AE",
@@ -238,7 +238,7 @@ function ShopCollectionAccount() {
                     type="text"
                     value={size}
                     readOnly
-                    className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2"
+                    className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2 text-center"
                     style={{
                       borderColor:
                         selectedSize === size ? "#3182CE" : "#99A6AE",
@@ -262,7 +262,7 @@ function ShopCollectionAccount() {
                   type="text"
                   value={sizes[8]}
                   readOnly
-                  className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2"
+                  className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2 text-center"
                   style={{
                     borderColor:
                       selectedSize === sizes[8] ? "#3182CE" : "#99A6AE",
@@ -325,4 +325,4 @@ function ShopCollectionAccount() {
   );
 }
 
-export default ShopCollectionAccount
+export default ShopCollectionAccount;

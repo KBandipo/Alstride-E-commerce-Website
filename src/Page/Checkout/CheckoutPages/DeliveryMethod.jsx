@@ -73,7 +73,7 @@ function DeliveryMethod() {
   };
 
   return (
-    <div className="w-full bg-[#FEFDFA] pb-[30px] shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)] sm:w-[56%] ">
+    <div className="w-full bg-[#FEFDFA] pb-[30px] shadow-[0_2px_10px_0px_rgba(0,0,0,0.10)] sm:w-[56%] ">
       <h2 className="pt-[30px] text-center text-[31px] font-bold leading-[40px] text-[#444] ">
         Delivery Methods
       </h2>

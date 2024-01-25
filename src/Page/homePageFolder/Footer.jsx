@@ -23,8 +23,8 @@ function Footer() {
               <h3 className="text-[20px] font-bold leading-normal ">
                 Quick Links
               </h3>
-              <FooterParagraph paragraphText="Home" textLink="/" />
-              <FooterParagraph paragraphText="Shops" textLink="/shop" />
+              <FooterParagraph paragraphText="Home" textLink="/account-home" />
+              <FooterParagraph paragraphText="Shops" textLink="/product-home" />
               <FooterParagraph paragraphText="About Us" textLink="#" />
               <FooterParagraph paragraphText="Contact Us" textLink="#" />
             </div>
@@ -97,7 +97,7 @@ function Footer() {
             {/* Social media */}
             <ul className="flex items-center space-x-[36px]">
               <li>
-                <a href="#">
+                <a href="https://www.pinterest.com/">
                   <img
                     src="/homePageImages/Pro-Pinterest-Icon.svg"
                     alt="Pro- Pinterest Icon"
@@ -106,7 +106,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.instagram.com/">
                   <img
                     src="/homePageImages/Instagram-Icon.svg"
                     alt="Instagram Icon"
@@ -115,7 +115,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.facebook.com/">
                   <img
                     src="/homePageImages/Pro-Facebook-Icon.svg"
                     alt="Pro-Facebook-Icon"

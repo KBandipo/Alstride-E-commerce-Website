@@ -31,7 +31,7 @@ function PaymentMethods() {
   };
 
   return (
-    <div className="w-full bg-[#FEFDFA] pb-[50px] shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)] sm:w-[41%]">
+    <div className="w-full bg-[#FEFDFA] pb-[50px] shadow-[0_2px_10px_0px_rgba(0,0,0,0.10)] sm:w-[41%]">
       <h3 className="mb-[50px] pt-[30px] text-center text-[31px] font-bold leading-[24px] text-[#444]  ">
         Payment Methods
       </h3>

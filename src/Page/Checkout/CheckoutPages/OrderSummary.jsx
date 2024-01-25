@@ -35,7 +35,7 @@ function OrderSummary() {
   }, [subtotal, shipping, tax]);
 
   return (
-    <div className="w-full bg-[#FEFDFA] pb-[50px] shadow-[0_2px_20px_0px_rgba(0,0,0,0.15)] sm:w-[56%]">
+    <div className="w-full bg-[#FEFDFA] pb-[50px] shadow-[0_2px_10px_0px_rgba(0,0,0,0.10)] sm:w-[56%]">
       <h3 className="mb-[50px] pt-[30px] text-center text-[31px] font-bold leading-[24px] text-[#444] ">
         Order Summary
       </h3>
@@ -45,7 +45,7 @@ function OrderSummary() {
         <p className="text-[31px] font-bold leading-[24px] text-black ">
           Subtotal (4 items)
         </p>
-        <p className="w-[10%] text-[18px] font-bold leading-[24px] ">{`$${subtotal}.00`}</p>
+        <p className="w-[15%] text-[18px] font-bold leading-[24px] ">{`$${subtotal}.00`}</p>
       </div>
       <div className="my-[30px] h-[1px] w-full bg-[#444444B3] "></div>
 
@@ -54,14 +54,14 @@ function OrderSummary() {
         <p className="text-[31px] font-bold leading-[24px] text-black ">
           Shipping
         </p>
-        <p className="w-[10%] text-[18px] font-bold leading-[24px] ">{`$${shipping}.00`}</p>
+        <p className="w-[15%] text-[18px] font-bold leading-[24px] ">{`$${shipping}.00`}</p>
       </div>
       <div className="my-[30px] h-[1px] w-full bg-[#444444B3] "></div>
 
       {/* Tax */}
       <div className="mx-auto flex w-[90%] items-center justify-between">
         <p className="text-[31px] font-bold leading-[24px] text-black ">Tax</p>
-        <p className="w-[10%] text-[18px] font-bold leading-[24px] ">{`$${tax}.00`}</p>
+        <p className="w-[15%] text-[18px] font-bold leading-[24px] ">{`$${tax}.00`}</p>
       </div>
       <div className="my-[30px] h-[1px] w-full bg-[#444444B3] "></div>
 
@@ -70,7 +70,7 @@ function OrderSummary() {
         <p className="text-[31px] font-bold leading-[24px] text-black ">
           Total
         </p>
-        <p className="w-[10%] text-[18px] font-bold leading-[24px]">{`$${total}.00`}</p>
+        <p className="w-[15%] text-[18px] font-bold leading-[24px]">{`$${total}.00`}</p>
       </div>
     </div>
   );
