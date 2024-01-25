@@ -2,12 +2,12 @@ import React from "react";
 import HeroSection from "../../Page/homePageFolder/HeroSection";
 import Footer from "../../Page/homePageFolder/Footer";
 // import DiscountSection from "../../Page/homePageFolder/DiscountSection";
+import AccountDiscountSection from "./AccountDiscountSection";
 import TestimonialSection from "../../Page/homePageFolder/TestimonialSection";
 import AccountHeader from "./AccountHeader";
 import FreeShippingAccount from "./FreeShippingAccount";
 import ShopCollectionAccount from "./ShopCollectionAccount";
 import LatestDropAccount from "./LastestDropAccount";
-import AccountDiscountSection from "./AccountDiscountSection";
 
 function AccountHome() {
   return (
