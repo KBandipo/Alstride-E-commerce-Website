@@ -48,24 +48,28 @@ function EmailVerification() {
                   pattern="[0-9]"
                   maxLength="1"
                   className="border-1 h-[70px] w-[63.111px] rounded-md border  border-solid border-black p-4 md:h-[86px] md:w-[72px]"
+                  required
                 />
                 <input
                   type="password"
                   pattern="[0-9]"
                   maxLength="1"
                   className="border-1 h-[70px] w-[63.111px] rounded-md border  border-solid border-black p-4 md:h-[86px] md:w-[72px]"
+                  required
                 />
                 <input
                   type="password"
                   pattern="[0-9]"
                   maxLength="1"
                   className="border-1 h-[70px] w-[63.111px] rounded-md border  border-solid border-black p-4 md:h-[86px] md:w-[72px]"
+                  required
                 />
                 <input
                   type="password"
                   pattern="[0-9]"
                   maxLength="1"
                   className="border-1 h-[70px] w-[63.111px] rounded-md border  border-solid border-black p-4 md:h-[86px] md:w-[72px]"
+                  required
                 />
               </div>
 
