@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-
 function LatestDropAccount() {
   const latestShoes = [
     {
@@ -21,7 +20,7 @@ function LatestDropAccount() {
     {
       id: 3,
       name: "Heels",
-      image: "public/homePageImages/new-heels-latest-drop-3.svg",
+      image: "/homePageImages/new-heels-latest-drop-3.svg",
       discount: "UP TO 20% OFF",
       description: "Open-Air Elegance",
     },
@@ -125,7 +124,7 @@ function LatestDropAccount() {
                   {shoe.description}
                 </h4>
                 <button className="rounded-[5px] border-[1px] border-solid border-black bg-white px-[30px] py-[15px] text-lg font-medium text-[#474C50] sm:text-xl md:text-2xl lg:px-[80px]  lg:py-[25px] lg:text-3xl xl:text-[31px] xl:leading-[40px]">
-                  <Link to="/sign-in">Shop Now</Link>
+                  <Link to="/product-home">Shop Now</Link>
                 </button>
               </div>
             </div>

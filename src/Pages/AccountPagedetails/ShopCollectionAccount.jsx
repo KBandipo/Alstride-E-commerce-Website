@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import ProductCardComp from "../../Page/homePageFolder/HomeComponents/ProductCardComp";
+// import ProductCardComp from "../../Page/homePageFolder/HomeComponents/ProductCardComp";
+import AccProductCardComp from "./AccountPageComponent/AccProductCardComp";
 
 function ShopCollectionAccount() {
   const products = [
@@ -212,7 +213,7 @@ function ShopCollectionAccount() {
                     type="text"
                     value={size}
                     readOnly
-                    className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2"
+                    className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2 text-center"
                     style={{
                       borderColor:
                         selectedSize === size ? "#3182CE" : "#99A6AE",
@@ -238,7 +239,7 @@ function ShopCollectionAccount() {
                     type="text"
                     value={size}
                     readOnly
-                    className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2"
+                    className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2 text-center"
                     style={{
                       borderColor:
                         selectedSize === size ? "#3182CE" : "#99A6AE",
@@ -262,7 +263,7 @@ function ShopCollectionAccount() {
                   type="text"
                   value={sizes[8]}
                   readOnly
-                  className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2"
+                  className="h-[60px] w-[65px] rounded border bg-[#F6F8F9] p-2 text-center"
                   style={{
                     borderColor:
                       selectedSize === sizes[8] ? "#3182CE" : "#99A6AE",
@@ -287,7 +288,7 @@ function ShopCollectionAccount() {
                 key={product.id}
                 className="mb-4 w-full p-2 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2"
               >
-                <ProductCardComp
+                <AccProductCardComp
                   id={product.id}
                   name={product.name}
                   image={product.image}
@@ -325,4 +326,4 @@ function ShopCollectionAccount() {
   );
 }
 
-export default ShopCollectionAccount
+export default ShopCollectionAccount;
